@@ -5,13 +5,8 @@
     "semantic_hash": ""
   },
   ".claude/settings.local.json": {
-    "mtime": 1790030658.3199186,
-    "ast_hash": "60fb20ca78a56d77ad7cbe7229f7a354",
-    "semantic_hash": ""
-  },
-  "C\u00f3digo.js": {
-    "mtime": 1790026299.4514627,
-    "ast_hash": "b7dd5fc60213b2dbe791414dab56ae59",
+    "mtime": 1790031584.6281927,
+    "ast_hash": "bbe060603c35c4bec71f4e0b093f2300",
     "semantic_hash": ""
   },
   "appsscript.json": {
@@ -25,8 +20,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1790030470.1448975,
-    "ast_hash": "124330bbe137667e82b76a8ed0a94eec",
+    "mtime": 1790031927.8957627,
+    "ast_hash": "b48f511c00ca7f523f0d180f10bcbf85",
     "semantic_hash": ""
   },
   "docs/FLUXO-ORQUESTRADOR.md": {
@@ -167,6 +162,176 @@
   "VERSAO-POWERPOINT/9-Atendimento e Escuta Ativa.md": {
     "mtime": 1790030703.924731,
     "ast_hash": "a19ca282414bef6bc6dd4a26cd432585",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/ATIVIDADES-AULA-21.html": {
+    "mtime": 1790014454.257798,
+    "ast_hash": "a59e771ffeaacd8bb5d02d9dd716323e",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/ATIVIDADES-MODULO-2.html": {
+    "mtime": 1790014914.222727,
+    "ast_hash": "6dc4354ba5d344ec0ef029e6957b273a",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/ATIVIDADES-MODULO-3.html": {
+    "mtime": 1790015010.7895288,
+    "ast_hash": "4699f0b6069747892dc50172a04b2fc3",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/ATIVIDADES-MODULO-4.html": {
+    "mtime": 1790015050.085696,
+    "ast_hash": "f8b68f18d07a7421cd8799873eb883e3",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/ATIVIDADES-MODULO-5.html": {
+    "mtime": 1790015090.2087483,
+    "ast_hash": "119a6b0781eb8be274c24a6f3401b499",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/ATIVIDADES-MODULO-6.html": {
+    "mtime": 1790015132.5355957,
+    "ast_hash": "fc7296b11a3a68052a65181dbd04f3c8",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-01.html": {
+    "mtime": 1790030365.089789,
+    "ast_hash": "c7cf85ac0c4bc356e55281466d104988",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-02.html": {
+    "mtime": 1790030365.09402,
+    "ast_hash": "8c00180f608a9db99ca983931ea7e02c",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-03.html": {
+    "mtime": 1790030365.0960357,
+    "ast_hash": "29a3edb3d40efe9c2892191d0ab006da",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-04.html": {
+    "mtime": 1790030365.0960357,
+    "ast_hash": "c8675c961bebf5dce5e388e20c5f19c6",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-05.html": {
+    "mtime": 1790030365.102577,
+    "ast_hash": "a0e2c96d1b0cb2f1ae1a181461385fe2",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-06.html": {
+    "mtime": 1790030365.1046221,
+    "ast_hash": "4ac7e2b1043beafbb0c0b7916409be80",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-07.html": {
+    "mtime": 1790030365.1066349,
+    "ast_hash": "ba6f16b39f6c6fc3ef7f3418733d67f9",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-08.html": {
+    "mtime": 1790030365.1095898,
+    "ast_hash": "da073cacf9b47ca554b69da2e14af6f0",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-09.html": {
+    "mtime": 1790030365.1095898,
+    "ast_hash": "63fe7182c32985b7ded07760a71a66da",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-10.html": {
+    "mtime": 1790030365.1095898,
+    "ast_hash": "674bd8f99f747e218ad19b1ffc8ec697",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-11.html": {
+    "mtime": 1790030365.116123,
+    "ast_hash": "6e9602bd1b2a0867f134f0c62387a62d",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-12.html": {
+    "mtime": 1790030365.1181989,
+    "ast_hash": "2d76e53bd1a4550629f10d685c6aeb95",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-13.html": {
+    "mtime": 1790030365.120249,
+    "ast_hash": "87a8c02843b966bfffa8171c54587c6f",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-14.html": {
+    "mtime": 1790030365.1222556,
+    "ast_hash": "0eea31f074a0d414349c72bbcb3be2d3",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-15.html": {
+    "mtime": 1790030365.1222556,
+    "ast_hash": "57ef5adad4c7cff2a61fa12278e1b343",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-16.html": {
+    "mtime": 1790030365.127971,
+    "ast_hash": "9c262a103ca6dbebb5d22f21df98afa2",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-17.html": {
+    "mtime": 1790030365.1309054,
+    "ast_hash": "7cf40189ed00f8b5d47b11fe70f14e99",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-18.html": {
+    "mtime": 1790030365.1309054,
+    "ast_hash": "0b03aca888b074592c95d5d668220aa0",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-19.html": {
+    "mtime": 1790030365.1309054,
+    "ast_hash": "e0034ec6198e7dc099a7a8d664c4688c",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-20.html": {
+    "mtime": 1790030365.1309054,
+    "ast_hash": "470fdeb95058edb811f41b534ea044e4",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/AULA-21.html": {
+    "mtime": 1790030365.1382532,
+    "ast_hash": "0d825a8170fe61121ccc91c8fae5afe2",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/LEIA-ME.md": {
+    "mtime": 1790030365.1423845,
+    "ast_hash": "3e84bc30150fb32704e378a9a876cc5e",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/INFOGRAFICOS/index.html": {
+    "mtime": 1790030365.1382532,
+    "ast_hash": "4bd179acdda64d2e0aba1f99e48ac6f4",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/QUESTIONARIOS.HTML": {
+    "mtime": 1790024211.586778,
+    "ast_hash": "4ce525812dae986c39a6c6540e22e353",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/index.html": {
+    "mtime": 1790024906.0698643,
+    "ast_hash": "b818ff8e51915f0f8e67111fa0d303c1",
+    "semantic_hash": ""
+  },
+  "EMENTA-CHALKIE-AI.md": {
+    "mtime": 1790011863.732004,
+    "ast_hash": "9f0e390d117b07518a1b8c30ff60e415",
+    "semantic_hash": ""
+  },
+  "STATUS-ATIVIDADES.md": {
+    "mtime": 1790031959.226113,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "docs/verificacao-cobertura-formularios.md": {
+    "mtime": 1790031943.5925434,
+    "ast_hash": "94364f27b127a21194d0e1a7d3b95419",
     "semantic_hash": ""
   }
 }

@@ -1,16 +1,16 @@
 # Graph Report - Scripts-Comunicacao  (2026-09-21)
 
 ## Corpus Check
-- 34 files · ~108,033 words
+- 37 files · ~197,150 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2168 nodes · 2138 edges · 933 communities (30 shown, 903 thin omitted)
+- 2231 nodes · 2197 edges · 946 communities (42 shown, 904 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5ac851a3`
+- Built from commit: `37ead36a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -948,6 +948,18 @@
 - [[_COMMUNITY_Community 930|Community 930]]
 - [[_COMMUNITY_Community 931|Community 931]]
 - [[_COMMUNITY_Community 932|Community 932]]
+- [[_COMMUNITY_Community 933|Community 933]]
+- [[_COMMUNITY_Community 934|Community 934]]
+- [[_COMMUNITY_Community 935|Community 935]]
+- [[_COMMUNITY_Community 936|Community 936]]
+- [[_COMMUNITY_Community 937|Community 937]]
+- [[_COMMUNITY_Community 938|Community 938]]
+- [[_COMMUNITY_Community 939|Community 939]]
+- [[_COMMUNITY_Community 940|Community 940]]
+- [[_COMMUNITY_Community 941|Community 941]]
+- [[_COMMUNITY_Community 942|Community 942]]
+- [[_COMMUNITY_Community 943|Community 943]]
+- [[_COMMUNITY_Community 944|Community 944]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `14-Redação de E-mails Corporativos` - 43 edges
@@ -967,15 +979,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (933 total, 903 thin omitted)
+## Communities (946 total, 904 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.11
 Nodes (18): 🎯 CHECKLIST DE SUCESSO, 🚀 COMO USAR, 📁 DEPENDÊNCIAS ENTRE SCRIPTS, 📊 Diagrama de Fluxo, 🔄 FLUXO DO ORQUESTRADOR DE FORMULÁRIOS, Hierarquia, 📝 LOG DE MUDANÇAS, 📈 MONITORAMENTO (+10 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.18
-Nodes (10): 1º — Linhas de continuação, 2º — Aspas simples aninhadas, 3º — `setChoices([` sem fechamento, CLAUDE.md — Scripts-Comunicacao, 🔴 COMMIT DE REFERÊNCIA — FORMATAÇÃO CORRETA, ⛔ COMMITS QUEBRADOS — NÃO USAR COMO BASE, 📐 OS TRÊS DEFEITOS E A ORDEM DE CORREÇÃO, 📝 PENDÊNCIAS CONHECIDAS (+2 more)
+Cohesion: 0.14
+Nodes (13): 1º — Linhas de continuação, 2º — Aspas simples aninhadas, 3º — `setChoices([` sem fechamento, Arquivos que não existem mais, CLAUDE.md — Scripts-Comunicacao, ⛔ COMMITS QUEBRADOS — NÃO USAR COMO BASE, 🔴 ESTADO DE REFERÊNCIA, 📐 OS TRÊS DEFEITOS E A ORDEM DE CORREÇÃO (+5 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.11
@@ -988,6 +1000,10 @@ Nodes (13): ✅ Checklist Final, Correção de Quebras de Linha — FORMULARIO-P
 ### Community 4 - "Community 4"
 Cohesion: 0.25
 Nodes (7): dependencies, exceptionLogging, runtimeVersion, timeZone, webapp, access, executeAs
+
+### Community 5 - "Community 5"
+Cohesion: 0.13
+Nodes (14): 📉 Caso exemplar: Aula 04 — Correção Gramatical (9%), 🔍 Causa: questões geradas por template, ✅ Checklist, Dois defeitos adicionais corrigidos, 📋 Mapeamento markdown → aula, 📌 O que foi verificado, O que mudou nas questões, Pendência (+6 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.17
@@ -1089,25 +1105,65 @@ Nodes (9): 3-O Ciclo do Feedback na Comunicação, ATENÇÃO, Checagem dos Pilar
 Cohesion: 0.20
 Nodes (9): 5-Síntese dos Fundamentos da Comunicação, Autoavaliação de Competências, Comunicação no Ambiente Acadêmico, Estrutura de Apresentação Eficaz, Etapas para Resolver Ruídos, Slide 16, Slide 20, Slide 28 (+1 more)
 
+### Community 933 - "Community 933"
+Cohesion: 0.15
+Nodes (12): Aula 1: Introdução (1h), 🔍 III.B ROTEIRO MODELO DE AULA, IV.B MARCOS DE COMPETÊNCIA ESPERADOS, 🗓️ IV. SEQUÊNCIA DE AULAS (33h TOTAL), ✅ IX. MÉTRICAS DE SUCESSO, 💯 V. CRITÉRIOS DE AVALIAÇÃO, 🔗 VII. MAPEAMENTO BNCC, 📋 X. CHECKLIST DE IMPLEMENTAÇÃO (+4 more)
+
+### Community 934 - "Community 934"
+Cohesion: 0.29
+Nodes (7): 📖 III. CONTEÚDOS PROGRAMÁTICOS (6 MÓDULOS), Módulo 1: Fundamentos da Comunicação (5h), Módulo 2: Comunicação Oral (6h), Módulo 3: Comunicação Escrita (5h), Módulo 4: Redação Técnica (5h), Módulo 5: Ferramentas Digitais (5h), Módulo 6: Comunicação Não-Verbal (2h)
+
+### Community 935 - "Community 935"
+Cohesion: 0.50
+Nodes (4): Adaptações, Dicas de Facilitação, Preparação, XI. GUIA DE IMPLEMENTAÇÃO PARA PROFESSORES
+
+### Community 936 - "Community 936"
+Cohesion: 0.50
+Nodes (4): Capacidades Mensuráveis (10), 🎯 II. OBJETIVOS E CAPACIDADES, Objetivo Geral, Objetivos Específicos
+
+### Community 937 - "Community 937"
+Cohesion: 0.50
+Nodes (4): Contatos, Leituras Obrigatórias, Sites Recomendados, XIII. REFERÊNCIAS
+
+### Community 938 - "Community 938"
+Cohesion: 0.50
+Nodes (4): Formativa (durante), Rubrica Projeto Final, Somativa (final), XII. AVALIAÇÃO PRÁTICA
+
+### Community 939 - "Community 939"
+Cohesion: 0.67
+Nodes (3): Abordagens Recomendadas, Estratégias de Engajamento Avançadas, 📚 VI. ESTRATÉGIAS DE ENSINO PARA IA
+
+### Community 940 - "Community 940"
+Cohesion: 0.67
+Nodes (3): Alinhamento BNCC, 📚 I. CONTEXTO E ALINHAMENTO, Justificativa
+
+### Community 941 - "Community 941"
+Cohesion: 0.67
+Nodes (3): Ciclo Feedback, Indicadores Alerta, XIV. ACOMPANHAMENTO
+
+### Community 942 - "Community 942"
+Cohesion: 0.67
+Nodes (3): Materiais Inclusos, Plataformas Recomendadas, 📦 VIII. RECURSOS
+
 ## Knowledge Gaps
-- **1072 isolated node(s):** `timeZone`, `dependencies`, `exceptionLogging`, `runtimeVersion`, `executeAs` (+1067 more)
+- **1123 isolated node(s):** `timeZone`, `dependencies`, `exceptionLogging`, `runtimeVersion`, `executeAs` (+1118 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **903 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **904 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `19-Segurança da Informação e Privacidade` connect `Community 14` to `Community 384`, `Community 385`, `Community 386`, `Community 387`, `Community 388`, `Community 389`, `Community 390`, `Community 391`, `Community 356`, `Community 357`, `Community 358`, `Community 359`, `Community 360`, `Community 361`, `Community 362`, `Community 363`, `Community 364`, `Community 365`, `Community 366`, `Community 367`, `Community 368`, `Community 369`, `Community 370`, `Community 371`, `Community 372`, `Community 373`, `Community 374`, `Community 375`, `Community 376`, `Community 377`, `Community 378`, `Community 379`, `Community 380`, `Community 381`, `Community 382`, `Community 383`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `13-Formatação e Padronização de Documentos` connect `Community 8` to `Community 139`, `Community 140`, `Community 141`, `Community 142`, `Community 143`, `Community 144`, `Community 145`, `Community 146`, `Community 147`, `Community 148`, `Community 149`, `Community 150`, `Community 151`, `Community 152`, `Community 153`, `Community 154`, `Community 155`, `Community 156`, `Community 157`, `Community 158`, `Community 159`, `Community 160`, `Community 161`, `Community 162`, `Community 163`, `Community 164`, `Community 165`, `Community 166`, `Community 167`, `Community 168`, `Community 169`, `Community 170`, `Community 171`, `Community 172`, `Community 173`, `Community 174`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `20-Etiqueta Digital e Netiqueta` connect `Community 15` to `Community 428`, `Community 429`, `Community 430`, `Community 431`, `Community 432`, `Community 433`, `Community 434`, `Community 435`, `Community 436`, `Community 437`, `Community 438`, `Community 439`, `Community 440`, `Community 441`, `Community 442`, `Community 443`, `Community 444`, `Community 445`, `Community 446`, `Community 447`, `Community 448`, `Community 449`, `Community 450`, `Community 451`, `Community 452`, `Community 453`, `Community 454`, `Community 455`, `Community 456`, `Community 457`, `Community 458`, `Community 459`, `Community 460`, `Community 461`, `Community 462`, `Community 463`, `Community 464`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `18-Plataformas Digitais de Comunicação` connect `Community 13` to `Community 320`, `Community 321`, `Community 322`, `Community 323`, `Community 324`, `Community 325`, `Community 326`, `Community 327`, `Community 328`, `Community 329`, `Community 330`, `Community 331`, `Community 332`, `Community 333`, `Community 334`, `Community 335`, `Community 336`, `Community 337`, `Community 338`, `Community 339`, `Community 340`, `Community 341`, `Community 342`, `Community 343`, `Community 344`, `Community 345`, `Community 346`, `Community 347`, `Community 348`, `Community 349`, `Community 350`, `Community 351`, `Community 352`, `Community 353`, `Community 354`, `Community 355`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `12-Correção Gramatical Aplicada ao Trabalho` connect `Community 7` to `Community 128`, `Community 129`, `Community 130`, `Community 131`, `Community 132`, `Community 133`, `Community 134`, `Community 135`, `Community 136`, `Community 137`, `Community 138`, `Community 103`, `Community 104`, `Community 105`, `Community 106`, `Community 107`, `Community 108`, `Community 109`, `Community 110`, `Community 111`, `Community 112`, `Community 113`, `Community 114`, `Community 115`, `Community 116`, `Community 117`, `Community 118`, `Community 119`, `Community 120`, `Community 121`, `Community 122`, `Community 123`, `Community 124`, `Community 125`, `Community 126`, `Community 127`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `timeZone`, `dependencies`, `exceptionLogging` to the rest of the system?**
-  _1072 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1123 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
+- **Should `Community 1` be split into smaller, more focused modules?**
+  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
