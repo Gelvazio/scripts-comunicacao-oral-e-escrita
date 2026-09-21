@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".claude/settings.local.json": {
-    "mtime": 1790030375.3298192,
-    "ast_hash": "bd6595c3da08bacd583d8265b75d65ee",
+    "mtime": 1790030658.3199186,
+    "ast_hash": "60fb20ca78a56d77ad7cbe7229f7a354",
     "semantic_hash": ""
   },
   "C\u00f3digo.js": {
@@ -42,6 +42,131 @@
   "docs/correcao-quebras-de-linha-formulario-principal.md": {
     "mtime": 1790030427.3088715,
     "ast_hash": "4952de0c153e02b62d4389a28665a979",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/1-Processo Comunicativo.md": {
+    "mtime": 1790030701.042341,
+    "ast_hash": "1606d64d00a208f0ecc9dd98a78a07a9",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/10-Prepara\u00e7\u00e3o para Entrevistas.md": {
+    "mtime": 1790030701.1516757,
+    "ast_hash": "82b9890535863d155d82d16bc0408c20",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/11-Estrutura\u00e7\u00e3o de Textos Profissionais.md": {
+    "mtime": 1790030701.2674756,
+    "ast_hash": "53e0d5e54fc579e29ec0ad4a51d83557",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/12-Corre\u00e7\u00e3o Gramatical Aplicada ao Trabalho.md": {
+    "mtime": 1790030701.389278,
+    "ast_hash": "7472a1dcedeab3d7301808c3402db06a",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/13-Formata\u00e7\u00e3o e Padroniza\u00e7\u00e3o de Documentos.md": {
+    "mtime": 1790030701.5019033,
+    "ast_hash": "efe46ccb12eaa05b94ae8894cd84af4c",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/14-Reda\u00e7\u00e3o de E-mails Corporativos.md": {
+    "mtime": 1790030701.6183732,
+    "ast_hash": "7bff0152673294093855e2d383e549bb",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/15-Elabora\u00e7\u00e3o de Relat\u00f3rios T\u00e9cnicos.md": {
+    "mtime": 1790030701.7614036,
+    "ast_hash": "eabb07767beb7dc653433d4b6241a846",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/16-Reda\u00e7\u00e3o de Memorandos e Comunica\u00e7\u00f5es Internas.md": {
+    "mtime": 1790030701.8809826,
+    "ast_hash": "ed362eab78824bb204b4b05051d04a80",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/17-Procedimentos e Instru\u00e7\u00f5es.md": {
+    "mtime": 1790030701.9925182,
+    "ast_hash": "77bcff308cb5e883781ccc0e34455221",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/18-Plataformas Digitais de Comunica\u00e7\u00e3o.md": {
+    "mtime": 1790030702.1110303,
+    "ast_hash": "5dd7fe1ba10ecdd6e742be4659f35085",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/19-Seguran\u00e7a da Informa\u00e7\u00e3o e Privacidade.md": {
+    "mtime": 1790030702.2314074,
+    "ast_hash": "e85afacf669d7991bdfe921edf2a821c",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/2-Comunica\u00e7\u00e3o Eficaz.md": {
+    "mtime": 1790030702.3430834,
+    "ast_hash": "645d767ecf01c838e583ca31f17db829",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/20-Etiqueta Digital e Netiqueta.md": {
+    "mtime": 1790030702.4697907,
+    "ast_hash": "88c80adc25dbf200da30c736dcc1a689",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/21-Trabalho Remoto e Colabora\u00e7\u00e3o.md": {
+    "mtime": 1790030702.5893476,
+    "ast_hash": "79d62c7db5775edc52097f36322e5338",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/22-Linguagem Corporal e Comunica\u00e7\u00e3o.md": {
+    "mtime": 1790030702.7022989,
+    "ast_hash": "9ae0137bcbb3f9fecef44a7ffd766676",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/23-Gestual, Tom de Voz e Sincronismo.md": {
+    "mtime": 1790030702.8112893,
+    "ast_hash": "467f2c3fbb4fb08cbc9b43b9d70836f9",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/24-Integra\u00e7\u00e3o Pr\u00e1tica_ O Projeto Capstone.md": {
+    "mtime": 1790030702.9265745,
+    "ast_hash": "0a596b21da96bfcbe9c18216b253cca7",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/25-Avalia\u00e7\u00e3o Final e Encerramento.md": {
+    "mtime": 1790030703.0389924,
+    "ast_hash": "f9c0abdd230837fc72061b70b3127323",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/3-O Ciclo do Feedback na Comunica\u00e7\u00e3o.md": {
+    "mtime": 1790030703.212678,
+    "ast_hash": "4e1f6c37419f326192926a14ece43df1",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/4-Contextos Formais versus Informais.md": {
+    "mtime": 1790030703.3269253,
+    "ast_hash": "a71739cdf452494c764fc2c279ffa88a",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/5-S\u00edntese dos Fundamentos da Comunica\u00e7\u00e3o.md": {
+    "mtime": 1790030703.449383,
+    "ast_hash": "e9b0c8bc4d6df623c2de8e3399685812",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/6-Estrutura de Apresenta\u00e7\u00f5es.md": {
+    "mtime": 1790030703.5692508,
+    "ast_hash": "fe2f9dfdb3713b0aa137255ee1333519",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/7-T\u00e9cnicas de Orat\u00f3ria e Express\u00e3o Vocal.md": {
+    "mtime": 1790030703.6823418,
+    "ast_hash": "7e18c2906ed5940599c4fef91aa6692e",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/8-Participa\u00e7\u00e3o e Condu\u00e7\u00e3o de Reuni\u00f5es.md": {
+    "mtime": 1790030703.8102505,
+    "ast_hash": "6f6d9127aef0b827cc658b1e2155e9a1",
+    "semantic_hash": ""
+  },
+  "VERSAO-POWERPOINT/9-Atendimento e Escuta Ativa.md": {
+    "mtime": 1790030703.924731,
+    "ast_hash": "a19ca282414bef6bc6dd4a26cd432585",
     "semantic_hash": ""
   }
 }
