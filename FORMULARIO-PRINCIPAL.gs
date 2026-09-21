@@ -17,13 +17,7 @@ function criarFormularioAula01() {
   var form = FormApp.create('Avaliação — Aula 01 · Processo Comunicativo · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Processo Comunicativo\n\n' +
-    'Aula 01 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Processo Comunicativo\n\nAula 01 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -333,13 +327,7 @@ Comunicação oral estratégica e postura profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Preparação para Entrevistas
-Comunicação oral estratégica e postura profissional\n\n' +
-    'Aula 02 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Comunicação oral estratégica e postura profissional\n\nAula 02 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -652,13 +640,7 @@ function criarFormularioAula03() {
   var form = FormApp.create('Avaliação — Aula 03 · Estruturação de Textos Profissionais · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Estruturação de Textos Profissionais\n\n' +
-    'Aula 03 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Estruturação de Textos Profissionais\n\nAula 03 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -961,13 +943,7 @@ function criarFormularioAula04() {
   var form = FormApp.create('Avaliação — Aula 04 · Correção Gramatical Aplicada ao Trabalho · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Correção Gramatical Aplicada ao Trabalho\n\n' +
-    'Aula 04 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Correção Gramatical Aplicada ao Trabalho\n\nAula 04 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -1273,13 +1249,7 @@ Apresentação visual e clareza na escrita formal · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Formatação e Padronização de Documentos
-Apresentação visual e clareza na escrita formal\n\n' +
-    'Aula 05 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Apresentação visual e clareza na escrita formal\n\nAula 05 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -1595,13 +1565,7 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Redação de E-mails Corporativos
-Comunicação escrita eficaz e profissional no ambiente de trabalho\n\n' +
-    'Aula 06 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Comunicação escrita eficaz e profissional no ambiente de trabalho\n\nAula 06 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -1917,13 +1881,7 @@ Estrutura, objetividade e análise prática no mundo profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Elaboração de Relatórios Técnicos
-Estrutura, objetividade e análise prática no mundo profissional\n\n' +
-    'Aula 07 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Estrutura, objetividade e análise prática no mundo profissional\n\nAula 07 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2239,13 +2197,7 @@ Agilidade, clareza e alinhamento na rotina corporativa · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Redação de Memorandos e Comunicações Internas
-Agilidade, clareza e alinhamento na rotina corporativa\n\n' +
-    'Aula 08 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Agilidade, clareza e alinhamento na rotina corporativa\n\nAula 08 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2560,13 +2512,7 @@ Como escrever passos claros, sequenciais e sem erros · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Procedimentos e Instruções
-Como escrever passos claros, sequenciais e sem erros\n\n' +
-    'Aula 09 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como escrever passos claros, sequenciais e sem erros\n\nAula 09 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2882,13 +2828,7 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho. · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Plataformas Digitais de Comunicação
-Conectando equipes com eficiência, agilidade e clareza no trabalho.\n\n' +
-    'Aula 10 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Conectando equipes com eficiência, agilidade e clareza no trabalho.\n\nAula 10 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -3204,13 +3144,7 @@ Protegendo dados, canais e reputação no ambiente digital corporativo · SENAI'
 
   form.setDescription(
     'Avaliação Completa: Segurança da Informação e Privacidade
-Protegendo dados, canais e reputação no ambiente digital corporativo\n\n' +
-    'Aula 11 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Protegendo dados, canais e reputação no ambiente digital corporativo\n\nAula 11 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -3526,13 +3460,7 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis · SENAI
 
   form.setDescription(
     'Avaliação Completa: Comunicação Eficaz
-Como transformar ideias em mensagens claras, precisas e compreensíveis\n\n' +
-    'Aula 12 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como transformar ideias em mensagens claras, precisas e compreensíveis\n\nAula 12 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -3848,13 +3776,7 @@ Convivência e postura ética no ambiente virtual · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Etiqueta Digital e Netiqueta
-Convivência e postura ética no ambiente virtual\n\n' +
-    'Aula 13 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Convivência e postura ética no ambiente virtual\n\nAula 13 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -4170,13 +4092,7 @@ Práticas e ferramentas para produzir em equipe digital · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Trabalho Remoto e Colaboração
-Práticas e ferramentas para produzir em equipe digital\n\n' +
-    'Aula 14 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Práticas e ferramentas para produzir em equipe digital\n\nAula 14 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -4492,13 +4408,7 @@ O poder dos sinais não-verbais no ambiente profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Linguagem Corporal e Comunicação
-O poder dos sinais não-verbais no ambiente profissional\n\n' +
-    'Aula 15 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+O poder dos sinais não-verbais no ambiente profissional\n\nAula 15 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -4814,13 +4724,7 @@ A harmonia perfeita entre corpo, voz e mensagem profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Gestual, Tom de Voz e Sincronismo
-A harmonia perfeita entre corpo, voz e mensagem profissional\n\n' +
-    'Aula 16 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+A harmonia perfeita entre corpo, voz e mensagem profissional\n\nAula 16 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -5136,13 +5040,7 @@ Unindo escrita técnica, oratória e ferramentas digitais · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Integração Prática: O Projeto Capstone
-Unindo escrita técnica, oratória e ferramentas digitais\n\n' +
-    'Aula 17 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Unindo escrita técnica, oratória e ferramentas digitais\n\nAula 17 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -5457,13 +5355,7 @@ function criarFormularioAula18() {
   var form = FormApp.create('Avaliação — Aula 18 · Avaliação Final e Encerramento · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Avaliação Final e Encerramento\n\n' +
-    'Aula 18 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Avaliação Final e Encerramento\n\nAula 18 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -5769,13 +5661,7 @@ Como transformar respostas em ferramentas de crescimento e alinhamento · SENAI'
 
   form.setDescription(
     'Avaliação Completa: O Ciclo do Feedback na Comunicação
-Como transformar respostas em ferramentas de crescimento e alinhamento\n\n' +
-    'Aula 19 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como transformar respostas em ferramentas de crescimento e alinhamento\n\nAula 19 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6091,13 +5977,7 @@ Adequação comunicativa, registros e impacto profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Contextos Formais versus Informais
-Adequação comunicativa, registros e impacto profissional\n\n' +
-    'Aula 20 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Adequação comunicativa, registros e impacto profissional\n\nAula 20 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6413,13 +6293,7 @@ Consolidação e Prática do Módulo 1 · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Síntese dos Fundamentos da Comunicação
-Consolidação e Prática do Módulo 1\n\n' +
-    'Aula 21 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Consolidação e Prática do Módulo 1\n\nAula 21 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6735,13 +6609,7 @@ Como planejar discursos memoráveis, claros e persuasivos · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Estrutura de Apresentações
-Como planejar discursos memoráveis, claros e persuasivos\n\n' +
-    'Aula 22 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como planejar discursos memoráveis, claros e persuasivos\n\nAula 22 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -7054,13 +6922,7 @@ function criarFormularioAula23() {
   var form = FormApp.create('Avaliação — Aula 23 · Técnicas de Oratória e Expressão Vocal · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Técnicas de Oratória e Expressão Vocal\n\n' +
-    'Aula 23 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Técnicas de Oratória e Expressão Vocal\n\nAula 23 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -7366,13 +7228,7 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência · SENA
 
   form.setDescription(
     'Avaliação Completa: Participação e Condução de Reuniões
-Como liderar, intervir com firmeza e registrar decisões com eficiência\n\n' +
-    'Aula 24 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como liderar, intervir com firmeza e registrar decisões com eficiência\n\nAula 24 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -7687,13 +7543,7 @@ function criarFormularioAula25() {
   var form = FormApp.create('Avaliação — Aula 25 · Atendimento e Escuta Ativa · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Atendimento e Escuta Ativa\n\n' +
-    'Aula 25 — UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '20 questões | 20 pontos no total\n' +
-    'Tempo estimado: 30-40 minutos\n' +
-    'Cobertura: 100% do assunto da aula\n' +
-    'Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Atendimento e Escuta Ativa\n\nAula 25 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -7998,17 +7848,7 @@ function criarQuizRevisao() {
   var form = FormApp.create('Revisão Integrada — Aulas 1 a 9 · Comunicação Oral e Escrita · SENAI');
 
   form.setDescription(
-    'REVISÃO INTEGRADA: Aulas 1 a 9\n\n' +
-    'UC Introdução à Comunicação Oral e Escrita\n' +
-    'Professor: Gelvazio\n\n' +
-    '30 questões | 30 pontos no total\n' +
-    'Tempo estimado: 45-60 minutos\n' +
-    'Cobertura: Consolidação de todos os tópicos das aulas 1-9\n' +
-    'Você verá sua pontuação e feedback detalhado ao enviar!\n\n' +
-    'OBJETIVOS:\n' +
-    '- Revisar conceitos principais das aulas 1-9\n' +
-    '- Identificar áreas que precisam de reforço\n' +
-    '- Preparar-se para avaliações posteriores'
+    'REVISÃO INTEGRADA: Aulas 1 a 9\n\nUC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n30 questões | 30 pontos no total\nTempo estimado: 45-60 minutos\nCobertura: Consolidação de todos os tópicos das aulas 1-9\nVocê verá sua pontuação e feedback detalhado ao enviar!\n\nOBJETIVOS:\n- Revisar conceitos principais das aulas 1-9\n- Identificar áreas que precisam de reforço\n- Preparar-se para avaliações posteriores'
   );
 
   form.setCollectEmail(false);
