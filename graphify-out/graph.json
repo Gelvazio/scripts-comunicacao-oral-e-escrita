@@ -1,0 +1,1522 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "C\u00f3digo.js",
+      "file_type": "code",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "c\u00f3digo",
+      "community": 5,
+      "norm_label": "codigo.js"
+    },
+    {
+      "label": "criarPlanilhaRastreamento()",
+      "file_type": "code",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "c\u00f3digo_criarplanilharastreamento",
+      "community": 5,
+      "norm_label": "criarplanilharastreamento()"
+    },
+    {
+      "label": "validarCodigoUnico()",
+      "file_type": "code",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "c\u00f3digo_validarcodigounico",
+      "community": 5,
+      "norm_label": "validarcodigounico()"
+    },
+    {
+      "label": "registrarUsoDeCodego()",
+      "file_type": "code",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L116",
+      "_origin": "ast",
+      "id": "c\u00f3digo_registrarusodecodego",
+      "community": 5,
+      "norm_label": "registrarusodecodego()"
+    },
+    {
+      "label": "listarCodigosDisponiveis()",
+      "file_type": "code",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "c\u00f3digo_listarcodigosdisponiveis",
+      "community": 5,
+      "norm_label": "listarcodigosdisponiveis()"
+    },
+    {
+      "label": "criarFormularioComValidacaoUnica()",
+      "file_type": "code",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L190",
+      "_origin": "ast",
+      "id": "c\u00f3digo_criarformulariocomvalidacaounica",
+      "community": 5,
+      "norm_label": "criarformulariocomvalidacaounica()"
+    },
+    {
+      "label": "gerarRelatorioUsoCodigosCompleto()",
+      "file_type": "code",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L235",
+      "_origin": "ast",
+      "id": "c\u00f3digo_gerarrelatoriousocodigoscompleto",
+      "community": 5,
+      "norm_label": "gerarrelatoriousocodigoscompleto()"
+    },
+    {
+      "label": "informacoesValidacao()",
+      "file_type": "code",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L288",
+      "_origin": "ast",
+      "id": "c\u00f3digo_informacoesvalidacao",
+      "community": 5,
+      "norm_label": "informacoesvalidacao()"
+    },
+    {
+      "label": "appsscript.json",
+      "file_type": "code",
+      "source_file": "appsscript.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appsscript",
+      "community": 4,
+      "norm_label": "appsscript.json"
+    },
+    {
+      "label": "timeZone",
+      "file_type": "code",
+      "source_file": "appsscript.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "appsscript_timezone",
+      "community": 4,
+      "norm_label": "timezone"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "appsscript.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "appsscript_dependencies",
+      "community": 4,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "exceptionLogging",
+      "file_type": "code",
+      "source_file": "appsscript.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "appsscript_exceptionlogging",
+      "community": 4,
+      "norm_label": "exceptionlogging"
+    },
+    {
+      "label": "runtimeVersion",
+      "file_type": "code",
+      "source_file": "appsscript.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "appsscript_runtimeversion",
+      "community": 4,
+      "norm_label": "runtimeversion"
+    },
+    {
+      "label": "webapp",
+      "file_type": "code",
+      "source_file": "appsscript.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "appsscript_webapp",
+      "community": 4,
+      "norm_label": "webapp"
+    },
+    {
+      "label": "executeAs",
+      "file_type": "code",
+      "source_file": "appsscript.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "appsscript_webapp_executeas",
+      "community": 4,
+      "norm_label": "executeas"
+    },
+    {
+      "label": "access",
+      "file_type": "code",
+      "source_file": "appsscript.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "appsscript_webapp_access",
+      "community": 4,
+      "norm_label": "access"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude",
+      "community": 1,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "CLAUDE.md \u2014 Scripts-Comunicacao",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_claude_md_scripts_comunicacao",
+      "community": 1,
+      "norm_label": "claude.md \u2014 scripts-comunicacao"
+    },
+    {
+      "label": "\ud83d\udd34 COMMIT DE REFER\u00caNCIA \u2014 FORMATA\u00c7\u00c3O CORRETA",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "claude_commit_de_refer\u00eancia_formata\u00e7\u00e3o_correta",
+      "community": 1,
+      "norm_label": "\ud83d\udd34 commit de referencia \u2014 formatacao correta"
+    },
+    {
+      "label": "\u26d4 COMMITS QUEBRADOS \u2014 N\u00c3O USAR COMO BASE",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "claude_commits_quebrados_n\u00e3o_usar_como_base",
+      "community": 1,
+      "norm_label": "\u26d4 commits quebrados \u2014 nao usar como base"
+    },
+    {
+      "label": "\ud83d\udcd0 OS TR\u00caS DEFEITOS E A ORDEM DE CORRE\u00c7\u00c3O",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "claude_os_tr\u00eas_defeitos_e_a_ordem_de_corre\u00e7\u00e3o",
+      "community": 1,
+      "norm_label": "\ud83d\udcd0 os tres defeitos e a ordem de correcao"
+    },
+    {
+      "label": "1\u00ba \u2014 Linhas de continua\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "claude_1o_linhas_de_continua\u00e7\u00e3o",
+      "community": 1,
+      "norm_label": "1o \u2014 linhas de continuacao"
+    },
+    {
+      "label": "2\u00ba \u2014 Aspas simples aninhadas",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "claude_2o_aspas_simples_aninhadas",
+      "community": 1,
+      "norm_label": "2o \u2014 aspas simples aninhadas"
+    },
+    {
+      "label": "3\u00ba \u2014 `setChoices([` sem fechamento",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "claude_3o_setchoices_sem_fechamento",
+      "community": 1,
+      "norm_label": "3o \u2014 `setchoices([` sem fechamento"
+    },
+    {
+      "label": "\u2705 VALIDA\u00c7\u00c3O OBRIGAT\u00d3RIA",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L113",
+      "_origin": "ast",
+      "id": "claude_valida\u00e7\u00e3o_obrigat\u00f3ria",
+      "community": 1,
+      "norm_label": "\u2705 validacao obrigatoria"
+    },
+    {
+      "label": "\ud83d\udcdd PEND\u00caNCIAS CONHECIDAS",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L133",
+      "_origin": "ast",
+      "id": "claude_pend\u00eancias_conhecidas",
+      "community": 1,
+      "norm_label": "\ud83d\udcdd pendencias conhecidas"
+    },
+    {
+      "label": "\u26a0\ufe0f REGRA DE OURO",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "claude_regra_de_ouro",
+      "community": 1,
+      "norm_label": "\u26a0\ufe0f regra de ouro"
+    },
+    {
+      "label": "FLUXO-ORQUESTRADOR.md",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador",
+      "community": 0,
+      "norm_label": "fluxo-orquestrador.md"
+    },
+    {
+      "label": "\ud83d\udd04 FLUXO DO ORQUESTRADOR DE FORMUL\u00c1RIOS",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "community": 0,
+      "norm_label": "\ud83d\udd04 fluxo do orquestrador de formularios"
+    },
+    {
+      "label": "\ud83d\udcca Diagrama de Fluxo",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_diagrama_de_fluxo",
+      "community": 0,
+      "norm_label": "\ud83d\udcca diagrama de fluxo"
+    },
+    {
+      "label": "\ud83d\udcc1 DEPEND\u00caNCIAS ENTRE SCRIPTS",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_depend\u00eancias_entre_scripts",
+      "community": 0,
+      "norm_label": "\ud83d\udcc1 dependencias entre scripts"
+    },
+    {
+      "label": "Hierarquia",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_hierarquia",
+      "community": 0,
+      "norm_label": "hierarquia"
+    },
+    {
+      "label": "\ud83d\ude80 COMO USAR",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_como_usar",
+      "community": 8,
+      "norm_label": "\ud83d\ude80 como usar"
+    },
+    {
+      "label": "Op\u00e7\u00e3o 1: Teste R\u00e1pido",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_op\u00e7\u00e3o_1_teste_r\u00e1pido",
+      "community": 8,
+      "norm_label": "opcao 1: teste rapido"
+    },
+    {
+      "label": "Op\u00e7\u00e3o 2: Criar Todos (Produ\u00e7\u00e3o)",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L129",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_op\u00e7\u00e3o_2_criar_todos_produ\u00e7\u00e3o",
+      "community": 8,
+      "norm_label": "opcao 2: criar todos (producao)"
+    },
+    {
+      "label": "Op\u00e7\u00e3o 3: Monitorar Resultado",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L140",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_op\u00e7\u00e3o_3_monitorar_resultado",
+      "community": 8,
+      "norm_label": "opcao 3: monitorar resultado"
+    },
+    {
+      "label": "\ud83d\udd27 TRATAMENTO DE ERROS",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_tratamento_de_erros",
+      "community": 0,
+      "norm_label": "\ud83d\udd27 tratamento de erros"
+    },
+    {
+      "label": "Se Um Formul\u00e1rio Falhar",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L164",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_se_um_formul\u00e1rio_falhar",
+      "community": 0,
+      "norm_label": "se um formulario falhar"
+    },
+    {
+      "label": "Se Todos Falharem",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_se_todos_falharem",
+      "community": 0,
+      "norm_label": "se todos falharem"
+    },
+    {
+      "label": "Se Houver Timeout",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L178",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_se_houver_timeout",
+      "community": 0,
+      "norm_label": "se houver timeout"
+    },
+    {
+      "label": "\ud83d\udcc8 MONITORAMENTO",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L185",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_monitoramento",
+      "community": 0,
+      "norm_label": "\ud83d\udcc8 monitoramento"
+    },
+    {
+      "label": "Verificar Progresso",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L187",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_verificar_progresso",
+      "community": 0,
+      "norm_label": "verificar progresso"
+    },
+    {
+      "label": "Verificar Resultado",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L192",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_verificar_resultado",
+      "community": 0,
+      "norm_label": "verificar resultado"
+    },
+    {
+      "label": "\ud83c\udfaf CHECKLIST DE SUCESSO",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L203",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_checklist_de_sucesso",
+      "community": 0,
+      "norm_label": "\ud83c\udfaf checklist de sucesso"
+    },
+    {
+      "label": "\ud83d\udcde TROUBLESHOOTING",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L215",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_troubleshooting",
+      "community": 0,
+      "norm_label": "\ud83d\udcde troubleshooting"
+    },
+    {
+      "label": "\ud83d\udcdd LOG DE MUDAN\u00c7AS",
+      "file_type": "document",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L227",
+      "_origin": "ast",
+      "id": "docs_fluxo_orquestrador_log_de_mudan\u00e7as",
+      "community": 0,
+      "norm_label": "\ud83d\udcdd log de mudancas"
+    },
+    {
+      "label": "PLANO-AJUSTE-SCRIPTS-GS.md",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs",
+      "community": 2,
+      "norm_label": "plano-ajuste-scripts-gs.md"
+    },
+    {
+      "label": "PLANO: Ajustar Scripts GS - Orquestrador Funcional",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_plano_ajustar_scripts_gs_orquestrador_funcional",
+      "community": 2,
+      "norm_label": "plano: ajustar scripts gs - orquestrador funcional"
+    },
+    {
+      "label": "\ud83d\udccb Resumo do Plano",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_resumo_do_plano",
+      "community": 2,
+      "norm_label": "\ud83d\udccb resumo do plano"
+    },
+    {
+      "label": "\ud83c\udfaf Estrutura Atual",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_estrutura_atual",
+      "community": 2,
+      "norm_label": "\ud83c\udfaf estrutura atual"
+    },
+    {
+      "label": "Orquestrador",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_orquestrador",
+      "community": 2,
+      "norm_label": "orquestrador"
+    },
+    {
+      "label": "Scripts de Aula (25 arquivos)",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_scripts_de_aula_25_arquivos",
+      "community": 2,
+      "norm_label": "scripts de aula (25 arquivos)"
+    },
+    {
+      "label": "Scripts Auxiliares",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_scripts_auxiliares",
+      "community": 2,
+      "norm_label": "scripts auxiliares"
+    },
+    {
+      "label": "\ud83d\udcdd Ajustes Necess\u00e1rios",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_ajustes_necess\u00e1rios",
+      "community": 6,
+      "norm_label": "\ud83d\udcdd ajustes necessarios"
+    },
+    {
+      "label": "\u2705 PASSO 1: Verificar Integridade",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_passo_1_verificar_integridade",
+      "community": 6,
+      "norm_label": "\u2705 passo 1: verificar integridade"
+    },
+    {
+      "label": "\u2705 PASSO 2: Garantir Acessibilidade",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_passo_2_garantir_acessibilidade",
+      "community": 6,
+      "norm_label": "\u2705 passo 2: garantir acessibilidade"
+    },
+    {
+      "label": "\u2705 PASSO 3: Melhorar Tratamento de Erros",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_passo_3_melhorar_tratamento_de_erros",
+      "community": 6,
+      "norm_label": "\u2705 passo 3: melhorar tratamento de erros"
+    },
+    {
+      "label": "\u2705 PASSO 4: Consolidar Fun\u00e7\u00f5es Comuns",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_passo_4_consolidar_fun\u00e7\u00f5es_comuns",
+      "community": 6,
+      "norm_label": "\u2705 passo 4: consolidar funcoes comuns"
+    },
+    {
+      "label": "\u2705 PASSO 5: Criar Fun\u00e7\u00e3o de Teste",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_passo_5_criar_fun\u00e7\u00e3o_de_teste",
+      "community": 6,
+      "norm_label": "\u2705 passo 5: criar funcao de teste"
+    },
+    {
+      "label": "\u2705 PASSO 6: Documentar",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L132",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_passo_6_documentar",
+      "community": 6,
+      "norm_label": "\u2705 passo 6: documentar"
+    },
+    {
+      "label": "\ud83d\udd17 Depend\u00eancias",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_depend\u00eancias",
+      "community": 2,
+      "norm_label": "\ud83d\udd17 dependencias"
+    },
+    {
+      "label": "\u26a0\ufe0f Riscos",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L147",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_riscos",
+      "community": 2,
+      "norm_label": "\u26a0\ufe0f riscos"
+    },
+    {
+      "label": "\u2705 Verifica\u00e7\u00e3o Final",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_verifica\u00e7\u00e3o_final",
+      "community": 2,
+      "norm_label": "\u2705 verificacao final"
+    },
+    {
+      "label": "\ud83d\udcca Status Geral",
+      "file_type": "document",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "docs_plano_ajuste_scripts_gs_status_geral",
+      "community": 2,
+      "norm_label": "\ud83d\udcca status geral"
+    },
+    {
+      "label": "correcao-quebras-de-linha-formulario-principal.md",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal",
+      "community": 3,
+      "norm_label": "correcao-quebras-de-linha-formulario-principal.md"
+    },
+    {
+      "label": "Corre\u00e7\u00e3o de Quebras de Linha \u2014 FORMULARIO-PRINCIPAL.gs",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "community": 3,
+      "norm_label": "correcao de quebras de linha \u2014 formulario-principal.gs"
+    },
+    {
+      "label": "\ud83d\udccc Objetivo",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_objetivo",
+      "community": 3,
+      "norm_label": "\ud83d\udccc objetivo"
+    },
+    {
+      "label": "\ud83d\udccb Escopo",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_escopo",
+      "community": 3,
+      "norm_label": "\ud83d\udccb escopo"
+    },
+    {
+      "label": "\ud83d\udd0d Diagn\u00f3stico",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_diagn\u00f3stico",
+      "community": 3,
+      "norm_label": "\ud83d\udd0d diagnostico"
+    },
+    {
+      "label": "\ud83d\udcca Plano de Execu\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_plano_de_execu\u00e7\u00e3o",
+      "community": 7,
+      "norm_label": "\ud83d\udcca plano de execucao"
+    },
+    {
+      "label": "Etapa 1: Reunir linhas de continua\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_etapa_1_reunir_linhas_de_continua\u00e7\u00e3o",
+      "community": 7,
+      "norm_label": "etapa 1: reunir linhas de continuacao"
+    },
+    {
+      "label": "Etapa 2: Converter aspas internas",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_etapa_2_converter_aspas_internas",
+      "community": 7,
+      "norm_label": "etapa 2: converter aspas internas"
+    },
+    {
+      "label": "Etapa 3: Fechar blocos `setChoices([` \u00f3rf\u00e3os",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_etapa_3_fechar_blocos_setchoices_\u00f3rf\u00e3os",
+      "community": 7,
+      "norm_label": "etapa 3: fechar blocos `setchoices([` orfaos"
+    },
+    {
+      "label": "Etapa 4: Valida\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_etapa_4_valida\u00e7\u00e3o",
+      "community": 7,
+      "norm_label": "etapa 4: validacao"
+    },
+    {
+      "label": "\u2705 Verifica\u00e7\u00e3o de Integridade",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_verifica\u00e7\u00e3o_de_integridade",
+      "community": 3,
+      "norm_label": "\u2705 verificacao de integridade"
+    },
+    {
+      "label": "\u26a0\ufe0f Riscos e Mitiga\u00e7\u00f5es",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_riscos_e_mitiga\u00e7\u00f5es",
+      "community": 3,
+      "norm_label": "\u26a0\ufe0f riscos e mitigacoes"
+    },
+    {
+      "label": "\ud83d\udcdd Notas",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_notas",
+      "community": 3,
+      "norm_label": "\ud83d\udcdd notas"
+    },
+    {
+      "label": "\u2705 Checklist Final",
+      "file_type": "document",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "docs_correcao_quebras_de_linha_formulario_principal_checklist_final",
+      "community": 3,
+      "norm_label": "\u2705 checklist final"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "c\u00f3digo",
+      "target": "c\u00f3digo_criarformulariocomvalidacaounica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "c\u00f3digo",
+      "target": "c\u00f3digo_criarplanilharastreamento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L235",
+      "weight": 1.0,
+      "source": "c\u00f3digo",
+      "target": "c\u00f3digo_gerarrelatoriousocodigoscompleto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L288",
+      "weight": 1.0,
+      "source": "c\u00f3digo",
+      "target": "c\u00f3digo_informacoesvalidacao",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "c\u00f3digo",
+      "target": "c\u00f3digo_listarcodigosdisponiveis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "c\u00f3digo",
+      "target": "c\u00f3digo_registrarusodecodego",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "c\u00f3digo",
+      "target": "c\u00f3digo_validarcodigounico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "C\u00f3digo.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "c\u00f3digo_validarcodigounico",
+      "target": "c\u00f3digo_registrarusodecodego",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appsscript.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "appsscript",
+      "target": "appsscript_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appsscript.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "appsscript",
+      "target": "appsscript_exceptionlogging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appsscript.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "appsscript",
+      "target": "appsscript_runtimeversion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appsscript.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "appsscript",
+      "target": "appsscript_timezone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appsscript.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "appsscript",
+      "target": "appsscript_webapp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appsscript.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "appsscript_webapp",
+      "target": "appsscript_webapp_access",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appsscript.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "appsscript_webapp",
+      "target": "appsscript_webapp_executeas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "claude_claude_md_scripts_comunicacao",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "claude_claude_md_scripts_comunicacao",
+      "target": "claude_commit_de_refer\u00eancia_formata\u00e7\u00e3o_correta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "claude_claude_md_scripts_comunicacao",
+      "target": "claude_commits_quebrados_n\u00e3o_usar_como_base",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "claude_claude_md_scripts_comunicacao",
+      "target": "claude_os_tr\u00eas_defeitos_e_a_ordem_de_corre\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "claude_claude_md_scripts_comunicacao",
+      "target": "claude_pend\u00eancias_conhecidas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "claude_claude_md_scripts_comunicacao",
+      "target": "claude_regra_de_ouro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "claude_claude_md_scripts_comunicacao",
+      "target": "claude_valida\u00e7\u00e3o_obrigat\u00f3ria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "claude_os_tr\u00eas_defeitos_e_a_ordem_de_corre\u00e7\u00e3o",
+      "target": "claude_1o_linhas_de_continua\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "claude_os_tr\u00eas_defeitos_e_a_ordem_de_corre\u00e7\u00e3o",
+      "target": "claude_2o_aspas_simples_aninhadas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "claude_os_tr\u00eas_defeitos_e_a_ordem_de_corre\u00e7\u00e3o",
+      "target": "claude_3o_setchoices_sem_fechamento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador",
+      "target": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L203",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "target": "docs_fluxo_orquestrador_checklist_de_sucesso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "target": "docs_fluxo_orquestrador_como_usar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "target": "docs_fluxo_orquestrador_depend\u00eancias_entre_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "target": "docs_fluxo_orquestrador_diagrama_de_fluxo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "target": "docs_fluxo_orquestrador_log_de_mudan\u00e7as",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "target": "docs_fluxo_orquestrador_monitoramento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "target": "docs_fluxo_orquestrador_tratamento_de_erros",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_fluxo_do_orquestrador_de_formul\u00e1rios",
+      "target": "docs_fluxo_orquestrador_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_depend\u00eancias_entre_scripts",
+      "target": "docs_fluxo_orquestrador_hierarquia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_como_usar",
+      "target": "docs_fluxo_orquestrador_op\u00e7\u00e3o_1_teste_r\u00e1pido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_como_usar",
+      "target": "docs_fluxo_orquestrador_op\u00e7\u00e3o_2_criar_todos_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_como_usar",
+      "target": "docs_fluxo_orquestrador_op\u00e7\u00e3o_3_monitorar_resultado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_tratamento_de_erros",
+      "target": "docs_fluxo_orquestrador_se_houver_timeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_tratamento_de_erros",
+      "target": "docs_fluxo_orquestrador_se_todos_falharem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_tratamento_de_erros",
+      "target": "docs_fluxo_orquestrador_se_um_formul\u00e1rio_falhar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_monitoramento",
+      "target": "docs_fluxo_orquestrador_verificar_progresso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/FLUXO-ORQUESTRADOR.md",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "docs_fluxo_orquestrador_monitoramento",
+      "target": "docs_fluxo_orquestrador_verificar_resultado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs",
+      "target": "docs_plano_ajuste_scripts_gs_plano_ajustar_scripts_gs_orquestrador_funcional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_plano_ajustar_scripts_gs_orquestrador_funcional",
+      "target": "docs_plano_ajuste_scripts_gs_ajustes_necess\u00e1rios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_plano_ajustar_scripts_gs_orquestrador_funcional",
+      "target": "docs_plano_ajuste_scripts_gs_depend\u00eancias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_plano_ajustar_scripts_gs_orquestrador_funcional",
+      "target": "docs_plano_ajuste_scripts_gs_estrutura_atual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_plano_ajustar_scripts_gs_orquestrador_funcional",
+      "target": "docs_plano_ajuste_scripts_gs_resumo_do_plano",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_plano_ajustar_scripts_gs_orquestrador_funcional",
+      "target": "docs_plano_ajuste_scripts_gs_riscos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_plano_ajustar_scripts_gs_orquestrador_funcional",
+      "target": "docs_plano_ajuste_scripts_gs_status_geral",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_plano_ajustar_scripts_gs_orquestrador_funcional",
+      "target": "docs_plano_ajuste_scripts_gs_verifica\u00e7\u00e3o_final",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_estrutura_atual",
+      "target": "docs_plano_ajuste_scripts_gs_orquestrador",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_estrutura_atual",
+      "target": "docs_plano_ajuste_scripts_gs_scripts_auxiliares",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_estrutura_atual",
+      "target": "docs_plano_ajuste_scripts_gs_scripts_de_aula_25_arquivos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_ajustes_necess\u00e1rios",
+      "target": "docs_plano_ajuste_scripts_gs_passo_1_verificar_integridade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_ajustes_necess\u00e1rios",
+      "target": "docs_plano_ajuste_scripts_gs_passo_2_garantir_acessibilidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_ajustes_necess\u00e1rios",
+      "target": "docs_plano_ajuste_scripts_gs_passo_3_melhorar_tratamento_de_erros",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_ajustes_necess\u00e1rios",
+      "target": "docs_plano_ajuste_scripts_gs_passo_4_consolidar_fun\u00e7\u00f5es_comuns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_ajustes_necess\u00e1rios",
+      "target": "docs_plano_ajuste_scripts_gs_passo_5_criar_fun\u00e7\u00e3o_de_teste",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PLANO-AJUSTE-SCRIPTS-GS.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "docs_plano_ajuste_scripts_gs_ajustes_necess\u00e1rios",
+      "target": "docs_plano_ajuste_scripts_gs_passo_6_documentar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_checklist_final",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_diagn\u00f3stico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_escopo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_notas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_objetivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_plano_de_execu\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_riscos_e_mitiga\u00e7\u00f5es",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_corre\u00e7\u00e3o_de_quebras_de_linha_formulario_principal_gs",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_verifica\u00e7\u00e3o_de_integridade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_etapa_1_reunir_linhas_de_continua\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_etapa_2_converter_aspas_internas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_etapa_3_fechar_blocos_setchoices_\u00f3rf\u00e3os",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/correcao-quebras-de-linha-formulario-principal.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "docs_correcao_quebras_de_linha_formulario_principal_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_correcao_quebras_de_linha_formulario_principal_etapa_4_valida\u00e7\u00e3o",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "d7902afcf66208398c7249aeed827a4bb75e027a"
+}

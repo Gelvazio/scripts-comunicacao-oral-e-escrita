@@ -1,0 +1,47 @@
+{
+  ".clasp.json": {
+    "mtime": 1790026299.4607804,
+    "ast_hash": "9306247256e648c45e4539784f696b3b",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1790030375.3298192,
+    "ast_hash": "bd6595c3da08bacd583d8265b75d65ee",
+    "semantic_hash": ""
+  },
+  "C\u00f3digo.js": {
+    "mtime": 1790026299.4514627,
+    "ast_hash": "b7dd5fc60213b2dbe791414dab56ae59",
+    "semantic_hash": ""
+  },
+  "appsscript.json": {
+    "mtime": 1790026299.4514627,
+    "ast_hash": "8a259b7644b7e028f3cf4325262557b1",
+    "semantic_hash": ""
+  },
+  "revisao.json": {
+    "mtime": 1790030350.5260158,
+    "ast_hash": "87b15d9e833c0cf5833b79dbf91df838",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1790030470.1448975,
+    "ast_hash": "124330bbe137667e82b76a8ed0a94eec",
+    "semantic_hash": ""
+  },
+  "docs/FLUXO-ORQUESTRADOR.md": {
+    "mtime": 1790026505.4467134,
+    "ast_hash": "16c77e94bcacaa76855030ed9423456c",
+    "semantic_hash": ""
+  },
+  "docs/PLANO-AJUSTE-SCRIPTS-GS.md": {
+    "mtime": 1790026509.8321507,
+    "ast_hash": "ce199fbd10066276c026a3312fcb1205",
+    "semantic_hash": ""
+  },
+  "docs/correcao-quebras-de-linha-formulario-principal.md": {
+    "mtime": 1790030427.3088715,
+    "ast_hash": "4952de0c153e02b62d4389a28665a979",
+    "semantic_hash": ""
+  }
+}

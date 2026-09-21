@@ -1,0 +1,6 @@
+# Apresentações originais — o conteúdo vive nos .md de mesmo nome.
+# Binários pesados (~13 MB cada) não entram no controle de versão.
+VERSAO-POWERPOINT/*.pptx
+
+# Cache do graphify
+graphify-out/cache/
