@@ -51,6 +51,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. Qual é a importância de "Processo Comunicativo" neste contexto?')
     .setChoices([
