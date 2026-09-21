@@ -149,11 +149,56 @@ Nenhum markdown ficou sem formulário e nenhum formulário ficou sem markdown.
 
 ---
 
+## ✅ Resultado após a regeneração
+
+As questões foram refeitas a partir do conteúdo dos markdowns (commit `031d6de`)
+e os arquivos `.gs` consolidados num só (commit `b2b829c`).
+
+| Indicador | Antes | Depois |
+|-----------|-------|--------|
+| Cobertura média de tópicos | 17,9% | **31,9%** |
+| Alternativas genéricas | 800 de 2.000 (40%) | **0** |
+| Questões sem valor avaliativo | 50 | **0** |
+| Resposta correta na 1ª posição | 500 de 500 | ~110 de 530 |
+| Questões no total | 500 | 530 (inclui o quiz de revisão) |
+| `addMultipleChoiceItem()` | 2.650 | **530** — 1 por questão |
+| `setIsQuiz(true)` | 0 | **26** |
+| `setPoints(1)` | 0 | **530** |
+
+### O que mudou nas questões
+
+Os distratores passaram a ser definições ou conceitos de **outros tópicos da
+mesma aula**, então acertar exige distinguir a matéria. Exemplo real da Aula 04:
+
+> **Segundo a aula, o que é "Concordância"?**
+> - Sinais que organizam pausas e sentidos das orações → *(é Pontuação)*
+> - **Ajuste harmônico de flexão entre termos da frase** ✔
+> - Regras formais para a escrita pública oficial → *(é Norma-padrão)*
+> - Relação em que um termo exige preposição própria → *(é Regência)*
+
+### Dois defeitos adicionais corrigidos
+
+1. **2.650 `addMultipleChoiceItem()` para 500 questões.** O padrão
+   `form.addMultipleChoiceItem().createChoice(...)` criava um item novo a cada
+   alternativa. O formulário publicado teria ~2.100 questões vazias.
+2. **`setIsQuiz` e `setPoints` inexistentes.** A descrição prometia pontuação
+   automática, mas nenhum formulário era configurado como quiz.
+
+### Pendência
+
+A cobertura de 31,9% é medida pela citação literal do título do slide. Muitas
+questões novas avaliam conteúdo de dentro do slide sem repetir seu título, então
+o número **subestima** a cobertura real. Ainda assim, quatro aulas ficaram abaixo
+de 25% (08, 15, 16 e 25) e podem receber uma segunda passada.
+
+---
+
 ## ✅ Checklist
 
 - [x] 25 markdowns lidos
 - [x] 25 formulários analisados
 - [x] Contagem de questões conferida — todos com 20
-- [x] Cobertura de tópicos medida — média de 17,9%
+- [x] Cobertura de tópicos medida — 17,9% antes, 31,9% depois
 - [x] Mapeamento markdown ↔ aula estabelecido
-- [ ] Regeneração das questões — **aguarda decisão**
+- [x] Regeneração das 530 questões concluída
+- [x] Validação com `node --check`

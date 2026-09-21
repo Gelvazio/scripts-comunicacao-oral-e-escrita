@@ -4,33 +4,40 @@ Instruções específicas deste projeto. Precedência máxima, acima do `CLAUDE.
 
 ---
 
-## 🔴 COMMIT DE REFERÊNCIA — FORMATAÇÃO CORRETA
+## 🔴 ESTADO DE REFERÊNCIA
 
-**`7f584fe` — `fix: corrigir sintaxe de FORMULARIO-PRINCIPAL.gs (versao de referencia)`**
+**`b2b829c` — `refactor: consolidar todos os .gs em FORMULARIO-PRINCIPAL.gs`**
 
-Este é o **único** commit em que `FORMULARIO-PRINCIPAL.gs` tem sintaxe válida.
-Toda alteração futura no arquivo parte dele, nunca de um commit anterior.
-
-```bash
-git show 7f584fe:FORMULARIO-PRINCIPAL.gs > referencia.gs
-```
-
-Estado validado em `7f584fe`:
+O projeto tem **um único arquivo de código**: `FORMULARIO-PRINCIPAL.gs`.
+Toda alteração parte deste commit. O marco anterior, `7f584fe`, foi o primeiro
+com sintaxe válida e continua útil como referência histórica.
 
 | Métrica | Valor |
 |---------|-------|
-| Linhas | 7.256 |
+| Linhas | 9.171 |
 | `node --check` | ✅ sintaxe válida |
-| Linhas com erro (`revisao.json`) | 0 |
-| Delimitadores não fechados | 0 |
-| `function` | 52 |
+| `function` | 60 |
+| Formulários de aula | 25, com 20 questões cada |
+| Quiz de revisão (Aulas 1–9) | 1, com 30 questões |
+| Questões no total | 530 |
+| `addMultipleChoiceItem()` | 530 — exatamente 1 por questão |
 | `createChoice(` | 2.120 |
-| `setChoices([` | 530 |
-| `setTitle(` | 663 |
-| `setRequired(true)` | 582 |
+| `createChoice(..., true)` | 530 — 1 correta por questão |
+| `setPoints(1)` | 530 |
+| `setIsQuiz(true)` | 26 |
+| `CODIGOS_VALIDOS` | declarado 1 vez |
+| Funções ou globais duplicadas | nenhuma |
 
-Diagnóstico completo: [`docs/correcao-quebras-de-linha-formulario-principal.md`](docs/correcao-quebras-de-linha-formulario-principal.md).
+Diagnósticos: [`docs/correcao-quebras-de-linha-formulario-principal.md`](docs/correcao-quebras-de-linha-formulario-principal.md)
+e [`docs/verificacao-cobertura-formularios.md`](docs/verificacao-cobertura-formularios.md).
 Relatório linha a linha: `revisao.json`.
+
+### Arquivos que não existem mais
+
+`CODIGOS.gs`, `VALIDADOR-CODIGO-UNICO.gs` e `Código.js` foram absorvidos em
+`b2b829c`. `Código.js` era cópia byte a byte do validador — como no Apps Script
+todos os arquivos dividem o mesmo escopo global, as sete funções se
+sobrescreviam. Não recrie esses arquivos.
 
 ---
 
@@ -110,23 +117,72 @@ linha com `.setTitle(` é questão nova (o bloco anterior deveria ter fechado).
 
 ---
 
+## 📝 PADRÃO OBRIGATÓRIO DE QUESTÃO
+
+Toda questão usa **uma variável**. O encadeamento direto cria um item novo a
+cada alternativa — foi assim que o arquivo chegou a 2.650 itens para 530
+questões, o que geraria ~2.100 questões vazias no formulário publicado.
+
+```javascript
+// ERRADO — cada form.addMultipleChoiceItem() cria OUTRO item no formulário
+form.addMultipleChoiceItem().setTitle('1. ...')
+  .setChoices([
+    form.addMultipleChoiceItem().createChoice('...', true)
+  ]).setRequired(true);
+
+// CERTO — um item, reaproveitado para criar as alternativas
+var q1 = form.addMultipleChoiceItem();
+q1.setTitle('1. ...');
+q1.setChoices([
+  q1.createChoice('...', false),
+  q1.createChoice('...', true)
+]);
+q1.setPoints(1);
+q1.setRequired(true);
+```
+
+`addMultipleChoiceItem()` tem de ser **igual ao número de questões**. Se for
+múltiplo disso, o encadeamento voltou.
+
+O formulário precisa de `form.setIsQuiz(true)` no cabeçalho e `setPoints(1)` em
+cada questão. Sem os dois, nada é pontuado — embora a descrição prometa nota
+automática ao enviar.
+
+---
+
+## 🎯 REGRA DAS QUESTÕES
+
+As questões saem do conteúdo real das aulas, que vive em
+`VERSAO-POWERPOINT/*.md`. **Nunca gere questão por template.**
+
+Os distratores vêm sempre de **outro conceito da mesma aula**, nunca de frases
+de descarte. Alternativas como `Não tem relevância prática`,
+`Apenas para contexto acadêmico`, `É um conceito desatualizado` ou
+`Aprender fórmulas matemáticas` deixam o aluno acertar por eliminação: existiam
+800 delas e foram eliminadas. A contagem correta hoje é **zero**.
+
+A posição da resposta correta varia. Se `createChoice(..., true)` aparecer
+sempre na primeira alternativa, o embaralhamento se perdeu.
+
+---
+
 ## ✅ VALIDAÇÃO OBRIGATÓRIA
 
-Nenhuma alteração em `FORMULARIO-PRINCIPAL.gs` é dada por concluída sem os dois
-comandos abaixo passando:
+Nenhuma alteração em `FORMULARIO-PRINCIPAL.gs` é dada por concluída sem o
+parser real passando:
 
 ```bash
 cp FORMULARIO-PRINCIPAL.gs /tmp/check.js && node --check /tmp/check.js
 ```
 
-E a conferência de integridade contra o commit de referência — as contagens
-precisam bater com a tabela do topo deste arquivo:
+E a conferência de integridade — as contagens precisam bater com a tabela do
+topo deste arquivo:
 
 ```bash
-for p in "^function " "createChoice(" "setChoices(\[" "setTitle("; do grep -c "$p" FORMULARIO-PRINCIPAL.gs; done
+for p in "^function " "addMultipleChoiceItem()" "createChoice(" "setPoints(1)" "setIsQuiz(true)"; do printf "%-26s %s\n" "$p" "$(grep -c "$p" FORMULARIO-PRINCIPAL.gs)"; done
 ```
 
-Se qualquer contagem divergir, houve **perda de conteúdo**: reverta e refaça.
+Se qualquer contagem divergir, houve perda de conteúdo ou regressão: reverta e refaça.
 
 ---
 
@@ -149,7 +205,7 @@ Estas são falhas de **conteúdo**, não de sintaxe. O arquivo roda com elas.
 
 ## ⚠️ REGRA DE OURO
 
-> O arquivo tem 7.256 linhas e 472 KB. **Nunca** edite `FORMULARIO-PRINCIPAL.gs`
+> O arquivo tem 9.171 linhas e 517 KB. **Nunca** edite `FORMULARIO-PRINCIPAL.gs`
 > linha a linha nem o reescreva inteiro. Use um script que faça a transformação,
 > com backup antes e `node --check` depois. Foi a edição manual que produziu os
 > 10 commits quebrados.
