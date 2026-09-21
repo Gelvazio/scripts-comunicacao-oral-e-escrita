@@ -17,7 +17,13 @@ function criarFormularioAula01() {
   var form = FormApp.create('Avaliação — Aula 01 · Processo Comunicativo · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Processo Comunicativo\n\n"Aula 01 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Processo Comunicativo\n\n' +
+    'Aula 01 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -136,7 +142,7 @@ function criarFormularioAula01() {
     .setChoices([
       form.addMultipleChoiceItem().createChoice('é um conjunto de técnicas treináveis que transformam oportunidades.
 Ao longo desta disciplina, você ', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Saber falar e escrever bem não é mágica'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Saber falar e escrever bem não é mágica"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -144,7 +150,7 @@ Ao longo desta disciplina, você ', true),
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "O Emissor"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('A Origem', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'O Emissor'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "O Emissor"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -152,7 +158,7 @@ Ao longo desta disciplina, você ', true),
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "O Receptor"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('O Destino', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'O Receptor'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "O Receptor"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -160,7 +166,7 @@ Ao longo desta disciplina, você ', true),
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "A Mensagem"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('O Conteúdo', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'A Mensagem'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "A Mensagem"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -169,7 +175,7 @@ Ao longo desta disciplina, você ', true),
     .setChoices([
       form.addMultipleChoiceItem().createChoice('o conjunto de ideias, sentimentos, instruções ou dados enviados.
 Para ser eficaz, ela precisa ter co', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'A mensagem é o objeto concreto da transmissão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "A mensagem é o objeto concreto da transmissão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -292,8 +298,8 @@ Para ser eficaz, ela precisa ter co',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -305,13 +311,13 @@ Para ser eficaz, ela precisa ter co',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -327,7 +333,13 @@ Comunicação oral estratégica e postura profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Preparação para Entrevistas
-Comunicação oral estratégica e postura profissional\n\n"Aula 02 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Comunicação oral estratégica e postura profissional\n\n' +
+    'Aula 02 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -449,7 +461,7 @@ Comunicação ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Entrevista"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Diálogo intencional para avaliar competências e perfil.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Entrevista'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Entrevista"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -457,7 +469,7 @@ Comunicação ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Postura"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Expressão corporal que transmite segurança e receptividade.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Postura'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Postura"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -465,7 +477,7 @@ Comunicação ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Argumentação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Apresentação lógica de fatos e aprendizados reais.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Argumentação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Argumentação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -473,7 +485,7 @@ Comunicação ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Autoconfiança"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Certeza consciente sobre o próprio valor e esforço.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Autoconfiança'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Autoconfiança"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -481,7 +493,7 @@ Comunicação ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Escuta Ativa e Atendimento', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Revisão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -608,8 +620,8 @@ Comunicação oral estratégica e postura profissional',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -621,13 +633,13 @@ Comunicação oral estratégica e postura profissional',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -640,7 +652,13 @@ function criarFormularioAula03() {
   var form = FormApp.create('Avaliação — Aula 03 · Estruturação de Textos Profissionais · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Estruturação de Textos Profissionais\n\n"Aula 03 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Estruturação de Textos Profissionais\n\n' +
+    'Aula 03 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -758,7 +776,7 @@ function criarFormularioAula03() {
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Coesão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('a costura do texto', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Coesão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Coesão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -766,7 +784,7 @@ function criarFormularioAula03() {
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Coerência"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('o sentido global', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Coerência'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Coerência"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -774,7 +792,7 @@ function criarFormularioAula03() {
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Parágrafo"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Unidade textual básica em torno de uma ideia central condutora.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Parágrafo'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Parágrafo"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -782,7 +800,7 @@ function criarFormularioAula03() {
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Estruturação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Organização lógica das ideias para orientar o leitor com clareza.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Estruturação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Estruturação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -790,7 +808,7 @@ function criarFormularioAula03() {
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Método STAR', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Revisão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -911,8 +929,8 @@ function analisarRespostasAula03() {
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -924,13 +942,13 @@ function analisarRespostasAula03() {
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -943,7 +961,13 @@ function criarFormularioAula04() {
   var form = FormApp.create('Avaliação — Aula 04 · Correção Gramatical Aplicada ao Trabalho · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Correção Gramatical Aplicada ao Trabalho\n\n"Aula 04 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Correção Gramatical Aplicada ao Trabalho\n\n' +
+    'Aula 04 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -1061,7 +1085,7 @@ function criarFormularioAula04() {
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Imagine enviar uma proposta comercial dizendo"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('“Não vamos cobrar taxa adicional”, mas esquecer o acento ou trocar uma vírgula de lugar, alterando o', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Imagine enviar uma proposta comercial dizendo'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Imagine enviar uma proposta comercial dizendo"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1069,7 +1093,7 @@ function criarFormularioAula04() {
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Norma-padrão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Regras formais para a escrita pública oficial.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Norma-padrão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Norma-padrão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1077,7 +1101,7 @@ function criarFormularioAula04() {
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pontuação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Sinais que organizam pausas e sentidos das orações.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pontuação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pontuação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1085,7 +1109,7 @@ function criarFormularioAula04() {
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Concordância"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Ajuste harmônico de flexão entre termos da frase.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Concordância'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Concordância"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1093,7 +1117,7 @@ function criarFormularioAula04() {
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Regência"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Relação em que um termo exige preposição própria.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Regência'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Regência"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1214,8 +1238,8 @@ function analisarRespostasAula04() {
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -1227,13 +1251,13 @@ function analisarRespostasAula04() {
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -1249,7 +1273,13 @@ Apresentação visual e clareza na escrita formal · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Formatação e Padronização de Documentos
-Apresentação visual e clareza na escrita formal\n\n"Aula 05 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Apresentação visual e clareza na escrita formal\n\n' +
+    'Aula 05 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -1371,7 +1401,7 @@ Apresentaç...'?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Compreender normas técnicas"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('aplicar margens, fontes institucionais, espaçamentos e alinhamentos corretos.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Compreender normas técnicas'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Compreender normas técnicas"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1379,7 +1409,7 @@ Apresentaç...'?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Estruturar hierarquia visual"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('usar títulos, subtítulos, ênfases e listas com intencionalidade clara.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Estruturar hierarquia visual'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Estruturar hierarquia visual"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1387,7 +1417,7 @@ Apresentaç...'?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Garantir acessibilidade e exportação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('produzir documentos limpos e salvá-los com segurança em formato PDF.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Garantir acessibilidade e exportação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Garantir acessibilidade e exportação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1395,7 +1425,7 @@ Apresentaç...'?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Formatação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Ajuste visual de fontes, margens e parágrafos.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Formatação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Formatação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1403,7 +1433,7 @@ Apresentaç...'?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Padronização"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Regras unificadas para consistência institucional.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Padronização'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Padronização"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1530,8 +1560,8 @@ Apresentação visual e clareza na escrita formal',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -1543,13 +1573,13 @@ Apresentação visual e clareza na escrita formal',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -1565,7 +1595,13 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Redação de E-mails Corporativos
-Comunicação escrita eficaz e profissional no ambiente de trabalho\n\n"Aula 06 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Comunicação escrita eficaz e profissional no ambiente de trabalho\n\n' +
+    'Aula 06 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -1687,7 +1723,7 @@ Comunica' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Recapitulação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Hierarquia Visual', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Recapitulação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Recapitulação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1695,7 +1731,7 @@ Comunica' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Quiz"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Normas de Apresentação Textual', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Quiz'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Quiz"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1703,7 +1739,7 @@ Comunica' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Qual é a principal função da hierarquia visual em textos corporativos?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1711,7 +1747,7 @@ Comunica' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Pergunta 2"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Por que devemos evitar parágrafos excessivamente longos em telas?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 2'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1719,7 +1755,7 @@ Comunica' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Pergunta 3"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Como o negrito deve ser empregado em documentos formais?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 3'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 3"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -1846,8 +1882,8 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -1859,13 +1895,13 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -1881,7 +1917,13 @@ Estrutura, objetividade e análise prática no mundo profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Elaboração de Relatórios Técnicos
-Estrutura, objetividade e análise prática no mundo profissional\n\n"Aula 07 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Estrutura, objetividade e análise prática no mundo profissional\n\n' +
+    'Aula 07 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2003,7 +2045,7 @@ Estrut' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Relatório"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Documento formal que expõe fatos apurados e conclusões técnicas.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Relatório'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Relatório"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2011,7 +2053,7 @@ Estrut' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Metodologia"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('instrumentos, ferramentas e etapas do procedimento.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Metodologia'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Metodologia"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2019,7 +2061,7 @@ Estrut' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Evidência"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Dado mensurável, fato auditável ou registro que comprova a ocorrência.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Evidência'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Evidência"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2027,7 +2069,7 @@ Estrut' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Impessoalidade"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Postura comunicativa neutra, focada no fato e isenta de opiniões.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Impessoalidade'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Impessoalidade"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2035,7 +2077,7 @@ Estrut' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('A redação no ambiente de trabalho', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Revisão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2162,8 +2204,8 @@ Estrutura, objetividade e análise prática no mundo profissional',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -2175,13 +2217,13 @@ Estrutura, objetividade e análise prática no mundo profissional',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -2197,7 +2239,13 @@ Agilidade, clareza e alinhamento na rotina corporativa · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Redação de Memorandos e Comunicações Internas
-Agilidade, clareza e alinhamento na rotina corporativa\n\n"Aula 08 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Agilidade, clareza e alinhamento na rotina corporativa\n\n' +
+    'Aula 08 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2318,7 +2366,7 @@ Agil...'?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Memorando"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Texto ágil entre setores para pedidos ou avisos internos.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Memorando'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Memorando"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2326,7 +2374,7 @@ Agil...'?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Comunicado"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Aviso oficial voltado para toda a equipe ou empresa.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Comunicado'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Comunicado"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2334,7 +2382,7 @@ Agil...'?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Concisão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Capacidade de transmitir o essencial com poucas palavras exatas.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Concisão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Concisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2342,7 +2390,7 @@ Agil...'?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Orientação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Instrução prática que guia o cumprimento de uma tarefa.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Orientação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Orientação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2350,7 +2398,7 @@ Agil...'?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Relatório Técnico', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Revisão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2477,8 +2525,8 @@ Agilidade, clareza e alinhamento na rotina corporativa',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -2490,13 +2538,13 @@ Agilidade, clareza e alinhamento na rotina corporativa',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -2512,7 +2560,13 @@ Como escrever passos claros, sequenciais e sem erros · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Procedimentos e Instruções
-Como escrever passos claros, sequenciais e sem erros\n\n"Aula 09 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como escrever passos claros, sequenciais e sem erros\n\n' +
+    'Aula 09 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2634,7 +2688,7 @@ Como escrever' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Recapitulando"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('O Memorando', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Recapitulando'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Recapitulando"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2642,7 +2696,7 @@ Como escrever' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pergunta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Qual é a finalidade central de um relatório técnico em comparação a um comunicado interno?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2650,7 +2704,7 @@ Como escrever' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 2"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Qual documento deve ser consultado quando um funcionário precisa aprender o passo a passo de uma tar', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 2'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2658,7 +2712,7 @@ Como escrever' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Pergunta 3"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Qual é o foco principal do memorando corporativo?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 3'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 3"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2666,7 +2720,7 @@ Como escrever' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Resposta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('O relatório documenta e analisa fatos e dados detalhados, enquanto o comunicado apenas transmite avi', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Resposta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Resposta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2793,8 +2847,8 @@ Como escrever passos claros, sequenciais e sem erros',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -2806,13 +2860,13 @@ Como escrever passos claros, sequenciais e sem erros',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -2828,7 +2882,13 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho. · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Plataformas Digitais de Comunicação
-Conectando equipes com eficiência, agilidade e clareza no trabalho.\n\n"Aula 10 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Conectando equipes com eficiência, agilidade e clareza no trabalho.\n\n' +
+    'Aula 10 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2950,7 +3010,7 @@ Cone' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Plataforma"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Ambiente digital integrado para gestão e mensagens.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Plataforma'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Plataforma"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2958,7 +3018,7 @@ Cone' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Síncrono"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Comunicação em tempo real, exigindo presença simultânea dos participantes.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Síncrono'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Síncrono"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2966,7 +3026,7 @@ Cone' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Assíncrono"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Troca de mensagens sem necessidade de resposta imediata ou simultaneidade.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Assíncrono'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Assíncrono"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2974,7 +3034,7 @@ Cone' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Ferramenta"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Aplicativo específico que executa funções operacionais e facilita fluxos.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Ferramenta'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Ferramenta"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -2982,7 +3042,7 @@ Cone' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Recapitulação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Procedimentos e Manuais', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Recapitulação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Recapitulação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3109,8 +3169,8 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho.',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -3122,13 +3182,13 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho.',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -3144,7 +3204,13 @@ Protegendo dados, canais e reputação no ambiente digital corporativo · SENAI'
 
   form.setDescription(
     'Avaliação Completa: Segurança da Informação e Privacidade
-Protegendo dados, canais e reputação no ambiente digital corporativo\n\n"Aula 11 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Protegendo dados, canais e reputação no ambiente digital corporativo\n\n' +
+    'Aula 11 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -3266,7 +3332,7 @@ Pr' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Segurança"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Proteção de sistemas e dados contra acessos não autorizados.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Segurança'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Segurança"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3274,7 +3340,7 @@ Pr' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Privacidade"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Direito do indivíduo de controlar o uso de seus dados pessoais.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Privacidade'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Privacidade"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3282,7 +3348,7 @@ Pr' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Confidencialidade"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Garantia de que a informação só é acessível por pessoas autorizadas.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Confidencialidade'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Confidencialidade"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3290,7 +3356,7 @@ Pr' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Phishing"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Golpe eletrônico que usa mensagens falsas para roubar senhas e dados.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Phishing'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Phishing"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3298,7 +3364,7 @@ Pr' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Canais de Comunicação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Revisão', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Canais de Comunicação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Canais de Comunicação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3425,8 +3491,8 @@ Protegendo dados, canais e reputação no ambiente digital corporativo',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -3438,13 +3504,13 @@ Protegendo dados, canais e reputação no ambiente digital corporativo',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -3460,7 +3526,13 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis · SENAI
 
   form.setDescription(
     'Avaliação Completa: Comunicação Eficaz
-Como transformar ideias em mensagens claras, precisas e compreensíveis\n\n"Aula 12 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como transformar ideias em mensagens claras, precisas e compreensíveis\n\n' +
+    'Aula 12 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -3582,7 +3654,7 @@ Como transformar idei' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Clareza"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Ausência de obscuridade; mensagem sem margem a dúvidas.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Clareza'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Clareza"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3590,7 +3662,7 @@ Como transformar idei' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Objetividade"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Foco direto no propósito sem rodeios desnecessários.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Objetividade'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Objetividade"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3598,7 +3670,7 @@ Como transformar idei' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Concisão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Transmissão do máximo de ideias com o mínimo de termos.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Concisão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Concisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3606,7 +3678,7 @@ Como transformar idei' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Coerência"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Discurso e Ação', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Coerência'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Coerência"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3614,7 +3686,7 @@ Como transformar idei' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Retomada"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('O Processo Comunicativo', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Retomada'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Retomada"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3741,8 +3813,8 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -3754,13 +3826,13 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -3776,7 +3848,13 @@ Convivência e postura ética no ambiente virtual · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Etiqueta Digital e Netiqueta
-Convivência e postura ética no ambiente virtual\n\n"Aula 13 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Convivência e postura ética no ambiente virtual\n\n' +
+    'Aula 13 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -3898,7 +3976,7 @@ Convivência' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Netiqueta"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Boas maneiras e respeito na internet.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Netiqueta'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Netiqueta"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3906,7 +3984,7 @@ Convivência' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Etiqueta"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Convenções sociais de respeito mútuo.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Etiqueta'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Etiqueta"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3914,7 +3992,7 @@ Convivência' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Convivência"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Coabitar pacificamente espaços comuns.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Convivência'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Convivência"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3922,7 +4000,7 @@ Convivência' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Postura"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Atitude ética e responsabilidade ativa.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Postura'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Postura"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -3930,7 +4008,7 @@ Convivência' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Recapitulando"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Segurança e Privacidade', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Recapitulando'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Recapitulando"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4057,8 +4135,8 @@ Convivência e postura ética no ambiente virtual',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -4070,13 +4148,13 @@ Convivência e postura ética no ambiente virtual',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -4092,7 +4170,13 @@ Práticas e ferramentas para produzir em equipe digital · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Trabalho Remoto e Colaboração
-Práticas e ferramentas para produzir em equipe digital\n\n"Aula 14 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Práticas e ferramentas para produzir em equipe digital\n\n' +
+    'Aula 14 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -4214,7 +4298,7 @@ Práticas e' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Pergunta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Por que devemos evitar escrever frases inteiras em letras maiúsculas no chat de trabalho?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4222,7 +4306,7 @@ Práticas e' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pergunta 2"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Qual é o papel do microfone mudo durante uma videoconferência com muitas pessoas?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 2'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4230,7 +4314,7 @@ Práticas e' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 3"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('O que devemos checar antes de enviar uma mensagem com dúvidas em grupo?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 3'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 3"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4238,7 +4322,7 @@ Práticas e' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Resposta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Porque letras maiúsculas transmitem a impressão de grito ou agressividade.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Resposta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Resposta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4246,7 +4330,7 @@ Práticas e' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Resposta 2"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Evitar que ruídos do ambiente atrapalhem quem está com a palavra.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Resposta 2'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Resposta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4373,8 +4457,8 @@ Práticas e ferramentas para produzir em equipe digital',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -4386,13 +4470,13 @@ Práticas e ferramentas para produzir em equipe digital',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -4408,7 +4492,13 @@ O poder dos sinais não-verbais no ambiente profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Linguagem Corporal e Comunicação
-O poder dos sinais não-verbais no ambiente profissional\n\n"Aula 15 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+O poder dos sinais não-verbais no ambiente profissional\n\n' +
+    'Aula 15 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -4530,7 +4620,7 @@ O poder' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Não-verbal"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Todo sinal comunicado sem palavras faladas ou escritas.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Não-verbal'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Não-verbal"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4538,7 +4628,7 @@ O poder' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Postura"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Posição sustentada do corpo que reflete estados internos e atitude.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Postura'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Postura"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4546,7 +4636,7 @@ O poder' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Proxêmica"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Estudo do uso do espaço físico e da distância interpessoal.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Proxêmica'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Proxêmica"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4554,7 +4644,7 @@ O poder' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Congruência"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Harmonia precisa entre o que a voz diz e o corpo expressa.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Congruência'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Congruência"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4562,7 +4652,7 @@ O poder' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Aulas Anteriores', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Revisão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4689,8 +4779,8 @@ O poder dos sinais não-verbais no ambiente profissional',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -4702,13 +4792,13 @@ O poder dos sinais não-verbais no ambiente profissional',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -4724,7 +4814,13 @@ A harmonia perfeita entre corpo, voz e mensagem profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Gestual, Tom de Voz e Sincronismo
-A harmonia perfeita entre corpo, voz e mensagem profissional\n\n"Aula 16 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+A harmonia perfeita entre corpo, voz e mensagem profissional\n\n' +
+    'Aula 16 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -4846,7 +4942,7 @@ A harm' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Gestual"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Conjunto de movimentos de braços e mãos que acompanham o discurso.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Gestual'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Gestual"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4854,7 +4950,7 @@ A harm' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Sincronismo"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Coincidência temporal perfeita entre gesto, palavra e respiração.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Sincronismo'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Sincronismo"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4862,7 +4958,7 @@ A harm' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Ênfase"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Destaque vocal ou gestual dado a palavras-chave estratégicas.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Ênfase'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Ênfase"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4870,7 +4966,7 @@ A harm' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Presença"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Domínio consciente do espaço físico, olhar firme e segurança corporal.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Presença'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Presença"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -4878,7 +4974,7 @@ A harm' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "A postura é a âncora de qualquer fala"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('pés alinhados à largura dos ombros distribuem o peso com equilíbrio, abrindo a caixa torácica e faci', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'A postura é a âncora de qualquer fala'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "A postura é a âncora de qualquer fala"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5005,8 +5101,8 @@ A harmonia perfeita entre corpo, voz e mensagem profissional',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -5018,13 +5114,13 @@ A harmonia perfeita entre corpo, voz e mensagem profissional',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -5040,7 +5136,13 @@ Unindo escrita técnica, oratória e ferramentas digitais · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Integração Prática: O Projeto Capstone
-Unindo escrita técnica, oratória e ferramentas digitais\n\n"Aula 17 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Unindo escrita técnica, oratória e ferramentas digitais\n\n' +
+    'Aula 17 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -5163,7 +5265,7 @@ U' em sua rotina profissional?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('O Projeto Capstone
 Unindo escrita técnica, oratória e ferramentas digitais', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Integração Prática'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Integração Prática"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5171,7 +5273,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Integração"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('União harmoniosa de diferentes partes em um sistema único e funcional.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Integração'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Integração"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5179,7 +5281,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Projeto"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Esforço temporário planejado para criar um resultado ou solução específica.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Projeto'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Projeto"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5187,7 +5289,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Aplicação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Uso concreto de teorias e regras em situações reais e práticas.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Aplicação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Aplicação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5195,7 +5297,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Trabalho"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Atividade coordenada com empenho físico e mental para atingir um objetivo.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Trabalho'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Trabalho"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5323,8 +5425,8 @@ Unindo escrita técnica, oratória e ferramentas digitais',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -5336,13 +5438,13 @@ Unindo escrita técnica, oratória e ferramentas digitais',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -5355,7 +5457,13 @@ function criarFormularioAula18() {
   var form = FormApp.create('Avaliação — Aula 18 · Avaliação Final e Encerramento · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Avaliação Final e Encerramento\n\n"Aula 18 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Avaliação Final e Encerramento\n\n' +
+    'Aula 18 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -5473,7 +5581,7 @@ function criarFormularioAula18() {
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Lembre-se do primeiro dia de aula"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('o nervosismo diante de uma pergunta, a dúvida ao estruturar um e-mail formal ou a insegurança ao fal', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Lembre-se do primeiro dia de aula'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Lembre-se do primeiro dia de aula"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5481,7 +5589,7 @@ function criarFormularioAula18() {
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Avaliação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Medição sistemática de conhecimentos e habilidades com critérios claros.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Avaliação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Avaliação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5489,7 +5597,7 @@ function criarFormularioAula18() {
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Apresentação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Ato de expor ideias a um público com clareza, técnica e empatia.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Apresentação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Apresentação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5497,7 +5605,7 @@ function criarFormularioAula18() {
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Desempenho"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Demonstração prática e observável das competências exigidas.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Desempenho'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Desempenho"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5505,7 +5613,7 @@ function criarFormularioAula18() {
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Evolução"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Progresso contínuo verificado entre o ponto de partida e o atual.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Evolução'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Evolução"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5626,8 +5734,8 @@ function analisarRespostasAula18() {
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -5639,13 +5747,13 @@ function analisarRespostasAula18() {
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -5661,7 +5769,13 @@ Como transformar respostas em ferramentas de crescimento e alinhamento · SENAI'
 
   form.setDescription(
     'Avaliação Completa: O Ciclo do Feedback na Comunicação
-Como transformar respostas em ferramentas de crescimento e alinhamento\n\n"Aula 19 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como transformar respostas em ferramentas de crescimento e alinhamento\n\n' +
+    'Aula 19 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -5783,7 +5897,7 @@ Como ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Feedback"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Retorno com avaliação sobre mensagem ou tarefa realizada.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Feedback'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Feedback"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5791,7 +5905,7 @@ Como ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Bidirecional"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Fluxo contínuo que vai e volta entre os dois interlocutores.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Bidirecional'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Bidirecional"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5799,7 +5913,7 @@ Como ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Escuta"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Ação ativa e consciente de compreender o que o outro diz.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Escuta'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Escuta"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5807,7 +5921,7 @@ Como ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Alinhamento"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Ajuste conjunto de metas e expectativas na equipe.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Alinhamento'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Alinhamento"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5815,7 +5929,7 @@ Como ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Elogio Inicial"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('“Sua introdução foi dinâmica e prendeu a atenção de toda a turma.”', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Elogio Inicial'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Elogio Inicial"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -5942,8 +6056,8 @@ Como transformar respostas em ferramentas de crescimento e alinhamento',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -5955,13 +6069,13 @@ Como transformar respostas em ferramentas de crescimento e alinhamento',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -5977,7 +6091,13 @@ Adequação comunicativa, registros e impacto profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Contextos Formais versus Informais
-Adequação comunicativa, registros e impacto profissional\n\n"Aula 20 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Adequação comunicativa, registros e impacto profissional\n\n' +
+    'Aula 20 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6099,7 +6219,7 @@ Adequ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Revisão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Feedback Construtivo', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Revisão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6107,7 +6227,7 @@ Adequ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pergunta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Qual é o principal propósito do feedback bidirecional no ciclo comunicativo?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6115,7 +6235,7 @@ Adequ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 2"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Por que um feedback deve focar no comportamento ou mensagem, e não na pessoa?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 2'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6123,7 +6243,7 @@ Adequ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Pergunta 3"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('O que caracteriza um feedback eficaz no ambiente acadêmico ou profissional?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 3'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 3"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6131,7 +6251,7 @@ Adequ' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Resposta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Permitir que emissor e receptor alinhem entendimentos e ajustem a mensagem.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Resposta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Resposta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6258,8 +6378,8 @@ Adequação comunicativa, registros e impacto profissional',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -6271,13 +6391,13 @@ Adequação comunicativa, registros e impacto profissional',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -6293,7 +6413,13 @@ Consolidação e Prática do Módulo 1 · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Síntese dos Fundamentos da Comunicação
-Consolidação e Prática do Módulo 1\n\n"Aula 21 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Consolidação e Prática do Módulo 1\n\n' +
+    'Aula 21 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6415,7 +6541,7 @@ C' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Integrar os 4 pilares do Módulo 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('elementos, eficácia, feedback e registros linguísticos.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Integrar os 4 pilares do Módulo 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Integrar os 4 pilares do Módulo 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6423,7 +6549,7 @@ C' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Síntese"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Capacidade de condensar informações centrais com clareza.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Síntese'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Síntese"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6431,7 +6557,7 @@ C' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Mapeamento"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Identificação sistemática dos fluxos e ruídos no canal.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Mapeamento'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Mapeamento"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6439,7 +6565,7 @@ C' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Contexto"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Ambiente social e cultural que define o tom do diálogo.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Contexto'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Contexto"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6447,7 +6573,7 @@ C' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Integridade"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Fidelidade aos fatos e ética no trato das informações.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Integridade'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Integridade"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6574,8 +6700,8 @@ Consolidação e Prática do Módulo 1',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -6587,13 +6713,13 @@ Consolidação e Prática do Módulo 1',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -6609,7 +6735,13 @@ Como planejar discursos memoráveis, claros e persuasivos · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Estrutura de Apresentações
-Como planejar discursos memoráveis, claros e persuasivos\n\n"Aula 22 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como planejar discursos memoráveis, claros e persuasivos\n\n' +
+    'Aula 22 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6731,7 +6863,7 @@ Como planejar' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Estrutura"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Esqueleto que organiza ideias e guia a audiência.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Estrutura'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Estrutura"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6739,7 +6871,7 @@ Como planejar' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Roteiro"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Guia de tópicos que apoia a fala sem leitura fixa.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Roteiro'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Roteiro"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6747,7 +6879,7 @@ Como planejar' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pacing"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Gestão da velocidade, pausas e tempo da fala.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pacing'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pacing"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6755,7 +6887,7 @@ Como planejar' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Persuasão"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Capacidade de engajar e motivar reflexão.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Persuasão'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Persuasão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6763,7 +6895,7 @@ Como planejar' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Pergunta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Qual componente do processo comunicativo confirma que a mensagem foi recebida e compreendida?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -6890,8 +7022,8 @@ Como planejar discursos memoráveis, claros e persuasivos',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -6903,13 +7035,13 @@ Como planejar discursos memoráveis, claros e persuasivos',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -6922,7 +7054,13 @@ function criarFormularioAula23() {
   var form = FormApp.create('Avaliação — Aula 23 · Técnicas de Oratória e Expressão Vocal · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Técnicas de Oratória e Expressão Vocal\n\n"Aula 23 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Técnicas de Oratória e Expressão Vocal\n\n' +
+    'Aula 23 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -7040,7 +7178,7 @@ function criarFormularioAula23() {
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Quiz"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Estrutura da Apresentação', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Quiz'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Quiz"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7048,7 +7186,7 @@ function criarFormularioAula23() {
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pergunta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Qual é o papel principal da abertura em um discurso?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7056,7 +7194,7 @@ function criarFormularioAula23() {
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 2"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('O que deve compor o desenvolvimento de uma boa apresentação?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 2'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7064,7 +7202,7 @@ function criarFormularioAula23() {
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Pergunta 3"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Como um fechamento de impacto deve finalizar uma exposição oral?', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pergunta 3'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 3"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7072,7 +7210,7 @@ function criarFormularioAula23() {
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Resposta 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Capturar a atenção do público, gerar empatia e definir com clareza o tema.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Resposta 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Resposta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7193,8 +7331,8 @@ function analisarRespostasAula23() {
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -7206,13 +7344,13 @@ function analisarRespostasAula23() {
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -7228,7 +7366,13 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência · SENA
 
   form.setDescription(
     'Avaliação Completa: Participação e Condução de Reuniões
-Como liderar, intervir com firmeza e registrar decisões com eficiência\n\n"Aula 24 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+Como liderar, intervir com firmeza e registrar decisões com eficiência\n\n' +
+    'Aula 24 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -7350,7 +7494,7 @@ Como' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Reunião"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Encontro formal para alinhar equipes e tomar decisões.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Reunião'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Reunião"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7358,7 +7502,7 @@ Como' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pauta"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Lista prévia de tópicos com metas e tempos definidos para guiar o diálogo.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Pauta'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pauta"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7366,7 +7510,7 @@ Como' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Síntese"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Resumo claro dos debates, destacando os pontos centrais.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Síntese'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Síntese"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7374,7 +7518,7 @@ Como' em sua rotina profissional?')
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Mediação"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Intervenção equilibrada para harmonizar opiniões e resolver desacordos no grupo.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Mediação'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Mediação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7511,8 +7655,8 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -7524,13 +7668,13 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -7543,7 +7687,13 @@ function criarFormularioAula25() {
   var form = FormApp.create('Avaliação — Aula 25 · Atendimento e Escuta Ativa · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Atendimento e Escuta Ativa\n\n"Aula 25 — UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"20 questões | 20 pontos no total\n"Tempo estimado: 30-40 minutos\n"Cobertura: 100% do assunto da aula\n"Você verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Atendimento e Escuta Ativa\n\n' +
+    'Aula 25 — UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '20 questões | 20 pontos no total\n' +
+    'Tempo estimado: 30-40 minutos\n' +
+    'Cobertura: 100% do assunto da aula\n' +
+    'Você verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -7661,7 +7811,7 @@ function criarFormularioAula25() {
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Reuniões Eficientes"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Papéis e Dinâmica', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Reuniões Eficientes'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Reuniões Eficientes"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7669,7 +7819,7 @@ function criarFormularioAula25() {
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Técnica 1"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Parafraseamento', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Técnica 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Técnica 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7677,7 +7827,7 @@ function criarFormularioAula25() {
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Técnica 2"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Validação Emocional', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Técnica 2'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Técnica 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7685,7 +7835,7 @@ function criarFormularioAula25() {
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Técnica 3"?')
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Perguntas Abertas', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Técnica 3'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Técnica 3"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7694,7 +7844,7 @@ function criarFormularioAula25() {
     .setChoices([
       form.addMultipleChoiceItem().createChoice('Tensão Alta
 Tom de voz baixo e pausas intencionais de silêncio.', true),
-      form.addMultipleChoiceItem().createChoice('Conceito oposto a 'Fase 1'', false),
+      form.addMultipleChoiceItem().createChoice('Conceito oposto a "Fase 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
@@ -7816,8 +7966,8 @@ Tom de voz baixo e pausas intencionais de silêncio.',
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/20 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/20 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -7829,13 +7979,13 @@ Tom de voz baixo e pausas intencionais de silêncio.',
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
-    Logger.log('   Média: ' + media.toFixed(1) + '/20 (' + ((media/20)*100).toFixed(0) + '%)');
-    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/20');
-    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/20');
-    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
+    Logger.log('   Média: " + media.toFixed(1) + "/20 (' + ((media/20)*100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: " + maior.toFixed(1) + "/20');
+    Logger.log('   Menor nota: " + menor.toFixed(1) + "/20');
+    Logger.log('   Variação: " + (maior - menor).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 14; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
 
@@ -7848,7 +7998,17 @@ function criarQuizRevisao() {
   var form = FormApp.create('Revisão Integrada — Aulas 1 a 9 · Comunicação Oral e Escrita · SENAI');
 
   form.setDescription(
-    'REVISÃO INTEGRADA: Aulas 1 a 9\n\n"UC Introdução à Comunicação Oral e Escrita\n"Professor: Gelvazio\n\n"30 questões | 30 pontos no total\n"Tempo estimado: 45-60 minutos\n"Cobertura: Consolidação de todos os tópicos das aulas 1-9\n"Você verá sua pontuação e feedback detalhado ao enviar!\n\n"OBJETIVOS:\n"- Revisar conceitos principais das aulas 1-9\n"- Identificar áreas que precisam de reforço\n"- Preparar-se para avaliações posteriores'
+    'REVISÃO INTEGRADA: Aulas 1 a 9\n\n' +
+    'UC Introdução à Comunicação Oral e Escrita\n' +
+    'Professor: Gelvazio\n\n' +
+    '30 questões | 30 pontos no total\n' +
+    'Tempo estimado: 45-60 minutos\n' +
+    'Cobertura: Consolidação de todos os tópicos das aulas 1-9\n' +
+    'Você verá sua pontuação e feedback detalhado ao enviar!\n\n' +
+    'OBJETIVOS:\n' +
+    '- Revisar conceitos principais das aulas 1-9\n' +
+    '- Identificar áreas que precisam de reforço\n' +
+    '- Preparar-se para avaliações posteriores'
   );
 
   form.setCollectEmail(false);
@@ -8226,11 +8386,11 @@ function analisarRespostasRevisao() {
     }
 
     Logger.log('👤 ' + email);
-    Logger.log('   Acertos: ' + acertos + '/' + total);
-    Logger.log('   Nota: ' + nota.toFixed(1) + '/30 (' + percentual.toFixed(0) + '%)');
-    Logger.log('   Bloco 1 (Fundamentos): ' + acertos_bloco1 + '/9');
-    Logger.log('   Bloco 2 (Apresentações): ' + acertos_bloco2 + '/9');
-    Logger.log('   Bloco 3 (Profissional): ' + acertos_bloco3 + '/12');
+    Logger.log('   Acertos: " + acertos + "/' + total);
+    Logger.log('   Nota: " + nota.toFixed(1) + "/30 (' + percentual.toFixed(0) + '%)');
+    Logger.log('   Bloco 1 (Fundamentos): " + acertos_bloco1 + "/9');
+    Logger.log('   Bloco 2 (Apresentações): " + acertos_bloco2 + "/9');
+    Logger.log('   Bloco 3 (Profissional): " + acertos_bloco3 + "/12');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
@@ -8243,17 +8403,17 @@ function analisarRespostasRevisao() {
 
     Logger.log('─────────────────────────────────────────────────');
     Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS (Revisão Aulas 1-9)');
-    Logger.log('   Média Geral: ' + media.toFixed(1) + '/30 (' + ((media/30)*100).toFixed(0) + '%)');
+    Logger.log('   Média Geral: " + media.toFixed(1) + "/30 (' + ((media/30)*100).toFixed(0) + '%)');
     Logger.log('');
-    Logger.log('   Bloco 1 (Fundamentos): ' + media_bloco1.toFixed(0) + '%');
-    Logger.log('   Bloco 2 (Apresentações): ' + media_bloco2.toFixed(0) + '%');
-    Logger.log('   Bloco 3 (Comunicação Profissional): ' + media_bloco3.toFixed(0) + '%');
+    Logger.log('   Bloco 1 (Fundamentos): " + media_bloco1.toFixed(0) + "%');
+    Logger.log('   Bloco 2 (Apresentações): " + media_bloco2.toFixed(0) + "%');
+    Logger.log('   Bloco 3 (Comunicação Profissional): " + media_bloco3.toFixed(0) + "%');
     Logger.log('');
-    Logger.log('   Maior nota: ' + Math.max.apply(null, todasAsNotas).toFixed(1) + '/30');
-    Logger.log('   Menor nota: ' + Math.min.apply(null, todasAsNotas).toFixed(1) + '/30');
-    Logger.log('   Variação: ' + (Math.max.apply(null, todasAsNotas) - Math.min.apply(null, todasAsNotas)).toFixed(1) + ' pontos');
+    Logger.log('   Maior nota: " + Math.max.apply(null, todasAsNotas).toFixed(1) + "/30');
+    Logger.log('   Menor nota: " + Math.min.apply(null, todasAsNotas).toFixed(1) + "/30');
+    Logger.log('   Variação: " + (Math.max.apply(null, todasAsNotas) - Math.min.apply(null, todasAsNotas)).toFixed(1) + " pontos');
 
     var aprovados = todasAsNotas.filter(function(n) { return n >= 21; }).length;
-    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
+    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
   }
 }
