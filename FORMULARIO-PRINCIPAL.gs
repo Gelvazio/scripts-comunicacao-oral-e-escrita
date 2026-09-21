@@ -17,7 +17,7 @@ function criarFormularioAula01() {
   var form = FormApp.create('Avaliação — Aula 01 · Processo Comunicativo · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Processo Comunicativo\n\nAula 01 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Processo ComunicativoAula 01 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -60,6 +60,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Introdução à Comunicação Oral e Escrita..."?')
     .setChoices([
@@ -67,6 +68,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. Qual é a importância de "Por que nos desentendemos?" neste contexto?')
@@ -76,6 +78,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. De acordo com a aula, qual é a relevância de: "Você já enviou uma mensagem de texto simples e a o..."?')
     .setChoices([
@@ -83,6 +86,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. Qual é a importância de "Objetivos da Aula de Hoje" neste contexto?')
@@ -92,6 +96,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria "Processo Comunicativo" em sua rotina profissional?')
     .setChoices([
@@ -99,6 +104,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Introdução à Comunicação Oral e Escrita" em sua rotina profissional?')
@@ -108,6 +114,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Por que nos desentendemos?" em sua rotina profissional?')
     .setChoices([
@@ -115,6 +122,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Você já enviou uma mensagem de texto sim" em sua rotina profissional?')
@@ -124,6 +132,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Objetivos da Aula de Hoje" em sua rotina profissional?')
     .setChoices([
@@ -131,6 +140,7 @@ function criarFormularioAula01() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Saber falar e escrever bem não é mágica"?')
@@ -141,6 +151,7 @@ Ao longo desta disciplina, você ', true),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "O Emissor"?')
     .setChoices([
@@ -148,6 +159,7 @@ Ao longo desta disciplina, você ', true),
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "O Emissor"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "O Receptor"?')
@@ -157,6 +169,7 @@ Ao longo desta disciplina, você ', true),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "A Mensagem"?')
     .setChoices([
@@ -164,6 +177,7 @@ Ao longo desta disciplina, você ', true),
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "A Mensagem"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "A mensagem é o objeto concreto da transmissão"?')
@@ -174,6 +188,7 @@ Para ser eficaz, ela precisa ter co', true),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar "Processo Comunicativo"?')
     .setChoices([
@@ -181,6 +196,7 @@ Para ser eficaz, ela precisa ter co', true),
       form.addMultipleChoiceItem().createChoice('Memorizar datas e eventos históricos', false),
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
@@ -190,6 +206,7 @@ Para ser eficaz, ela precisa ter co', true),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
     .setChoices([
@@ -198,6 +215,7 @@ Para ser eficaz, ela precisa ter co', true),
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de "Processo Comunicativo"?')
     .setChoices([
@@ -205,6 +223,7 @@ Para ser eficaz, ela precisa ter co', true),
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -328,7 +347,7 @@ Comunicação oral estratégica e postura profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Preparação para Entrevistas
-Comunicação oral estratégica e postura profissional\n\nAula 02 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Comunicação oral estratégica e postura profissionalAula 02 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -364,6 +383,7 @@ Comunicação oral estratégica e postura profissional', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Preparação para Entrevistas
 Comunicação oral estra...'?')
@@ -373,6 +393,7 @@ Comunicação oral estra...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. Qual é a importância de "O que define uma contratação?" neste contexto?')
     .setChoices([
@@ -380,6 +401,7 @@ Comunicação oral estra...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Dois candidatos possuem as mesmas notas escolares ..."?')
@@ -389,6 +411,7 @@ Comunicação oral estra...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos da Nossa Aula" neste contexto?')
     .setChoices([
@@ -397,6 +420,7 @@ Comunicação oral estra...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Compreender a entrevista como um contexto formal d..."?')
     .setChoices([
@@ -404,6 +428,7 @@ Comunicação oral estra...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Preparação para Entrevistas
@@ -414,6 +439,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O que define uma contratação?" em sua rotina profissional?')
     .setChoices([
@@ -421,6 +447,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Dois candidatos possuem as mesmas notas " em sua rotina profissional?')
@@ -430,6 +457,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos da Nossa Aula" em sua rotina profissional?')
     .setChoices([
@@ -437,6 +465,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Compreender a entrevista como um context" em sua rotina profissional?')
@@ -446,6 +475,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Entrevista"?')
     .setChoices([
@@ -453,6 +483,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Entrevista"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Postura"?')
@@ -462,6 +493,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Argumentação"?')
     .setChoices([
@@ -469,6 +501,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Argumentação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Autoconfiança"?')
@@ -478,6 +511,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
@@ -485,6 +519,7 @@ Comunicação ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Preparação para Entrevistas
@@ -495,6 +530,7 @@ Comunicação oral estratégica e postura profissional'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -502,6 +538,7 @@ Comunicação oral estratégica e postura profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -511,6 +548,7 @@ Comunicação oral estratégica e postura profissional'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Preparação para Entrevistas
 Comunicação oral estratégica e postura profissional'?')
@@ -519,6 +557,7 @@ Comunicação oral estratégica e postura profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -641,7 +680,7 @@ function criarFormularioAula03() {
   var form = FormApp.create('Avaliação — Aula 03 · Estruturação de Textos Profissionais · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Estruturação de Textos Profissionais\n\nAula 03 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Estruturação de Textos ProfissionaisAula 03 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -675,6 +714,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: "Estruturação de Textos Profissionais..."?')
     .setChoices([
@@ -682,6 +722,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Comunicação escrita com clareza, coesão e impacto ..."?')
@@ -691,6 +732,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Palavras que constroem ou travam negócios..."?')
     .setChoices([
@@ -698,6 +740,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. De acordo com a aula, qual é a relevância de: "Você já recebeu uma mensagem tão confusa que não s..."?')
@@ -707,6 +750,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. Qual é a importância de "Objetivos de aprendizagem" neste contexto?')
     .setChoices([
@@ -714,6 +758,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria "Estruturação de Textos Profissionais" em sua rotina profissional?')
@@ -723,6 +768,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Comunicação escrita com clareza, coesão " em sua rotina profissional?')
     .setChoices([
@@ -730,6 +776,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Palavras que constroem ou travam negócio" em sua rotina profissional?')
@@ -739,6 +786,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Você já recebeu uma mensagem tão confusa" em sua rotina profissional?')
     .setChoices([
@@ -746,6 +794,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Objetivos de aprendizagem" em sua rotina profissional?')
@@ -755,6 +804,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Coesão"?')
     .setChoices([
@@ -762,6 +812,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Coesão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Coerência"?')
@@ -771,6 +822,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Parágrafo"?')
     .setChoices([
@@ -778,6 +830,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Parágrafo"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Estruturação"?')
@@ -787,6 +840,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
@@ -794,6 +848,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar "Estruturação de Textos Profissionais"?')
@@ -803,6 +858,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -810,6 +866,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -819,6 +876,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de "Estruturação de Textos Profissionais"?')
     .setChoices([
@@ -826,6 +884,7 @@ function criarFormularioAula03() {
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -944,7 +1003,7 @@ function criarFormularioAula04() {
   var form = FormApp.create('Avaliação — Aula 04 · Correção Gramatical Aplicada ao Trabalho · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Correção Gramatical Aplicada ao Trabalho\n\nAula 04 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Correção Gramatical Aplicada ao TrabalhoAula 04 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -978,6 +1037,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: "Correção Gramatical Aplicada ao Trabalho..."?')
     .setChoices([
@@ -985,6 +1045,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Precisão linguística e clareza nos documentos corp..."?')
@@ -994,6 +1055,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine enviar uma proposta comercial dizendo: “Nã..."?')
     .setChoices([
@@ -1001,6 +1063,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. De acordo com a aula, qual é a relevância de: "Identificar e corrigir deslizes comuns de concordâ..."?')
@@ -1010,6 +1073,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Empregar a crase e a norma-padrão de forma asserti..."?')
     .setChoices([
@@ -1017,6 +1081,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria "Correção Gramatical Aplicada ao Trabalho" em sua rotina profissional?')
@@ -1026,6 +1091,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Precisão linguística e clareza nos docum" em sua rotina profissional?')
     .setChoices([
@@ -1033,6 +1099,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine enviar uma proposta comercial di" em sua rotina profissional?')
@@ -1042,6 +1109,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Identificar e corrigir deslizes comuns d" em sua rotina profissional?')
     .setChoices([
@@ -1049,6 +1117,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Empregar a crase e a norma-padrão de for" em sua rotina profissional?')
@@ -1058,6 +1127,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Imagine enviar uma proposta comercial dizendo"?')
     .setChoices([
@@ -1065,6 +1135,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Imagine enviar uma proposta comercial dizendo"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Norma-padrão"?')
@@ -1074,6 +1145,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pontuação"?')
     .setChoices([
@@ -1081,6 +1153,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pontuação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Concordância"?')
@@ -1090,6 +1163,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Regência"?')
     .setChoices([
@@ -1097,6 +1171,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Regência"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar "Correção Gramatical Aplicada ao Trabalho"?')
@@ -1106,6 +1181,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -1113,6 +1189,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -1122,6 +1199,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de "Correção Gramatical Aplicada ao Trabalho"?')
     .setChoices([
@@ -1129,6 +1207,7 @@ function criarFormularioAula04() {
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -1250,7 +1329,7 @@ Apresentação visual e clareza na escrita formal · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Formatação e Padronização de Documentos
-Apresentação visual e clareza na escrita formal\n\nAula 05 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Apresentação visual e clareza na escrita formalAula 05 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -1286,6 +1365,7 @@ Apresentação visual e clareza na escrita formal', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Formatação e Padronização de Documentos
 Apresentaç...'?')
@@ -1295,6 +1375,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Qual texto você leria primeiro?..."?')
     .setChoices([
@@ -1302,6 +1383,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine receber dois currículos com o mesmo conteú..."?')
@@ -1311,6 +1393,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos da Nossa Aula" neste contexto?')
     .setChoices([
@@ -1319,6 +1402,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Compreender normas técnicas: aplicar margens, font..."?')
     .setChoices([
@@ -1326,6 +1410,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Formatação e Padronização de Documentos
@@ -1336,6 +1421,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Qual texto você leria primeiro?" em sua rotina profissional?')
     .setChoices([
@@ -1343,6 +1429,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine receber dois currículos com o me" em sua rotina profissional?')
@@ -1352,6 +1439,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos da Nossa Aula" em sua rotina profissional?')
     .setChoices([
@@ -1359,6 +1447,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Compreender normas técnicas: aplicar mar" em sua rotina profissional?')
@@ -1368,6 +1457,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Compreender normas técnicas"?')
     .setChoices([
@@ -1375,6 +1465,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Compreender normas técnicas"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Estruturar hierarquia visual"?')
@@ -1384,6 +1475,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Garantir acessibilidade e exportação"?')
     .setChoices([
@@ -1391,6 +1483,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Garantir acessibilidade e exportação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Formatação"?')
@@ -1400,6 +1493,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Padronização"?')
     .setChoices([
@@ -1407,6 +1501,7 @@ Apresentaç...'?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Padronização"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Formatação e Padronização de Documentos
@@ -1417,6 +1512,7 @@ Apresentação visual e clareza na escrita formal'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -1424,6 +1520,7 @@ Apresentação visual e clareza na escrita formal'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -1433,6 +1530,7 @@ Apresentação visual e clareza na escrita formal'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Formatação e Padronização de Documentos
 Apresentação visual e clareza na escrita formal'?')
@@ -1441,6 +1539,7 @@ Apresentação visual e clareza na escrita formal'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -1566,7 +1665,7 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Redação de E-mails Corporativos
-Comunicação escrita eficaz e profissional no ambiente de trabalho\n\nAula 06 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Comunicação escrita eficaz e profissional no ambiente de trabalhoAula 06 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -1602,6 +1701,7 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Redação de E-mails Corporativos
 Comunicação escrit...'?')
@@ -1611,6 +1711,7 @@ Comunicação escrit...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. Qual é a importância de "Você abriria esta mensagem?" neste contexto?')
     .setChoices([
@@ -1618,6 +1719,7 @@ Comunicação escrit...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine receber uma mensagem com o assunto "URGENT..."?')
@@ -1627,6 +1729,7 @@ Comunicação escrit...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos de Aprendizagem" neste contexto?')
     .setChoices([
@@ -1635,6 +1738,7 @@ Comunicação escrit...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Estruturar e-mails profissionais com assunto conci..."?')
     .setChoices([
@@ -1642,6 +1746,7 @@ Comunicação escrit...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Redação de E-mails Corporativos
@@ -1652,6 +1757,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Você abriria esta mensagem?" em sua rotina profissional?')
     .setChoices([
@@ -1659,6 +1765,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine receber uma mensagem com o assun" em sua rotina profissional?')
@@ -1668,6 +1775,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos de Aprendizagem" em sua rotina profissional?')
     .setChoices([
@@ -1675,6 +1783,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Estruturar e-mails profissionais com ass" em sua rotina profissional?')
@@ -1684,6 +1793,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Recapitulação"?')
     .setChoices([
@@ -1691,6 +1801,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Recapitulação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Quiz"?')
@@ -1700,6 +1811,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 1"?')
     .setChoices([
@@ -1707,6 +1819,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Pergunta 2"?')
@@ -1716,6 +1829,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Pergunta 3"?')
     .setChoices([
@@ -1723,6 +1837,7 @@ Comunica' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 3"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Redação de E-mails Corporativos
@@ -1733,6 +1848,7 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -1740,6 +1856,7 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -1749,6 +1866,7 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Redação de E-mails Corporativos
 Comunicação escrita eficaz e profissional no ambiente de trabalho'?')
@@ -1757,6 +1875,7 @@ Comunicação escrita eficaz e profissional no ambiente de trabalho'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -1882,7 +2001,7 @@ Estrutura, objetividade e análise prática no mundo profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Elaboração de Relatórios Técnicos
-Estrutura, objetividade e análise prática no mundo profissional\n\nAula 07 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Estrutura, objetividade e análise prática no mundo profissionalAula 07 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -1918,6 +2037,7 @@ Estrutura, objetividade e análise prática no mundo profissional', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Elaboração de Relatórios Técnicos
 Estrutura, objet...'?')
@@ -1927,6 +2047,7 @@ Estrutura, objet...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Um mistério na linha de montagem..."?')
     .setChoices([
@@ -1934,6 +2055,7 @@ Estrutura, objet...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Uma fábrica parou por 4 horas seguidas. O supervis..."?')
@@ -1943,6 +2065,7 @@ Estrutura, objet...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. De acordo com a aula, qual é a relevância de: "Compreender a função corporativa e as partes essen..."?')
     .setChoices([
@@ -1951,6 +2074,7 @@ Estrutura, objet...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Aplicar o princípio da impessoalidade e fundamenta..."?')
     .setChoices([
@@ -1958,6 +2082,7 @@ Estrutura, objet...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Elaboração de Relatórios Técnicos
@@ -1968,6 +2093,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Um mistério na linha de montagem" em sua rotina profissional?')
     .setChoices([
@@ -1975,6 +2101,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Uma fábrica parou por 4 horas seguidas. " em sua rotina profissional?')
@@ -1984,6 +2111,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Compreender a função corporativa e as pa" em sua rotina profissional?')
     .setChoices([
@@ -1991,6 +2119,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Aplicar o princípio da impessoalidade e " em sua rotina profissional?')
@@ -2000,6 +2129,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Relatório"?')
     .setChoices([
@@ -2007,6 +2137,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Relatório"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Metodologia"?')
@@ -2016,6 +2147,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Evidência"?')
     .setChoices([
@@ -2023,6 +2155,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Evidência"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Impessoalidade"?')
@@ -2032,6 +2165,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
@@ -2039,6 +2173,7 @@ Estrut' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Elaboração de Relatórios Técnicos
@@ -2049,6 +2184,7 @@ Estrutura, objetividade e análise prática no mundo profissional'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -2056,6 +2192,7 @@ Estrutura, objetividade e análise prática no mundo profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -2065,6 +2202,7 @@ Estrutura, objetividade e análise prática no mundo profissional'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Elaboração de Relatórios Técnicos
 Estrutura, objetividade e análise prática no mundo profissional'?')
@@ -2073,6 +2211,7 @@ Estrutura, objetividade e análise prática no mundo profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -2198,7 +2337,7 @@ Agilidade, clareza e alinhamento na rotina corporativa · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Redação de Memorandos e Comunicações Internas
-Agilidade, clareza e alinhamento na rotina corporativa\n\nAula 08 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Agilidade, clareza e alinhamento na rotina corporativaAula 08 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2234,6 +2373,7 @@ Agilidade, clareza e alinhamento na rotina corporativa', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Redação de Memorandos e Comunicações Internas
 Agil...'?')
@@ -2243,6 +2383,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "O que acontece quando o recado falha?..."?')
     .setChoices([
@@ -2250,6 +2391,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine uma equipe inteira que chega para trabalha..."?')
@@ -2259,6 +2401,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos da Nossa Aula" neste contexto?')
     .setChoices([
@@ -2266,6 +2409,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Distinguir as funções e formatos de memorando, com..."?')
@@ -2275,6 +2419,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria "Redação de Memorandos e Comunicações Int" em sua rotina profissional?')
     .setChoices([
@@ -2282,6 +2427,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O que acontece quando o recado falha?" em sua rotina profissional?')
@@ -2291,6 +2437,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine uma equipe inteira que chega par" em sua rotina profissional?')
     .setChoices([
@@ -2298,6 +2445,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos da Nossa Aula" em sua rotina profissional?')
@@ -2307,6 +2455,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Distinguir as funções e formatos de memo" em sua rotina profissional?')
     .setChoices([
@@ -2314,6 +2463,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Memorando"?')
@@ -2323,6 +2473,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Comunicado"?')
     .setChoices([
@@ -2330,6 +2481,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Comunicado"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Concisão"?')
@@ -2339,6 +2491,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Orientação"?')
     .setChoices([
@@ -2347,6 +2500,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
@@ -2354,6 +2508,7 @@ Agil...'?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Redação de Memorandos e Comunicações Internas
@@ -2364,6 +2519,7 @@ Agilidade, clareza e alinhamento na rotina corporativa'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -2371,6 +2527,7 @@ Agilidade, clareza e alinhamento na rotina corporativa'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -2380,6 +2537,7 @@ Agilidade, clareza e alinhamento na rotina corporativa'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Redação de Memorandos e Comunicações Internas
 Agilidade, clareza e alinhamento na rotina corporativa'?')
@@ -2388,6 +2546,7 @@ Agilidade, clareza e alinhamento na rotina corporativa'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -2513,7 +2672,7 @@ Como escrever passos claros, sequenciais e sem erros · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Procedimentos e Instruções
-Como escrever passos claros, sequenciais e sem erros\n\nAula 09 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Como escrever passos claros, sequenciais e sem errosAula 09 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2549,6 +2708,7 @@ Como escrever passos claros, sequenciais e sem erros', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Procedimentos e Instruções
 Como escrever passos cl...'?')
@@ -2558,6 +2718,7 @@ Como escrever passos cl...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. Qual é a importância de "O que acontece na falha?" neste contexto?')
     .setChoices([
@@ -2565,6 +2726,7 @@ Como escrever passos cl...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Você já tentou montar um móvel ou seguir uma recei..."?')
@@ -2574,6 +2736,7 @@ Como escrever passos cl...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos da Nossa Aula" neste contexto?')
     .setChoices([
@@ -2582,6 +2745,7 @@ Como escrever passos cl...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Diferenciar textos instrucionais de relatórios e m..."?')
     .setChoices([
@@ -2589,6 +2753,7 @@ Como escrever passos cl...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Procedimentos e Instruções
@@ -2599,6 +2764,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O que acontece na falha?" em sua rotina profissional?')
     .setChoices([
@@ -2606,6 +2772,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Você já tentou montar um móvel ou seguir" em sua rotina profissional?')
@@ -2615,6 +2782,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos da Nossa Aula" em sua rotina profissional?')
     .setChoices([
@@ -2622,6 +2790,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Diferenciar textos instrucionais de rela" em sua rotina profissional?')
@@ -2631,6 +2800,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Recapitulando"?')
     .setChoices([
@@ -2638,6 +2808,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Recapitulando"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pergunta 1"?')
@@ -2647,6 +2818,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 2"?')
     .setChoices([
@@ -2654,6 +2826,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Pergunta 3"?')
@@ -2663,6 +2836,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Resposta 1"?')
     .setChoices([
@@ -2670,6 +2844,7 @@ Como escrever' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Resposta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Procedimentos e Instruções
@@ -2680,6 +2855,7 @@ Como escrever passos claros, sequenciais e sem erros'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -2687,6 +2863,7 @@ Como escrever passos claros, sequenciais e sem erros'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -2696,6 +2873,7 @@ Como escrever passos claros, sequenciais e sem erros'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Procedimentos e Instruções
 Como escrever passos claros, sequenciais e sem erros'?')
@@ -2704,6 +2882,7 @@ Como escrever passos claros, sequenciais e sem erros'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -2829,7 +3008,7 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho. · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Plataformas Digitais de Comunicação
-Conectando equipes com eficiência, agilidade e clareza no trabalho.\n\nAula 10 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Conectando equipes com eficiência, agilidade e clareza no trabalho.Aula 10 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -2865,6 +3044,7 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho.', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Plataformas Digitais de Comunicação
 Conectando equ...'?')
@@ -2874,6 +3054,7 @@ Conectando equ...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Uma mensagem urgente ou ruído excessivo?..."?')
     .setChoices([
@@ -2881,6 +3062,7 @@ Conectando equ...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine receber 47 notificações simultâneas em cin..."?')
@@ -2890,6 +3072,7 @@ Conectando equ...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos de Aprendizagem" neste contexto?')
     .setChoices([
@@ -2898,6 +3081,7 @@ Conectando equ...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Diferenciar comunicação síncrona e assíncrona, ide..."?')
     .setChoices([
@@ -2905,6 +3089,7 @@ Conectando equ...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Plataformas Digitais de Comunicação
@@ -2915,6 +3100,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Uma mensagem urgente ou ruído excessivo?" em sua rotina profissional?')
     .setChoices([
@@ -2922,6 +3108,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine receber 47 notificações simultân" em sua rotina profissional?')
@@ -2931,6 +3118,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos de Aprendizagem" em sua rotina profissional?')
     .setChoices([
@@ -2938,6 +3126,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Diferenciar comunicação síncrona e assín" em sua rotina profissional?')
@@ -2947,6 +3136,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Plataforma"?')
     .setChoices([
@@ -2954,6 +3144,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Plataforma"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Síncrono"?')
@@ -2963,6 +3154,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Assíncrono"?')
     .setChoices([
@@ -2970,6 +3162,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Assíncrono"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Ferramenta"?')
@@ -2979,6 +3172,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Recapitulação"?')
     .setChoices([
@@ -2986,6 +3180,7 @@ Cone' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Recapitulação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Plataformas Digitais de Comunicação
@@ -2996,6 +3191,7 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho.'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -3003,6 +3199,7 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho.'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -3012,6 +3209,7 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho.'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Plataformas Digitais de Comunicação
 Conectando equipes com eficiência, agilidade e clareza no trabalho.'?')
@@ -3020,6 +3218,7 @@ Conectando equipes com eficiência, agilidade e clareza no trabalho.'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -3145,7 +3344,7 @@ Protegendo dados, canais e reputação no ambiente digital corporativo · SENAI'
 
   form.setDescription(
     'Avaliação Completa: Segurança da Informação e Privacidade
-Protegendo dados, canais e reputação no ambiente digital corporativo\n\nAula 11 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Protegendo dados, canais e reputação no ambiente digital corporativoAula 11 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -3181,6 +3380,7 @@ Protegendo dados, canais e reputação no ambiente digital corporativo', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Segurança da Informação e Privacidade
 Protegendo d...'?')
@@ -3190,6 +3390,7 @@ Protegendo d...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "O que acontece quando você clica?..."?')
     .setChoices([
@@ -3197,6 +3398,7 @@ Protegendo d...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine receber um e-mail urgente da diretoria da ..."?')
@@ -3206,6 +3408,7 @@ Protegendo d...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos da Nossa Aula" neste contexto?')
     .setChoices([
@@ -3214,6 +3417,7 @@ Protegendo d...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Diferenciar canais de comunicação seguros e aplica..."?')
     .setChoices([
@@ -3221,6 +3425,7 @@ Protegendo d...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Segurança da Informação e Privacidade
@@ -3231,6 +3436,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O que acontece quando você clica?" em sua rotina profissional?')
     .setChoices([
@@ -3238,6 +3444,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine receber um e-mail urgente da dir" em sua rotina profissional?')
@@ -3247,6 +3454,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos da Nossa Aula" em sua rotina profissional?')
     .setChoices([
@@ -3254,6 +3462,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Diferenciar canais de comunicação seguro" em sua rotina profissional?')
@@ -3263,6 +3472,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Segurança"?')
     .setChoices([
@@ -3270,6 +3480,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Segurança"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Privacidade"?')
@@ -3279,6 +3490,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Confidencialidade"?')
     .setChoices([
@@ -3286,6 +3498,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Confidencialidade"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Phishing"?')
@@ -3295,6 +3508,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Canais de Comunicação"?')
     .setChoices([
@@ -3302,6 +3516,7 @@ Pr' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Canais de Comunicação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Segurança da Informação e Privacidade
@@ -3312,6 +3527,7 @@ Protegendo dados, canais e reputação no ambiente digital corporativo'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -3319,6 +3535,7 @@ Protegendo dados, canais e reputação no ambiente digital corporativo'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -3328,6 +3545,7 @@ Protegendo dados, canais e reputação no ambiente digital corporativo'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Segurança da Informação e Privacidade
 Protegendo dados, canais e reputação no ambiente digital corporativo'?')
@@ -3336,6 +3554,7 @@ Protegendo dados, canais e reputação no ambiente digital corporativo'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -3461,7 +3680,7 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis · SENAI
 
   form.setDescription(
     'Avaliação Completa: Comunicação Eficaz
-Como transformar ideias em mensagens claras, precisas e compreensíveis\n\nAula 12 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Como transformar ideias em mensagens claras, precisas e compreensíveisAula 12 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -3497,6 +3716,7 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Comunicação Eficaz
 Como transformar ideias em mens...'?')
@@ -3506,6 +3726,7 @@ Como transformar ideias em mens...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. Qual é a importância de "O Custo de um Mal-entendido" neste contexto?')
     .setChoices([
@@ -3513,6 +3734,7 @@ Como transformar ideias em mens...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Uma mensagem com duplo sentido pode cancelar um ev..."?')
@@ -3522,6 +3744,7 @@ Como transformar ideias em mens...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. De acordo com a aula, qual é a relevância de: "Identificar os pilares fundamentais da comunicação..."?')
     .setChoices([
@@ -3530,6 +3753,7 @@ Como transformar ideias em mens...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Eliminar ambiguidades e excesso de termos em texto..."?')
     .setChoices([
@@ -3537,6 +3761,7 @@ Como transformar ideias em mens...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Comunicação Eficaz
@@ -3547,6 +3772,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O Custo de um Mal-entendido" em sua rotina profissional?')
     .setChoices([
@@ -3554,6 +3780,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Uma mensagem com duplo sentido pode canc" em sua rotina profissional?')
@@ -3563,6 +3790,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Identificar os pilares fundamentais da c" em sua rotina profissional?')
     .setChoices([
@@ -3570,6 +3798,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Eliminar ambiguidades e excesso de termo" em sua rotina profissional?')
@@ -3579,6 +3808,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Clareza"?')
     .setChoices([
@@ -3586,6 +3816,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Clareza"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Objetividade"?')
@@ -3595,6 +3826,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Concisão"?')
     .setChoices([
@@ -3602,6 +3834,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Concisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Coerência"?')
@@ -3611,6 +3844,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Retomada"?')
     .setChoices([
@@ -3618,6 +3852,7 @@ Como transformar idei' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Retomada"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Comunicação Eficaz
@@ -3628,6 +3863,7 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -3635,6 +3871,7 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -3644,6 +3881,7 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Comunicação Eficaz
 Como transformar ideias em mensagens claras, precisas e compreensíveis'?')
@@ -3652,6 +3890,7 @@ Como transformar ideias em mensagens claras, precisas e compreensíveis'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -3777,7 +4016,7 @@ Convivência e postura ética no ambiente virtual · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Etiqueta Digital e Netiqueta
-Convivência e postura ética no ambiente virtual\n\nAula 13 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Convivência e postura ética no ambiente virtualAula 13 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -3813,6 +4052,7 @@ Convivência e postura ética no ambiente virtual', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Etiqueta Digital e Netiqueta
 Convivência e postura...'?')
@@ -3822,6 +4062,7 @@ Convivência e postura...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. Qual é a importância de "O peso das palavras na tela" neste contexto?')
     .setChoices([
@@ -3829,6 +4070,7 @@ Convivência e postura...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Você já recebeu uma mensagem em letras maiúsculas ..."?')
@@ -3838,6 +4080,7 @@ Convivência e postura...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos da Nossa Aula" neste contexto?')
     .setChoices([
@@ -3846,6 +4089,7 @@ Convivência e postura...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Compreender os princípios de netiqueta e sua relev..."?')
     .setChoices([
@@ -3853,6 +4097,7 @@ Convivência e postura...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Etiqueta Digital e Netiqueta
@@ -3863,6 +4108,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O peso das palavras na tela" em sua rotina profissional?')
     .setChoices([
@@ -3870,6 +4116,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Você já recebeu uma mensagem em letras m" em sua rotina profissional?')
@@ -3879,6 +4126,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos da Nossa Aula" em sua rotina profissional?')
     .setChoices([
@@ -3886,6 +4134,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Compreender os princípios de netiqueta e" em sua rotina profissional?')
@@ -3895,6 +4144,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Netiqueta"?')
     .setChoices([
@@ -3902,6 +4152,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Netiqueta"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Etiqueta"?')
@@ -3911,6 +4162,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Convivência"?')
     .setChoices([
@@ -3918,6 +4170,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Convivência"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Postura"?')
@@ -3927,6 +4180,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Recapitulando"?')
     .setChoices([
@@ -3934,6 +4188,7 @@ Convivência' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Recapitulando"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Etiqueta Digital e Netiqueta
@@ -3944,6 +4199,7 @@ Convivência e postura ética no ambiente virtual'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -3951,6 +4207,7 @@ Convivência e postura ética no ambiente virtual'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -3960,6 +4217,7 @@ Convivência e postura ética no ambiente virtual'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Etiqueta Digital e Netiqueta
 Convivência e postura ética no ambiente virtual'?')
@@ -3968,6 +4226,7 @@ Convivência e postura ética no ambiente virtual'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -4093,7 +4352,7 @@ Práticas e ferramentas para produzir em equipe digital · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Trabalho Remoto e Colaboração
-Práticas e ferramentas para produzir em equipe digital\n\nAula 14 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Práticas e ferramentas para produzir em equipe digitalAula 14 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -4129,6 +4388,7 @@ Práticas e ferramentas para produzir em equipe digital', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Trabalho Remoto e Colaboração
 Práticas e ferrament...'?')
@@ -4138,6 +4398,7 @@ Práticas e ferrament...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Trabalhar Junto Sem Estar Perto..."?')
     .setChoices([
@@ -4145,6 +4406,7 @@ Práticas e ferrament...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine escrever um trabalho escolar em grupo onde..."?')
@@ -4154,6 +4416,7 @@ Práticas e ferrament...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos da Nossa Aula" neste contexto?')
     .setChoices([
@@ -4162,6 +4425,7 @@ Práticas e ferrament...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Identificar recursos essenciais em documentos comp..."?')
     .setChoices([
@@ -4169,6 +4433,7 @@ Práticas e ferrament...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Trabalho Remoto e Colaboração
@@ -4179,6 +4444,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Trabalhar Junto Sem Estar Perto" em sua rotina profissional?')
     .setChoices([
@@ -4186,6 +4452,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine escrever um trabalho escolar em " em sua rotina profissional?')
@@ -4195,6 +4462,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos da Nossa Aula" em sua rotina profissional?')
     .setChoices([
@@ -4202,6 +4470,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Identificar recursos essenciais em docum" em sua rotina profissional?')
@@ -4211,6 +4480,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Pergunta 1"?')
     .setChoices([
@@ -4218,6 +4488,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pergunta 2"?')
@@ -4227,6 +4498,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 3"?')
     .setChoices([
@@ -4234,6 +4506,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 3"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Resposta 1"?')
@@ -4243,6 +4516,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Resposta 2"?')
     .setChoices([
@@ -4250,6 +4524,7 @@ Práticas e' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Resposta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Trabalho Remoto e Colaboração
@@ -4260,6 +4535,7 @@ Práticas e ferramentas para produzir em equipe digital'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -4267,6 +4543,7 @@ Práticas e ferramentas para produzir em equipe digital'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -4276,6 +4553,7 @@ Práticas e ferramentas para produzir em equipe digital'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Trabalho Remoto e Colaboração
 Práticas e ferramentas para produzir em equipe digital'?')
@@ -4284,6 +4562,7 @@ Práticas e ferramentas para produzir em equipe digital'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -4409,7 +4688,7 @@ O poder dos sinais não-verbais no ambiente profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Linguagem Corporal e Comunicação
-O poder dos sinais não-verbais no ambiente profissional\n\nAula 15 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+O poder dos sinais não-verbais no ambiente profissionalAula 15 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -4445,6 +4724,7 @@ O poder dos sinais não-verbais no ambiente profissional', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Linguagem Corporal e Comunicação
 O poder dos sinai...'?')
@@ -4454,6 +4734,7 @@ O poder dos sinai...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Você fala mesmo antes de abrir a boca?..."?')
     .setChoices([
@@ -4461,6 +4742,7 @@ O poder dos sinai...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine assistir a uma apresentação profissional n..."?')
@@ -4470,6 +4752,7 @@ O poder dos sinai...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos de Aprendizagem" neste contexto?')
     .setChoices([
@@ -4478,6 +4761,7 @@ O poder dos sinai...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Identificar os componentes centrais da comunicação..."?')
     .setChoices([
@@ -4485,6 +4769,7 @@ O poder dos sinai...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Linguagem Corporal e Comunicação
@@ -4495,6 +4780,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Você fala mesmo antes de abrir a boca?" em sua rotina profissional?')
     .setChoices([
@@ -4502,6 +4788,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine assistir a uma apresentação prof" em sua rotina profissional?')
@@ -4511,6 +4798,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos de Aprendizagem" em sua rotina profissional?')
     .setChoices([
@@ -4518,6 +4806,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Identificar os componentes centrais da c" em sua rotina profissional?')
@@ -4527,6 +4816,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Não-verbal"?')
     .setChoices([
@@ -4534,6 +4824,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Não-verbal"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Postura"?')
@@ -4543,6 +4834,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Proxêmica"?')
     .setChoices([
@@ -4550,6 +4842,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Proxêmica"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Congruência"?')
@@ -4559,6 +4852,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Revisão"?')
     .setChoices([
@@ -4566,6 +4860,7 @@ O poder' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Linguagem Corporal e Comunicação
@@ -4576,6 +4871,7 @@ O poder dos sinais não-verbais no ambiente profissional'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -4583,6 +4879,7 @@ O poder dos sinais não-verbais no ambiente profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -4592,6 +4889,7 @@ O poder dos sinais não-verbais no ambiente profissional'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Linguagem Corporal e Comunicação
 O poder dos sinais não-verbais no ambiente profissional'?')
@@ -4600,6 +4898,7 @@ O poder dos sinais não-verbais no ambiente profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -4725,7 +5024,7 @@ A harmonia perfeita entre corpo, voz e mensagem profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Gestual, Tom de Voz e Sincronismo
-A harmonia perfeita entre corpo, voz e mensagem profissional\n\nAula 16 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+A harmonia perfeita entre corpo, voz e mensagem profissionalAula 16 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -4761,6 +5060,7 @@ A harmonia perfeita entre corpo, voz e mensagem profissional', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Gestual, Tom de Voz e Sincronismo
 A harmonia perfe...'?')
@@ -4770,6 +5070,7 @@ A harmonia perfe...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Quando o corpo contradiz a fala..."?')
     .setChoices([
@@ -4777,6 +5078,7 @@ A harmonia perfe...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine alguém afirmando com voz trêmula, ombros c..."?')
@@ -4786,6 +5088,7 @@ A harmonia perfe...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos de Aprendizagem" neste contexto?')
     .setChoices([
@@ -4794,6 +5097,7 @@ A harmonia perfe...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Identificar e sincronizar gestos manuais intencion..."?')
     .setChoices([
@@ -4801,6 +5105,7 @@ A harmonia perfe...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Gestual, Tom de Voz e Sincronismo
@@ -4811,6 +5116,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Quando o corpo contradiz a fala" em sua rotina profissional?')
     .setChoices([
@@ -4818,6 +5124,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine alguém afirmando com voz trêmula" em sua rotina profissional?')
@@ -4827,6 +5134,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos de Aprendizagem" em sua rotina profissional?')
     .setChoices([
@@ -4834,6 +5142,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Identificar e sincronizar gestos manuais" em sua rotina profissional?')
@@ -4843,6 +5152,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Gestual"?')
     .setChoices([
@@ -4850,6 +5160,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Gestual"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Sincronismo"?')
@@ -4859,6 +5170,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Ênfase"?')
     .setChoices([
@@ -4866,6 +5178,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Ênfase"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Presença"?')
@@ -4875,6 +5188,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "A postura é a âncora de qualquer fala"?')
     .setChoices([
@@ -4882,6 +5196,7 @@ A harm' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "A postura é a âncora de qualquer fala"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Gestual, Tom de Voz e Sincronismo
@@ -4892,6 +5207,7 @@ A harmonia perfeita entre corpo, voz e mensagem profissional'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -4899,6 +5215,7 @@ A harmonia perfeita entre corpo, voz e mensagem profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -4908,6 +5225,7 @@ A harmonia perfeita entre corpo, voz e mensagem profissional'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Gestual, Tom de Voz e Sincronismo
 A harmonia perfeita entre corpo, voz e mensagem profissional'?')
@@ -4916,6 +5234,7 @@ A harmonia perfeita entre corpo, voz e mensagem profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -5041,7 +5360,7 @@ Unindo escrita técnica, oratória e ferramentas digitais · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Integração Prática: O Projeto Capstone
-Unindo escrita técnica, oratória e ferramentas digitais\n\nAula 17 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Unindo escrita técnica, oratória e ferramentas digitaisAula 17 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -5077,6 +5396,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Integração Prática: O Projeto Capstone
 Unindo escr...'?')
@@ -5086,6 +5406,7 @@ Unindo escr...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "O Grande Enigma da Comunicação Real..."?')
     .setChoices([
@@ -5093,6 +5414,7 @@ Unindo escr...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine ter uma solução brilhante para a sua escol..."?')
@@ -5102,6 +5424,7 @@ Unindo escr...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos de Aprendizagem" neste contexto?')
     .setChoices([
@@ -5110,6 +5433,7 @@ Unindo escr...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Integrar os saberes dos 6 módulos do curso em um p..."?')
     .setChoices([
@@ -5117,6 +5441,7 @@ Unindo escr...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Integração Prática: O Projeto Capstone
@@ -5127,6 +5452,7 @@ U' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O Grande Enigma da Comunicação Real" em sua rotina profissional?')
     .setChoices([
@@ -5134,6 +5460,7 @@ U' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine ter uma solução brilhante para a" em sua rotina profissional?')
@@ -5143,6 +5470,7 @@ U' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos de Aprendizagem" em sua rotina profissional?')
     .setChoices([
@@ -5151,6 +5479,7 @@ U' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Integrar os saberes dos 6 módulos do cur" em sua rotina profissional?')
     .setChoices([
@@ -5158,6 +5487,7 @@ U' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Integração Prática"?')
@@ -5168,6 +5498,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Integração"?')
     .setChoices([
@@ -5175,6 +5506,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Integração"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Projeto"?')
@@ -5184,6 +5516,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Aplicação"?')
     .setChoices([
@@ -5192,6 +5525,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Trabalho"?')
     .setChoices([
@@ -5199,6 +5533,7 @@ Unindo escrita técnica, oratória e ferramentas digitais', true),
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Trabalho"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Integração Prática: O Projeto Capstone
@@ -5209,6 +5544,7 @@ Unindo escrita técnica, oratória e ferramentas digitais'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -5216,6 +5552,7 @@ Unindo escrita técnica, oratória e ferramentas digitais'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -5225,6 +5562,7 @@ Unindo escrita técnica, oratória e ferramentas digitais'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Integração Prática: O Projeto Capstone
 Unindo escrita técnica, oratória e ferramentas digitais'?')
@@ -5233,6 +5571,7 @@ Unindo escrita técnica, oratória e ferramentas digitais'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -5356,7 +5695,7 @@ function criarFormularioAula18() {
   var form = FormApp.create('Avaliação — Aula 18 · Avaliação Final e Encerramento · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Avaliação Final e Encerramento\n\nAula 18 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Avaliação Final e EncerramentoAula 18 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -5390,6 +5729,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. Qual é a importância de "Avaliação Final e Encerramento" neste contexto?')
     .setChoices([
@@ -5397,6 +5737,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Conclusão do curso de Comunicação Oral e Escrita..."?')
@@ -5406,6 +5747,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. Qual é a importância de "O que mudou na sua voz?" neste contexto?')
     .setChoices([
@@ -5413,6 +5755,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. De acordo com a aula, qual é a relevância de: "Lembre-se do primeiro dia de aula: o nervosismo di..."?')
@@ -5422,6 +5765,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. Qual é a importância de "Objetivos da Nossa Aula Final" neste contexto?')
     .setChoices([
@@ -5429,6 +5773,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria "Avaliação Final e Encerramento" em sua rotina profissional?')
@@ -5438,6 +5783,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Conclusão do curso de Comunicação Oral e" em sua rotina profissional?')
     .setChoices([
@@ -5445,6 +5791,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "O que mudou na sua voz?" em sua rotina profissional?')
@@ -5454,6 +5801,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Lembre-se do primeiro dia de aula: o ner" em sua rotina profissional?')
     .setChoices([
@@ -5461,6 +5809,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Objetivos da Nossa Aula Final" em sua rotina profissional?')
@@ -5470,6 +5819,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Lembre-se do primeiro dia de aula"?')
     .setChoices([
@@ -5477,6 +5827,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Lembre-se do primeiro dia de aula"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Avaliação"?')
@@ -5486,6 +5837,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Apresentação"?')
     .setChoices([
@@ -5493,6 +5845,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Apresentação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Desempenho"?')
@@ -5502,6 +5855,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Evolução"?')
     .setChoices([
@@ -5509,6 +5863,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Evolução"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar "Avaliação Final e Encerramento"?')
@@ -5518,6 +5873,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -5525,6 +5881,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -5534,6 +5891,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de "Avaliação Final e Encerramento"?')
     .setChoices([
@@ -5541,6 +5899,7 @@ function criarFormularioAula18() {
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -5662,7 +6021,7 @@ Como transformar respostas em ferramentas de crescimento e alinhamento · SENAI'
 
   form.setDescription(
     'Avaliação Completa: O Ciclo do Feedback na Comunicação
-Como transformar respostas em ferramentas de crescimento e alinhamento\n\nAula 19 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Como transformar respostas em ferramentas de crescimento e alinhamentoAula 19 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -5698,6 +6057,7 @@ Como transformar respostas em ferramentas de crescimento e alinhamento', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'O Ciclo do Feedback na Comunicação
 Como transforma...'?')
@@ -5707,6 +6067,7 @@ Como transforma...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "O que acontece se ninguém responder?..."?')
     .setChoices([
@@ -5714,6 +6075,7 @@ Como transforma...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine enviar uma mensagem urgente e nunca recebe..."?')
@@ -5723,6 +6085,7 @@ Como transforma...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos de Aprendizagem" neste contexto?')
     .setChoices([
@@ -5731,6 +6094,7 @@ Como transforma...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Explicar o papel do feedback na transformação do f..."?')
     .setChoices([
@@ -5738,6 +6102,7 @@ Como transforma...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'O Ciclo do Feedback na Comunicação
@@ -5748,6 +6113,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O que acontece se ninguém responder?" em sua rotina profissional?')
     .setChoices([
@@ -5755,6 +6121,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine enviar uma mensagem urgente e nu" em sua rotina profissional?')
@@ -5764,6 +6131,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos de Aprendizagem" em sua rotina profissional?')
     .setChoices([
@@ -5771,6 +6139,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Explicar o papel do feedback na transfor" em sua rotina profissional?')
@@ -5780,6 +6149,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Feedback"?')
     .setChoices([
@@ -5787,6 +6157,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Feedback"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Bidirecional"?')
@@ -5796,6 +6167,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Escuta"?')
     .setChoices([
@@ -5803,6 +6175,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Escuta"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Alinhamento"?')
@@ -5812,6 +6185,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Elogio Inicial"?')
     .setChoices([
@@ -5819,6 +6193,7 @@ Como ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Elogio Inicial"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'O Ciclo do Feedback na Comunicação
@@ -5829,6 +6204,7 @@ Como transformar respostas em ferramentas de crescimento e alinhamento'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -5836,6 +6212,7 @@ Como transformar respostas em ferramentas de crescimento e alinhamento'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -5845,6 +6222,7 @@ Como transformar respostas em ferramentas de crescimento e alinhamento'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'O Ciclo do Feedback na Comunicação
 Como transformar respostas em ferramentas de crescimento e alinhamento'?')
@@ -5853,6 +6231,7 @@ Como transformar respostas em ferramentas de crescimento e alinhamento'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -5978,7 +6357,7 @@ Adequação comunicativa, registros e impacto profissional · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Contextos Formais versus Informais
-Adequação comunicativa, registros e impacto profissional\n\nAula 20 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Adequação comunicativa, registros e impacto profissionalAula 20 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6014,6 +6393,7 @@ Adequação comunicativa, registros e impacto profissional', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Contextos Formais versus Informais
 Adequação comun...'?')
@@ -6023,6 +6403,7 @@ Adequação comun...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Você contrataria este candidato?..."?')
     .setChoices([
@@ -6030,6 +6411,7 @@ Adequação comun...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Imagine abrir um e-mail de processo seletivo e ler..."?')
@@ -6039,6 +6421,7 @@ Adequação comun...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos da Nossa Aula" neste contexto?')
     .setChoices([
@@ -6047,6 +6430,7 @@ Adequação comun...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Diferenciar registros formais e informais com base..."?')
     .setChoices([
@@ -6054,6 +6438,7 @@ Adequação comun...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Contextos Formais versus Informais
@@ -6064,6 +6449,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Você contrataria este candidato?" em sua rotina profissional?')
     .setChoices([
@@ -6071,6 +6457,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Imagine abrir um e-mail de processo sele" em sua rotina profissional?')
@@ -6080,6 +6467,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos da Nossa Aula" em sua rotina profissional?')
     .setChoices([
@@ -6087,6 +6475,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Diferenciar registros formais e informai" em sua rotina profissional?')
@@ -6096,6 +6485,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Revisão"?')
     .setChoices([
@@ -6103,6 +6493,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Revisão"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pergunta 1"?')
@@ -6112,6 +6503,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 2"?')
     .setChoices([
@@ -6119,6 +6511,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Pergunta 3"?')
@@ -6128,6 +6521,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Resposta 1"?')
     .setChoices([
@@ -6135,6 +6529,7 @@ Adequ' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Resposta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Contextos Formais versus Informais
@@ -6145,6 +6540,7 @@ Adequação comunicativa, registros e impacto profissional'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -6152,6 +6548,7 @@ Adequação comunicativa, registros e impacto profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -6161,6 +6558,7 @@ Adequação comunicativa, registros e impacto profissional'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Contextos Formais versus Informais
 Adequação comunicativa, registros e impacto profissional'?')
@@ -6169,6 +6567,7 @@ Adequação comunicativa, registros e impacto profissional'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -6294,7 +6693,7 @@ Consolidação e Prática do Módulo 1 · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Síntese dos Fundamentos da Comunicação
-Consolidação e Prática do Módulo 1\n\nAula 21 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Consolidação e Prática do Módulo 1Aula 21 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6330,6 +6729,7 @@ Consolidação e Prática do Módulo 1', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Síntese dos Fundamentos da Comunicação
 Consolidaçã...'?')
@@ -6339,6 +6739,7 @@ Consolidaçã...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "O que custa uma mensagem truncada?..."?')
     .setChoices([
@@ -6346,6 +6747,7 @@ Consolidaçã...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Em aviação, hospitais ou empresas, uma palavra mal..."?')
@@ -6355,6 +6757,7 @@ Consolidaçã...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos de Aprendizagem" neste contexto?')
     .setChoices([
@@ -6363,6 +6766,7 @@ Consolidaçã...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Integrar os 4 pilares do Módulo 1: elementos, efic..."?')
     .setChoices([
@@ -6370,6 +6774,7 @@ Consolidaçã...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Síntese dos Fundamentos da Comunicação
@@ -6380,6 +6785,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O que custa uma mensagem truncada?" em sua rotina profissional?')
     .setChoices([
@@ -6387,6 +6793,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Em aviação, hospitais ou empresas, uma p" em sua rotina profissional?')
@@ -6396,6 +6803,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos de Aprendizagem" em sua rotina profissional?')
     .setChoices([
@@ -6403,6 +6811,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Integrar os 4 pilares do Módulo 1: eleme" em sua rotina profissional?')
@@ -6412,6 +6821,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Integrar os 4 pilares do Módulo 1"?')
     .setChoices([
@@ -6419,6 +6829,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Integrar os 4 pilares do Módulo 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Síntese"?')
@@ -6428,6 +6839,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Mapeamento"?')
     .setChoices([
@@ -6435,6 +6847,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Mapeamento"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Contexto"?')
@@ -6444,6 +6857,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Integridade"?')
     .setChoices([
@@ -6451,6 +6865,7 @@ C' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Integridade"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Síntese dos Fundamentos da Comunicação
@@ -6461,6 +6876,7 @@ Consolidação e Prática do Módulo 1'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -6468,6 +6884,7 @@ Consolidação e Prática do Módulo 1'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -6477,6 +6894,7 @@ Consolidação e Prática do Módulo 1'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Síntese dos Fundamentos da Comunicação
 Consolidação e Prática do Módulo 1'?')
@@ -6485,6 +6903,7 @@ Consolidação e Prática do Módulo 1'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -6610,7 +7029,7 @@ Como planejar discursos memoráveis, claros e persuasivos · SENAI');
 
   form.setDescription(
     'Avaliação Completa: Estrutura de Apresentações
-Como planejar discursos memoráveis, claros e persuasivos\n\nAula 22 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Como planejar discursos memoráveis, claros e persuasivosAula 22 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6646,6 +7065,7 @@ Como planejar discursos memoráveis, claros e persuasivos', true),
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Estrutura de Apresentações
 Como planejar discursos...'?')
@@ -6655,6 +7075,7 @@ Como planejar discursos...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Por que falar em público assusta?..."?')
     .setChoices([
@@ -6662,6 +7083,7 @@ Como planejar discursos...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Pesquisas indicam que muitas pessoas temem mais fa..."?')
@@ -6671,6 +7093,7 @@ Como planejar discursos...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos de Aprendizagem" neste contexto?')
     .setChoices([
@@ -6679,6 +7102,7 @@ Como planejar discursos...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Organizar uma apresentação clássica em introdução,..."?')
     .setChoices([
@@ -6686,6 +7110,7 @@ Como planejar discursos...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Estrutura de Apresentações
@@ -6696,6 +7121,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Por que falar em público assusta?" em sua rotina profissional?')
     .setChoices([
@@ -6703,6 +7129,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Pesquisas indicam que muitas pessoas tem" em sua rotina profissional?')
@@ -6712,6 +7139,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos de Aprendizagem" em sua rotina profissional?')
     .setChoices([
@@ -6719,6 +7147,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Organizar uma apresentação clássica em i" em sua rotina profissional?')
@@ -6728,6 +7157,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Estrutura"?')
     .setChoices([
@@ -6735,6 +7165,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Estrutura"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Roteiro"?')
@@ -6744,6 +7175,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pacing"?')
     .setChoices([
@@ -6751,6 +7183,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pacing"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Persuasão"?')
@@ -6760,6 +7193,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Pergunta 1"?')
     .setChoices([
@@ -6767,6 +7201,7 @@ Como planejar' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Estrutura de Apresentações
@@ -6777,6 +7212,7 @@ Como planejar discursos memoráveis, claros e persuasivos'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -6784,6 +7220,7 @@ Como planejar discursos memoráveis, claros e persuasivos'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -6793,6 +7230,7 @@ Como planejar discursos memoráveis, claros e persuasivos'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Estrutura de Apresentações
 Como planejar discursos memoráveis, claros e persuasivos'?')
@@ -6801,6 +7239,7 @@ Como planejar discursos memoráveis, claros e persuasivos'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -6923,7 +7362,7 @@ function criarFormularioAula23() {
   var form = FormApp.create('Avaliação — Aula 23 · Técnicas de Oratória e Expressão Vocal · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Técnicas de Oratória e Expressão Vocal\n\nAula 23 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Técnicas de Oratória e Expressão VocalAula 23 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -6957,6 +7396,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: "Técnicas de Oratória e Expressão Vocal..."?')
     .setChoices([
@@ -6964,6 +7404,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Como dominar a voz e falar com confiança e clareza..."?')
@@ -6973,6 +7414,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "O que torna uma fala inesquecível?..."?')
     .setChoices([
@@ -6980,6 +7422,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. De acordo com a aula, qual é a relevância de: "Você já ouviu alguém com ideias incríveis falar de..."?')
@@ -6989,6 +7432,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. Qual é a importância de "Objetivos da Nossa Aula" neste contexto?')
     .setChoices([
@@ -6996,6 +7440,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria "Técnicas de Oratória e Expressão Vocal" em sua rotina profissional?')
@@ -7005,6 +7450,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Como dominar a voz e falar com confiança" em sua rotina profissional?')
     .setChoices([
@@ -7012,6 +7458,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "O que torna uma fala inesquecível?" em sua rotina profissional?')
@@ -7021,6 +7468,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Você já ouviu alguém com ideias incrívei" em sua rotina profissional?')
     .setChoices([
@@ -7028,6 +7476,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Objetivos da Nossa Aula" em sua rotina profissional?')
@@ -7037,6 +7486,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Quiz"?')
     .setChoices([
@@ -7044,6 +7494,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Quiz"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pergunta 1"?')
@@ -7053,6 +7504,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Pergunta 2"?')
     .setChoices([
@@ -7060,6 +7512,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Pergunta 2"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Pergunta 3"?')
@@ -7069,6 +7522,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Resposta 1"?')
     .setChoices([
@@ -7076,6 +7530,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Resposta 1"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar "Técnicas de Oratória e Expressão Vocal"?')
@@ -7085,6 +7540,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -7092,6 +7548,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -7101,6 +7558,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de "Técnicas de Oratória e Expressão Vocal"?')
     .setChoices([
@@ -7108,6 +7566,7 @@ function criarFormularioAula23() {
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -7229,7 +7688,7 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência · SENA
 
   form.setDescription(
     'Avaliação Completa: Participação e Condução de Reuniões
-Como liderar, intervir com firmeza e registrar decisões com eficiência\n\nAula 24 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+Como liderar, intervir com firmeza e registrar decisões com eficiênciaAula 24 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -7265,6 +7724,7 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência', true)
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. De acordo com a aula, qual é a relevância de: 'Participação e Condução de Reuniões
 Como liderar, ...'?')
@@ -7274,6 +7734,7 @@ Como liderar, ...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. Qual é a importância de "O dilema das reuniões" neste contexto?')
     .setChoices([
@@ -7281,6 +7742,7 @@ Como liderar, ...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Você já sentiu que uma reunião de uma hora poderia..."?')
@@ -7290,6 +7752,7 @@ Como liderar, ...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Qual é a importância de "Objetivos da nossa aula" neste contexto?')
     .setChoices([
@@ -7298,6 +7761,7 @@ Como liderar, ...'?')
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. De acordo com a aula, qual é a relevância de: "Reconhecer papéis essenciais e a importância da pa..."?')
     .setChoices([
@@ -7305,6 +7769,7 @@ Como liderar, ...'?')
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria 'Participação e Condução de Reuniões
@@ -7315,6 +7780,7 @@ Como' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "O dilema das reuniões" em sua rotina profissional?')
     .setChoices([
@@ -7322,6 +7788,7 @@ Como' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Você já sentiu que uma reunião de uma ho" em sua rotina profissional?')
@@ -7331,6 +7798,7 @@ Como' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Objetivos da nossa aula" em sua rotina profissional?')
     .setChoices([
@@ -7338,6 +7806,7 @@ Como' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Reconhecer papéis essenciais e a importâ" em sua rotina profissional?')
@@ -7347,6 +7816,7 @@ Como' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Reunião"?')
     .setChoices([
@@ -7354,6 +7824,7 @@ Como' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Reunião"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Pauta"?')
@@ -7363,6 +7834,7 @@ Como' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Síntese"?')
     .setChoices([
@@ -7371,6 +7843,7 @@ Como' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Mediação"?')
     .setChoices([
@@ -7378,6 +7851,7 @@ Como' em sua rotina profissional?')
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Mediação"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de 'Feche com pergunta
@@ -7389,6 +7863,7 @@ Convide a equipe à deliberação'', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar 'Participação e Condução de Reuniões
 Como liderar, intervir com firmeza e registrar decisões com eficiência'?')
@@ -7398,6 +7873,7 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência'?')
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
     .setChoices([
@@ -7405,6 +7881,7 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência'?')
       form.addMultipleChoiceItem().createChoice('Apenas o conceito principal', false),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
@@ -7414,6 +7891,7 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência'?')
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de 'Participação e Condução de Reuniões
 Como liderar, intervir com firmeza e registrar decisões com eficiência'?')
@@ -7422,6 +7900,7 @@ Como liderar, intervir com firmeza e registrar decisões com eficiência'?')
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -7544,7 +8023,7 @@ function criarFormularioAula25() {
   var form = FormApp.create('Avaliação — Aula 25 · Atendimento e Escuta Ativa · SENAI');
 
   form.setDescription(
-    'Avaliação Completa: Atendimento e Escuta Ativa\n\nAula 25 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+    'Avaliação Completa: Atendimento e Escuta AtivaAula 25 — UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio20 questões | 20 pontos no totalTempo estimado: 30-40 minutosCobertura: 100% do assunto da aulaVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setCollectEmail(false);
@@ -7578,6 +8057,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Fundamentos de comunicação digital', false),
       form.addMultipleChoiceItem().createChoice('Estratégias de marketing avançado', false),
       form.addMultipleChoiceItem().createChoice('Análise de redes sociais', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. Qual é a importância de "Atendimento e Escuta Ativa" neste contexto?')
     .setChoices([
@@ -7585,6 +8065,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. De acordo com a aula, qual é a relevância de: "Técnicas de acolhimento e resolução profissional..."?')
@@ -7594,6 +8075,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. De acordo com a aula, qual é a relevância de: "Você já se sentiu invisível ao falar?..."?')
     .setChoices([
@@ -7601,6 +8083,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. De acordo com a aula, qual é a relevância de: "Imagine explicar um problema importante enquanto a..."?')
@@ -7610,6 +8093,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. Qual é a importância de "Objetivos de Aprendizagem" neste contexto?')
     .setChoices([
@@ -7617,6 +8101,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Não tem relevância prática', false),
       form.addMultipleChoiceItem().createChoice('Apenas para contexto acadêmico', false),
       form.addMultipleChoiceItem().createChoice('É um conceito desatualizado', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria "Atendimento e Escuta Ativa" em sua rotina profissional?')
@@ -7626,6 +8111,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Como você aplicaria "Técnicas de acolhimento e resolução prof" em sua rotina profissional?')
     .setChoices([
@@ -7633,6 +8119,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como você aplicaria "Você já se sentiu invisível ao falar?" em sua rotina profissional?')
@@ -7642,6 +8129,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('10. Como você aplicaria "Imagine explicar um problema importante " em sua rotina profissional?')
     .setChoices([
@@ -7649,6 +8137,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Apenas em situações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Como você aplicaria "Objetivos de Aprendizagem" em sua rotina profissional?')
@@ -7658,6 +8147,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Nunca seria aplicável no trabalho', false),
       form.addMultipleChoiceItem().createChoice('Apenas em atividades de lazer', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Qual é a definição correta de "Reuniões Eficientes"?')
     .setChoices([
@@ -7665,6 +8155,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Reuniões Eficientes"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a definição correta de "Técnica 1"?')
@@ -7674,6 +8165,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Qual é a definição correta de "Técnica 2"?')
     .setChoices([
@@ -7682,6 +8174,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a definição correta de "Técnica 3"?')
     .setChoices([
@@ -7689,6 +8182,7 @@ function criarFormularioAula25() {
       form.addMultipleChoiceItem().createChoice('Conceito oposto a "Técnica 3"', false),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Qual é a definição correta de "Fase 1"?')
@@ -7699,6 +8193,7 @@ Tom de voz baixo e pausas intencionais de silêncio.', true),
       form.addMultipleChoiceItem().createChoice('Uma ferramenta de trabalho genérica', false),
       form.addMultipleChoiceItem().createChoice('Um tipo de erro comum', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o objetivo principal ao estudar "Atendimento e Escuta Ativa"?')
     .setChoices([
@@ -7706,6 +8201,7 @@ Tom de voz baixo e pausas intencionais de silêncio.', true),
       form.addMultipleChoiceItem().createChoice('Memorizar datas e eventos históricos', false),
       form.addMultipleChoiceItem().createChoice('Aprender fórmulas matemáticas', false),
       form.addMultipleChoiceItem().createChoice('Decorar termos em língua estrangeira', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Qual conceito foi o mais importante para você nesta aula?')
@@ -7715,6 +8211,7 @@ Tom de voz baixo e pausas intencionais de silêncio.', true),
       form.addMultipleChoiceItem().createChoice('Nenhum conceito é realmente importante', false),
       form.addMultipleChoiceItem().createChoice('Conceitos de outras disciplinas', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('19. Como você se sente preparado para aplicar estes conhecimentos?')
     .setChoices([
@@ -7723,6 +8220,7 @@ Tom de voz baixo e pausas intencionais de silêncio.', true),
       form.addMultipleChoiceItem().createChoice('Pouco preparado, preciso de mais prática', false),
       form.addMultipleChoiceItem().createChoice('Não estou preparado adequadamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Resumindo, qual é a mensagem-chave que você retira de "Atendimento e Escuta Ativa"?')
     .setChoices([
@@ -7730,6 +8228,7 @@ Tom de voz baixo e pausas intencionais de silêncio.', true),
       form.addMultipleChoiceItem().createChoice('Apenas passar na avaliação', false),
       form.addMultipleChoiceItem().createChoice('Memorizar informações para futuro uso', false),
       form.addMultipleChoiceItem().createChoice('Completar um requisito curricular', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
 
@@ -7849,7 +8348,7 @@ function criarQuizRevisao() {
   var form = FormApp.create('Revisão Integrada — Aulas 1 a 9 · Comunicação Oral e Escrita · SENAI');
 
   form.setDescription(
-    'REVISÃO INTEGRADA: Aulas 1 a 9\n\nUC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n30 questões | 30 pontos no total\nTempo estimado: 45-60 minutos\nCobertura: Consolidação de todos os tópicos das aulas 1-9\nVocê verá sua pontuação e feedback detalhado ao enviar!\n\nOBJETIVOS:\n- Revisar conceitos principais das aulas 1-9\n- Identificar áreas que precisam de reforço\n- Preparar-se para avaliações posteriores'
+    'REVISÃO INTEGRADA: Aulas 1 a 9UC Introdução à Comunicação Oral e EscritaProfessor: Gelvazio30 questões | 30 pontos no totalTempo estimado: 45-60 minutosCobertura: Consolidação de todos os tópicos das aulas 1-9Você verá sua pontuação e feedback detalhado ao enviar!OBJETIVOS:- Revisar conceitos principais das aulas 1-9- Identificar áreas que precisam de reforço- Preparar-se para avaliações posteriores'
   );
 
   form.setCollectEmail(false);
@@ -7885,6 +8384,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Escolher o canal mais moderno disponível', false),
       form.addMultipleChoiceItem().createChoice('Usar a linguagem mais formal possível', false),
       form.addMultipleChoiceItem().createChoice('Evitar qualquer feedback do receptor', false)
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('2. O que diferencia comunicação eficaz de comunicação ineficaz?')
     .setChoices([
@@ -7892,6 +8392,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('O número de pessoas envolvidas', false),
       form.addMultipleChoiceItem().createChoice('A duração da comunicação', false),
       form.addMultipleChoiceItem().createChoice('O formato (escrito ou oral)', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('3. Qual é a importância do RUÍDO em um processo de comunicação?')
@@ -7901,6 +8402,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Tornar a comunicação mais formal', false),
       form.addMultipleChoiceItem().createChoice('Imprimir documentos com mais qualidade', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('4. O que é FEEDBACK e por que é importante?')
     .setChoices([
@@ -7908,6 +8410,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Crítica negativa sobre a comunicação', false),
       form.addMultipleChoiceItem().createChoice('Aumento de volume de comunicação', false),
       form.addMultipleChoiceItem().createChoice('Repetição da mensagem original', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('5. Como o CONTEXTO afeta a comunicação?')
@@ -7917,6 +8420,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Apenas importa em comunicação formal', false),
       form.addMultipleChoiceItem().createChoice('Elimina a necessidade de clareza', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('6. Qual é a relação entre CÓDIGO e SIGNIFICADO na comunicação?')
     .setChoices([
@@ -7924,6 +8428,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Código é apenas para mensagens escritas', false),
       form.addMultipleChoiceItem().createChoice('Significado é independente do código', false),
       form.addMultipleChoiceItem().createChoice('Código não afeta a comunicação', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('7. Como você aplicaria o ciclo de FEEDBACK em equipes profissionais?')
@@ -7933,6 +8438,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Evitando qualquer diálogo sobre o que foi dito', false),
       form.addMultipleChoiceItem().createChoice('Ignorando as reações dos colegas', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('8. Qual é a diferença entre comunicação FORMAL e INFORMAL?')
     .setChoices([
@@ -7941,6 +8447,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Não há diferença prática', false),
       form.addMultipleChoiceItem().createChoice('Informal nunca é usada profissionalmente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('9. Como identificar quando usar LINGUAGEM TÉCNICA vs COLOQUIAL?')
     .setChoices([
@@ -7948,6 +8455,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Sempre usar técnica, independentemente do público', false),
       form.addMultipleChoiceItem().createChoice('Sempre usar coloquial para ser amigável', false),
       form.addMultipleChoiceItem().createChoice('Misturar ambas constantemente', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   // AULAS 4-6: Apresentações e Estrutura (9 questões)
@@ -7960,6 +8468,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Impressionar com complexidade', false),
       form.addMultipleChoiceItem().createChoice('Distrair do conteúdo fraco', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('11. Quais são os elementos essenciais de uma apresentação bem estruturada?')
     .setChoices([
@@ -7967,6 +8476,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Muitos slides com decoração visual', false),
       form.addMultipleChoiceItem().createChoice('Apenas conteúdo textual denso', false),
       form.addMultipleChoiceItem().createChoice('Múltiplas transições animadas', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('12. Como a ORATÓRIA contribui para uma comunicação mais efetiva?')
@@ -7976,6 +8486,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Substitui o conteúdo bem estruturado', false),
       form.addMultipleChoiceItem().createChoice('Funciona apenas com público destreinado', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('13. Qual é a importância da VOZ e do TOM em uma apresentação oral?')
     .setChoices([
@@ -7983,6 +8494,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Não têm impacto real no entendimento', false),
       form.addMultipleChoiceItem().createChoice('Apenas importa em apresentações formais extremas', false),
       form.addMultipleChoiceItem().createChoice('Devem ser monótonos para parecer profissional', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('14. Como estruturar uma introdução que PRENDA a atenção?')
@@ -7992,6 +8504,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Com uma piada sempre, independentemente do tópico', false),
       form.addMultipleChoiceItem().createChoice('Pulando direto para o conteúdo técnico', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('15. Qual é a função principal do DESENVOLVIMENTO em uma apresentação?')
     .setChoices([
@@ -7999,6 +8512,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Apenas repetir a introdução', false),
       form.addMultipleChoiceItem().createChoice('Distrair do tema principal', false),
       form.addMultipleChoiceItem().createChoice('Confundir o público propositalmente', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('16. Como finalizar uma apresentação de forma MEMORÁVEL?')
@@ -8008,6 +8522,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Apresentando novos tópicos não mencionados', false),
       form.addMultipleChoiceItem().createChoice('Desculpando-se pela presentação', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('17. Qual é o papel dos RECURSOS VISUAIS em uma apresentação?')
     .setChoices([
@@ -8016,6 +8531,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Decorar sem agregar significado', false),
       form.addMultipleChoiceItem().createChoice('Ser mais importantes que o conteúdo', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('18. Como gerenciar o TEMPO em uma apresentação?')
     .setChoices([
@@ -8023,6 +8539,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Falar o máximo possível no tempo disponível', false),
       form.addMultipleChoiceItem().createChoice('Ignorar o tempo e deixar para outro momento', false),
       form.addMultipleChoiceItem().createChoice('Terminar sempre cedo sem aproveitar o tempo', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   // AULAS 7-9: Comunicação Profissional (12 questões)
@@ -8035,6 +8552,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Servem apenas para reclamar', false),
       form.addMultipleChoiceItem().createChoice('Não fazem diferença real', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('20. Como estruturar uma reunião EFETIVA?')
     .setChoices([
@@ -8042,6 +8560,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Chamando as pessoas última hora', false),
       form.addMultipleChoiceItem().createChoice('Sem estrutura, deixar fluir', false),
       form.addMultipleChoiceItem().createChoice('Com máximo de pessoas, sem limite de tempo', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('21. Qual é o papel de um PARTICIPANTE ativo em reuniões?')
@@ -8051,6 +8570,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Ficar em silêncio durante toda reunião', false),
       form.addMultipleChoiceItem().createChoice('Usar celular para outras tarefas', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('22. Como um MODERADOR deve conduzir uma reunião?')
     .setChoices([
@@ -8058,6 +8578,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Deixando qualquer um falar sem limite', false),
       form.addMultipleChoiceItem().createChoice('Impondo sua opinião sobre todos', false),
       form.addMultipleChoiceItem().createChoice('Não interferindo em conflitos', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('23. O que é ESCUTA ATIVA e como praticá-la?')
@@ -8067,6 +8588,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Pensar no que vai falar enquanto ouve', false),
       form.addMultipleChoiceItem().createChoice('Interromper frequentemente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('24. Como lidar com OBJEÇÕES ou CONFLITOS em comunicação profissional?')
     .setChoices([
@@ -8074,6 +8596,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Discutir agressivamente até vencer', false),
       form.addMultipleChoiceItem().createChoice('Ignorar completamente', false),
       form.addMultipleChoiceItem().createChoice('Desistir imediatamente da posição', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('25. Qual é a importância da EMPATIA em atendimento ao público?')
@@ -8083,6 +8606,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Enfraquece a autoridade profissional', false),
       form.addMultipleChoiceItem().createChoice('Deve ser aplicada seletivamente', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('26. Como adaptar sua COMUNICAÇÃO para diferentes PÚBLICOS?')
     .setChoices([
@@ -8090,6 +8614,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Falando sempre da mesma forma', false),
       form.addMultipleChoiceItem().createChoice('Usando técnico máximo independentemente de público', false),
       form.addMultipleChoiceItem().createChoice('Evitando todo feedback de compreensão', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('27. Qual é o impacto da LINGUAGEM CORPORAL em comunicação?')
@@ -8099,6 +8624,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Apenas importa em videochamadas', false),
       form.addMultipleChoiceItem().createChoice('Pode contradizer a mensagem verbal sem problemas', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('28. Como manter a CONFIANÇA em comunicação profissional?')
     .setChoices([
@@ -8106,6 +8632,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Prometeendo coisas e não entregando', false),
       form.addMultipleChoiceItem().createChoice('Compartilhando informações de terceiros', false),
       form.addMultipleChoiceItem().createChoice('Sendo vago e impreciso', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('29. Como recuperar-se de um ERRO em comunicação?')
@@ -8115,6 +8642,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Ignorar e continuar como se nada tivesse acontecido', false),
       form.addMultipleChoiceItem().createChoice('Fazer piada para minimizar', false)
     ]).setRequired(true);
+    ]).setRequired(true);
 
   form.addMultipleChoiceItem().setTitle('30. Qual é seu principal aprendizado das aulas 1-9 de comunicação?')
     .setChoices([
@@ -8122,6 +8650,7 @@ function criarQuizRevisao() {
       form.addMultipleChoiceItem().createChoice('Comunicação é apenas dom inato', false),
       form.addMultipleChoiceItem().createChoice('Teoria não tem aplicação prática', false),
       form.addMultipleChoiceItem().createChoice('Já sabia tudo antes dessa disciplina', false)
+    ]).setRequired(true);
     ]).setRequired(true);
 
   Logger.log('✅ REVISÃO INTEGRADA (Aulas 1-9) criada com sucesso!');
