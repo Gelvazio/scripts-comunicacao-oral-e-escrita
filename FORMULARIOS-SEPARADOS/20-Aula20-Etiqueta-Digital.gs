@@ -12,25 +12,11 @@ function criarFormularioAula13() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  // setLimitOneResponsePerUser removido: exigia login Google. Identificacao do aluno agora e feita pelo Nome Completo
   form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
-
-  form.addSectionHeaderItem().setTitle('VALIDACAO - Codigo de Acesso Obrigatorio');
-
-  var campoCodigoAcesso = form.addTextItem();
-  campoCodigoAcesso.setTitle('Codigo de Acesso (Obrigatorio - 1 uso por codigo)');
-  campoCodigoAcesso.setHelpText('Digite seu codigo exclusivo no formato: XXXX-XXXX-XXXX (ex: 3DJ4-CAJ6-5UT0)');
-  campoCodigoAcesso.setRequired(true);
-
-  campoCodigoAcesso.setValidation(
-    FormApp.createTextValidation()
-      .requireTextMatchesPattern('^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$')
-      .setHelpText('Formato invalido! Use: XXXX-XXXX-XXXX (ex: 3DJ4-CAJ6-5UT0)')
-      .build()
-  );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual');
   var q1 = form.addMultipleChoiceItem();
@@ -254,8 +240,6 @@ function criarFormularioAula13() {
   q20.setRequired(true);
 
 
-
-  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ Aula 20 criada com sucesso!');
   Logger.log('');
