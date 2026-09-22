@@ -1,5 +1,6 @@
 ﻿// ===== 01-Aula01-Processo-Comunicativo.gs =====
-// Funcao: criarFormularioAula01()
+// Aula real (sequencia do curso): Aula 01 - Processo-Comunicativo
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula01()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula01() {

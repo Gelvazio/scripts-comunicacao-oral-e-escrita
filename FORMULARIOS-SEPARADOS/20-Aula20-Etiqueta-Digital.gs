@@ -1,11 +1,12 @@
-﻿// ===== 13-Aula13-Etiqueta-Digital.gs =====
-// Funcao: criarFormularioAula13()
+﻿// ===== 20-Aula20-Etiqueta-Digital.gs =====
+// Aula real (sequencia do curso): Aula 20 - Etiqueta-Digital
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula13()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula13() {
-  var form = FormApp.create('Avaliação — Aula 13 · Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual · SENAI');
+  var form = FormApp.create('Avaliação — Aula 20 · Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual\n\nAula 13 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual\n\nAula 20 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula13() {
 
 
 
-  Logger.log('✅ AULA 13 criada com sucesso!');
+  Logger.log('✅ Aula 20 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 13 — Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual');
@@ -270,10 +271,10 @@ function criarFormularioAula13() {
 }
 
 function analisarRespostasAula13() {
-  var form = FormApp.openByTitle('Avaliação — Aula 13 · Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 20 · Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 13: Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 20: Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

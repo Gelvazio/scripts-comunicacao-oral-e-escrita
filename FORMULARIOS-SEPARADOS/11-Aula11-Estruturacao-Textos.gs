@@ -1,11 +1,12 @@
-﻿// ===== 03-Aula03-Estruturacao-Textos.gs =====
-// Funcao: criarFormularioAula03()
+﻿// ===== 11-Aula11-Estruturacao-Textos.gs =====
+// Aula real (sequencia do curso): Aula 11 - Estruturacao-Textos
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula03()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula03() {
-  var form = FormApp.create('Avaliação — Aula 03 · Estruturação de Textos Profissionais · SENAI');
+  var form = FormApp.create('Avaliação — Aula 11 · Estruturação de Textos Profissionais · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Estruturação de Textos Profissionais\n\nAula 03 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Estruturação de Textos Profissionais\n\nAula 11 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula03() {
 
 
 
-  Logger.log('✅ AULA 03 criada com sucesso!');
+  Logger.log('✅ Aula 11 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 03 — Estruturação de Textos Profissionais');
@@ -270,10 +271,10 @@ function criarFormularioAula03() {
 }
 
 function analisarRespostasAula03() {
-  var form = FormApp.openByTitle('Avaliação — Aula 03 · Estruturação de Textos Profissionais · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 11 · Estruturação de Textos Profissionais · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 03: Estruturação de Textos Profissionais');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 11: Estruturação de Textos Profissionais');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

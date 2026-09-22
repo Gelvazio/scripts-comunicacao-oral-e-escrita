@@ -1,11 +1,12 @@
-﻿// ===== 20-Aula20-Contextos-Formais.gs =====
-// Funcao: criarFormularioAula20()
+﻿// ===== 04-Aula04-Contextos-Formais.gs =====
+// Aula real (sequencia do curso): Aula 04 - Contextos-Formais
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula20()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula20() {
-  var form = FormApp.create('Avaliação — Aula 20 · Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional · SENAI');
+  var form = FormApp.create('Avaliação — Aula 04 · Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional\n\nAula 20 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional\n\nAula 04 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula20() {
 
 
 
-  Logger.log('✅ AULA 20 criada com sucesso!');
+  Logger.log('✅ Aula 04 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 20 — Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional');
@@ -270,10 +271,10 @@ function criarFormularioAula20() {
 }
 
 function analisarRespostasAula20() {
-  var form = FormApp.openByTitle('Avaliação — Aula 20 · Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 04 · Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 20: Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 04: Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

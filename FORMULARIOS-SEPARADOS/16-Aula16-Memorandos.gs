@@ -1,11 +1,12 @@
-﻿// ===== 08-Aula08-Memorandos.gs =====
-// Funcao: criarFormularioAula08()
+﻿// ===== 16-Aula16-Memorandos.gs =====
+// Aula real (sequencia do curso): Aula 16 - Memorandos
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula08()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula08() {
-  var form = FormApp.create('Avaliação — Aula 08 · Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa · SENAI');
+  var form = FormApp.create('Avaliação — Aula 16 · Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa\n\nAula 08 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa\n\nAula 16 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula08() {
 
 
 
-  Logger.log('✅ AULA 08 criada com sucesso!');
+  Logger.log('✅ Aula 16 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 08 — Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa');
@@ -270,10 +271,10 @@ function criarFormularioAula08() {
 }
 
 function analisarRespostasAula08() {
-  var form = FormApp.openByTitle('Avaliação — Aula 08 · Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 16 · Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 08: Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 16: Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

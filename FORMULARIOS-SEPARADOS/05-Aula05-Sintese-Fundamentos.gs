@@ -1,11 +1,12 @@
-﻿// ===== 21-Aula21-Sintese-Fundamentos.gs =====
-// Funcao: criarFormularioAula21()
+﻿// ===== 05-Aula05-Sintese-Fundamentos.gs =====
+// Aula real (sequencia do curso): Aula 05 - Sintese-Fundamentos
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula21()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula21() {
-  var form = FormApp.create('Avaliação — Aula 21 · Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1 · SENAI');
+  var form = FormApp.create('Avaliação — Aula 05 · Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1 · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1\n\nAula 21 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1\n\nAula 05 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula21() {
 
 
 
-  Logger.log('✅ AULA 21 criada com sucesso!');
+  Logger.log('✅ Aula 05 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 21 — Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1');
@@ -270,10 +271,10 @@ function criarFormularioAula21() {
 }
 
 function analisarRespostasAula21() {
-  var form = FormApp.openByTitle('Avaliação — Aula 21 · Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1 · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 05 · Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1 · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 21: Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 05: Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

@@ -1,11 +1,12 @@
-﻿// ===== 02-Aula02-Preparacao-Entrevistas.gs =====
-// Funcao: criarFormularioAula02()
+﻿// ===== 10-Aula10-Preparacao-Entrevistas.gs =====
+// Aula real (sequencia do curso): Aula 10 - Preparacao-Entrevistas
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula02()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula02() {
-  var form = FormApp.create('Avaliação — Aula 02 · Preparação para Entrevistas Comunicação oral estratégica e postura profissional · SENAI');
+  var form = FormApp.create('Avaliação — Aula 10 · Preparação para Entrevistas Comunicação oral estratégica e postura profissional · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Preparação para Entrevistas Comunicação oral estratégica e postura profissional\n\nAula 02 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Preparação para Entrevistas Comunicação oral estratégica e postura profissional\n\nAula 10 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula02() {
 
 
 
-  Logger.log('✅ AULA 02 criada com sucesso!');
+  Logger.log('✅ Aula 10 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 02 — Preparação para Entrevistas Comunicação oral estratégica e postura profissional');
@@ -270,10 +271,10 @@ function criarFormularioAula02() {
 }
 
 function analisarRespostasAula02() {
-  var form = FormApp.openByTitle('Avaliação — Aula 02 · Preparação para Entrevistas Comunicação oral estratégica e postura profissional · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 10 · Preparação para Entrevistas Comunicação oral estratégica e postura profissional · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 02: Preparação para Entrevistas Comunicação oral estratégica e postura profissional');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 10: Preparação para Entrevistas Comunicação oral estratégica e postura profissional');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

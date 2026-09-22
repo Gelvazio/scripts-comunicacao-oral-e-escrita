@@ -1,11 +1,12 @@
-﻿// ===== 10-Aula10-Plataformas-Digitais.gs =====
-// Funcao: criarFormularioAula10()
+﻿// ===== 18-Aula18-Plataformas-Digitais.gs =====
+// Aula real (sequencia do curso): Aula 18 - Plataformas-Digitais
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula10()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula10() {
-  var form = FormApp.create('Avaliação — Aula 10 · Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho. · SENAI');
+  var form = FormApp.create('Avaliação — Aula 18 · Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho. · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho.\n\nAula 10 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho.\n\nAula 18 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula10() {
 
 
 
-  Logger.log('✅ AULA 10 criada com sucesso!');
+  Logger.log('✅ Aula 18 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 10 — Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho.');
@@ -270,10 +271,10 @@ function criarFormularioAula10() {
 }
 
 function analisarRespostasAula10() {
-  var form = FormApp.openByTitle('Avaliação — Aula 10 · Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho. · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 18 · Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho. · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 10: Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho.');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 18: Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho.');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

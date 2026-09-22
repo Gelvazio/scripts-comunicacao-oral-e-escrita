@@ -1,11 +1,12 @@
-﻿// ===== 04-Aula04-Correcao-Gramatical.gs =====
-// Funcao: criarFormularioAula04()
+﻿// ===== 12-Aula12-Correcao-Gramatical.gs =====
+// Aula real (sequencia do curso): Aula 12 - Correcao-Gramatical
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula04()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula04() {
-  var form = FormApp.create('Avaliação — Aula 04 · Correção Gramatical Aplicada ao Trabalho · SENAI');
+  var form = FormApp.create('Avaliação — Aula 12 · Correção Gramatical Aplicada ao Trabalho · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Correção Gramatical Aplicada ao Trabalho\n\nAula 04 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Correção Gramatical Aplicada ao Trabalho\n\nAula 12 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula04() {
 
 
 
-  Logger.log('✅ AULA 04 criada com sucesso!');
+  Logger.log('✅ Aula 12 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 04 — Correção Gramatical Aplicada ao Trabalho');
@@ -270,10 +271,10 @@ function criarFormularioAula04() {
 }
 
 function analisarRespostasAula04() {
-  var form = FormApp.openByTitle('Avaliação — Aula 04 · Correção Gramatical Aplicada ao Trabalho · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 12 · Correção Gramatical Aplicada ao Trabalho · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 04: Correção Gramatical Aplicada ao Trabalho');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 12: Correção Gramatical Aplicada ao Trabalho');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

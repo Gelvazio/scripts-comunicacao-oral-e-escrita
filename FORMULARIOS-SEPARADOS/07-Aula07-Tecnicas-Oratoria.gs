@@ -1,11 +1,12 @@
-﻿// ===== 23-Aula23-Tecnicas-Oratoria.gs =====
-// Funcao: criarFormularioAula23()
+﻿// ===== 07-Aula07-Tecnicas-Oratoria.gs =====
+// Aula real (sequencia do curso): Aula 07 - Tecnicas-Oratoria
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula23()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula23() {
-  var form = FormApp.create('Avaliação — Aula 23 · Técnicas de Oratória e Expressão Vocal · SENAI');
+  var form = FormApp.create('Avaliação — Aula 07 · Técnicas de Oratória e Expressão Vocal · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Técnicas de Oratória e Expressão Vocal\n\nAula 23 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Técnicas de Oratória e Expressão Vocal\n\nAula 07 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula23() {
 
 
 
-  Logger.log('✅ AULA 23 criada com sucesso!');
+  Logger.log('✅ Aula 07 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 23 — Técnicas de Oratória e Expressão Vocal');
@@ -270,10 +271,10 @@ function criarFormularioAula23() {
 }
 
 function analisarRespostasAula23() {
-  var form = FormApp.openByTitle('Avaliação — Aula 23 · Técnicas de Oratória e Expressão Vocal · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 07 · Técnicas de Oratória e Expressão Vocal · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 23: Técnicas de Oratória e Expressão Vocal');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 07: Técnicas de Oratória e Expressão Vocal');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

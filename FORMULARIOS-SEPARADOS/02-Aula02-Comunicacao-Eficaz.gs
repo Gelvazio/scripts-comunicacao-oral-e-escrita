@@ -1,11 +1,12 @@
-﻿// ===== 12-Aula12-Comunicacao-Eficaz.gs =====
-// Funcao: criarFormularioAula12()
+﻿// ===== 02-Aula02-Comunicacao-Eficaz.gs =====
+// Aula real (sequencia do curso): Aula 02 - Comunicacao-Eficaz
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula12()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula12() {
-  var form = FormApp.create('Avaliação — Aula 12 · Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis · SENAI');
+  var form = FormApp.create('Avaliação — Aula 02 · Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis\n\nAula 12 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis\n\nAula 02 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula12() {
 
 
 
-  Logger.log('✅ AULA 12 criada com sucesso!');
+  Logger.log('✅ Aula 02 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 12 — Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis');
@@ -270,10 +271,10 @@ function criarFormularioAula12() {
 }
 
 function analisarRespostasAula12() {
-  var form = FormApp.openByTitle('Avaliação — Aula 12 · Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 02 · Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 12: Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 02: Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

@@ -1,11 +1,12 @@
-﻿// ===== 07-Aula07-Relatorios-Tecnicos.gs =====
-// Funcao: criarFormularioAula07()
+﻿// ===== 15-Aula15-Relatorios-Tecnicos.gs =====
+// Aula real (sequencia do curso): Aula 15 - Relatorios-Tecnicos
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula07()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula07() {
-  var form = FormApp.create('Avaliação — Aula 07 · Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional · SENAI');
+  var form = FormApp.create('Avaliação — Aula 15 · Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional\n\nAula 07 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional\n\nAula 15 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula07() {
 
 
 
-  Logger.log('✅ AULA 07 criada com sucesso!');
+  Logger.log('✅ Aula 15 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 07 — Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional');
@@ -270,10 +271,10 @@ function criarFormularioAula07() {
 }
 
 function analisarRespostasAula07() {
-  var form = FormApp.openByTitle('Avaliação — Aula 07 · Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 15 · Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 07: Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 15: Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

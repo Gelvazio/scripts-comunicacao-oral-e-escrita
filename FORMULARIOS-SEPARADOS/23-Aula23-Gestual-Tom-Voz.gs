@@ -1,11 +1,12 @@
-﻿// ===== 16-Aula16-Gestual-Tom-Voz.gs =====
-// Funcao: criarFormularioAula16()
+﻿// ===== 23-Aula23-Gestual-Tom-Voz.gs =====
+// Aula real (sequencia do curso): Aula 23 - Gestual-Tom-Voz
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula16()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula16() {
-  var form = FormApp.create('Avaliação — Aula 16 · Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional · SENAI');
+  var form = FormApp.create('Avaliação — Aula 23 · Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional\n\nAula 16 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional\n\nAula 23 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula16() {
 
 
 
-  Logger.log('✅ AULA 16 criada com sucesso!');
+  Logger.log('✅ Aula 23 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 16 — Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional');
@@ -270,10 +271,10 @@ function criarFormularioAula16() {
 }
 
 function analisarRespostasAula16() {
-  var form = FormApp.openByTitle('Avaliação — Aula 16 · Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 23 · Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 16: Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 23: Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

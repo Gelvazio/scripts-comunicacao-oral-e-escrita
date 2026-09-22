@@ -1,11 +1,12 @@
-﻿// ===== 25-Aula25-Atendimento-Escuta.gs =====
-// Funcao: criarFormularioAula25()
+﻿// ===== 09-Aula09-Atendimento-Escuta.gs =====
+// Aula real (sequencia do curso): Aula 09 - Atendimento-Escuta
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula25()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula25() {
-  var form = FormApp.create('Avaliação — Aula 25 · Atendimento e Escuta Ativa · SENAI');
+  var form = FormApp.create('Avaliação — Aula 09 · Atendimento e Escuta Ativa · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Atendimento e Escuta Ativa\n\nAula 25 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Atendimento e Escuta Ativa\n\nAula 09 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula25() {
 
 
 
-  Logger.log('✅ AULA 25 criada com sucesso!');
+  Logger.log('✅ Aula 09 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 25 — Atendimento e Escuta Ativa');
@@ -270,10 +271,10 @@ function criarFormularioAula25() {
 }
 
 function analisarRespostasAula25() {
-  var form = FormApp.openByTitle('Avaliação — Aula 25 · Atendimento e Escuta Ativa · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 09 · Atendimento e Escuta Ativa · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 25: Atendimento e Escuta Ativa');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 09: Atendimento e Escuta Ativa');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

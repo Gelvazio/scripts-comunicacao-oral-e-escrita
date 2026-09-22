@@ -1,11 +1,12 @@
-﻿// ===== 22-Aula22-Estrutura-Apresentacoes.gs =====
-// Funcao: criarFormularioAula22()
+﻿// ===== 06-Aula06-Estrutura-Apresentacoes.gs =====
+// Aula real (sequencia do curso): Aula 06 - Estrutura-Apresentacoes
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula22()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula22() {
-  var form = FormApp.create('Avaliação — Aula 22 · Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos · SENAI');
+  var form = FormApp.create('Avaliação — Aula 06 · Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos\n\nAula 22 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos\n\nAula 06 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula22() {
 
 
 
-  Logger.log('✅ AULA 22 criada com sucesso!');
+  Logger.log('✅ Aula 06 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 22 — Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos');
@@ -270,10 +271,10 @@ function criarFormularioAula22() {
 }
 
 function analisarRespostasAula22() {
-  var form = FormApp.openByTitle('Avaliação — Aula 22 · Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 06 · Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 22: Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 06: Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

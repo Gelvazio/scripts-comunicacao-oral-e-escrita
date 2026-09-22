@@ -1,11 +1,12 @@
-﻿// ===== 09-Aula09-Procedimentos-Instrucoes.gs =====
-// Funcao: criarFormularioAula09()
+﻿// ===== 17-Aula17-Procedimentos-Instrucoes.gs =====
+// Aula real (sequencia do curso): Aula 17 - Procedimentos-Instrucoes
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula09()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula09() {
-  var form = FormApp.create('Avaliação — Aula 09 · Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros · SENAI');
+  var form = FormApp.create('Avaliação — Aula 17 · Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros\n\nAula 09 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros\n\nAula 17 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula09() {
 
 
 
-  Logger.log('✅ AULA 09 criada com sucesso!');
+  Logger.log('✅ Aula 17 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 09 — Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros');
@@ -270,10 +271,10 @@ function criarFormularioAula09() {
 }
 
 function analisarRespostasAula09() {
-  var form = FormApp.openByTitle('Avaliação — Aula 09 · Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 17 · Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 09: Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 17: Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

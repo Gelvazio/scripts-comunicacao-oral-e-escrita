@@ -1,11 +1,12 @@
-﻿// ===== 15-Aula15-Linguagem-Corporal.gs =====
-// Funcao: criarFormularioAula15()
+﻿// ===== 22-Aula22-Linguagem-Corporal.gs =====
+// Aula real (sequencia do curso): Aula 22 - Linguagem-Corporal
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula15()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula15() {
-  var form = FormApp.create('Avaliação — Aula 15 · Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional · SENAI');
+  var form = FormApp.create('Avaliação — Aula 22 · Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional\n\nAula 15 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional\n\nAula 22 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula15() {
 
 
 
-  Logger.log('✅ AULA 15 criada com sucesso!');
+  Logger.log('✅ Aula 22 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 15 — Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional');
@@ -270,10 +271,10 @@ function criarFormularioAula15() {
 }
 
 function analisarRespostasAula15() {
-  var form = FormApp.openByTitle('Avaliação — Aula 15 · Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 22 · Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 15: Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 22: Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

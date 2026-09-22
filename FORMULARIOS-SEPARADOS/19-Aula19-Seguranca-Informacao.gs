@@ -1,11 +1,12 @@
-﻿// ===== 11-Aula11-Seguranca-Informacao.gs =====
-// Funcao: criarFormularioAula11()
+﻿// ===== 19-Aula19-Seguranca-Informacao.gs =====
+// Aula real (sequencia do curso): Aula 19 - Seguranca-Informacao
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula11()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula11() {
-  var form = FormApp.create('Avaliação — Aula 11 · Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo · SENAI');
+  var form = FormApp.create('Avaliação — Aula 19 · Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo\n\nAula 11 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo\n\nAula 19 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula11() {
 
 
 
-  Logger.log('✅ AULA 11 criada com sucesso!');
+  Logger.log('✅ Aula 19 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 11 — Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo');
@@ -270,10 +271,10 @@ function criarFormularioAula11() {
 }
 
 function analisarRespostasAula11() {
-  var form = FormApp.openByTitle('Avaliação — Aula 11 · Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 19 · Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 11: Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 19: Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

@@ -1,11 +1,12 @@
-﻿// ===== 06-Aula06-Redacao-Emails.gs =====
-// Funcao: criarFormularioAula06()
+﻿// ===== 14-Aula14-Redacao-Emails.gs =====
+// Aula real (sequencia do curso): Aula 14 - Redacao-Emails
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula06()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula06() {
-  var form = FormApp.create('Avaliação — Aula 06 · Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho · SENAI');
+  var form = FormApp.create('Avaliação — Aula 14 · Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho\n\nAula 06 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho\n\nAula 14 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula06() {
 
 
 
-  Logger.log('✅ AULA 06 criada com sucesso!');
+  Logger.log('✅ Aula 14 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 06 — Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho');
@@ -270,10 +271,10 @@ function criarFormularioAula06() {
 }
 
 function analisarRespostasAula06() {
-  var form = FormApp.openByTitle('Avaliação — Aula 06 · Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 14 · Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 06: Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 14: Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

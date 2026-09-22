@@ -1,11 +1,12 @@
-﻿// ===== 19-Aula19-Ciclo-Feedback.gs =====
-// Funcao: criarFormularioAula19()
+﻿// ===== 03-Aula03-Ciclo-Feedback.gs =====
+// Aula real (sequencia do curso): Aula 03 - Ciclo-Feedback
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula19()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula19() {
-  var form = FormApp.create('Avaliação — Aula 19 · O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento · SENAI');
+  var form = FormApp.create('Avaliação — Aula 03 · O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento · SENAI');
 
-  form.setDescription( 'Avaliação Completa: O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento\n\nAula 19 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento\n\nAula 03 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula19() {
 
 
 
-  Logger.log('✅ AULA 19 criada com sucesso!');
+  Logger.log('✅ Aula 03 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 19 — O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento');
@@ -270,10 +271,10 @@ function criarFormularioAula19() {
 }
 
 function analisarRespostasAula19() {
-  var form = FormApp.openByTitle('Avaliação — Aula 19 · O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 03 · O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 19: O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 03: O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

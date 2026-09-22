@@ -1,11 +1,12 @@
-﻿// ===== 05-Aula05-Formatacao-Padronizacao.gs =====
-// Funcao: criarFormularioAula05()
+﻿// ===== 13-Aula13-Formatacao-Padronizacao.gs =====
+// Aula real (sequencia do curso): Aula 13 - Formatacao-Padronizacao
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula05()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula05() {
-  var form = FormApp.create('Avaliação — Aula 05 · Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal · SENAI');
+  var form = FormApp.create('Avaliação — Aula 13 · Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal\n\nAula 05 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal\n\nAula 13 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula05() {
 
 
 
-  Logger.log('✅ AULA 05 criada com sucesso!');
+  Logger.log('✅ Aula 13 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 05 — Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal');
@@ -270,10 +271,10 @@ function criarFormularioAula05() {
 }
 
 function analisarRespostasAula05() {
-  var form = FormApp.openByTitle('Avaliação — Aula 05 · Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 13 · Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 05: Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 13: Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

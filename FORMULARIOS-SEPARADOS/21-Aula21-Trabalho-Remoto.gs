@@ -1,11 +1,12 @@
-﻿// ===== 14-Aula14-Trabalho-Remoto.gs =====
-// Funcao: criarFormularioAula14()
+﻿// ===== 21-Aula21-Trabalho-Remoto.gs =====
+// Aula real (sequencia do curso): Aula 21 - Trabalho-Remoto
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula14()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula14() {
-  var form = FormApp.create('Avaliação — Aula 14 · Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital · SENAI');
+  var form = FormApp.create('Avaliação — Aula 21 · Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital\n\nAula 14 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital\n\nAula 21 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula14() {
 
 
 
-  Logger.log('✅ AULA 14 criada com sucesso!');
+  Logger.log('✅ Aula 21 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 14 — Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital');
@@ -270,10 +271,10 @@ function criarFormularioAula14() {
 }
 
 function analisarRespostasAula14() {
-  var form = FormApp.openByTitle('Avaliação — Aula 14 · Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 21 · Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 14: Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 21: Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');

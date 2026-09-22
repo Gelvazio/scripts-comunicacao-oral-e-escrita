@@ -1,11 +1,12 @@
-﻿// ===== 17-Aula17-Projeto-Capstone.gs =====
-// Funcao: criarFormularioAula17()
+﻿// ===== 24-Aula24-Projeto-Capstone.gs =====
+// Aula real (sequencia do curso): Aula 24 - Projeto-Capstone
+// Funcao interna (numeracao original do Google Forms): criarFormularioAula17()
 // Extraido de FORMULARIO-PRINCIPAL.gs
 
 function criarFormularioAula17() {
-  var form = FormApp.create('Avaliação — Aula 17 · Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais · SENAI');
+  var form = FormApp.create('Avaliação — Aula 24 · Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais · SENAI');
 
-  form.setDescription( 'Avaliação Completa: Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais\n\nAula 17 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
+  form.setDescription( 'Avaliação Completa: Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais\n\nAula 24 — UC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n20 questões | 20 pontos no total\nTempo estimado: 30-40 minutos\nCobertura: 100% do assunto da aula\nVocê verá sua pontuação e feedback automaticamente ao enviar!'
   );
 
   form.setIsQuiz(true);
@@ -254,7 +255,7 @@ function criarFormularioAula17() {
 
 
 
-  Logger.log('✅ AULA 17 criada com sucesso!');
+  Logger.log('✅ Aula 24 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
   Logger.log('   Aula: 17 — Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais');
@@ -270,10 +271,10 @@ function criarFormularioAula17() {
 }
 
 function analisarRespostasAula17() {
-  var form = FormApp.openByTitle('Avaliação — Aula 17 · Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais · SENAI');
+  var form = FormApp.openByTitle('Avaliação — Aula 24 · Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — AULA 17: Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais');
+  Logger.log('📊 ANÁLISE DETALHADA — Aula 24: Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');
