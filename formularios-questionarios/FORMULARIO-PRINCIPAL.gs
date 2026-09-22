@@ -893,7 +893,7 @@ function criarFormularioAula01() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula01() {
@@ -1228,7 +1228,7 @@ function criarFormularioAula02() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula02() {
@@ -1562,7 +1562,7 @@ function criarFormularioAula03() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula03() {
@@ -1896,7 +1896,7 @@ function criarFormularioAula04() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula04() {
@@ -2231,7 +2231,7 @@ function criarFormularioAula05() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula05() {
@@ -2566,7 +2566,7 @@ function criarFormularioAula06() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula06() {
@@ -2901,7 +2901,7 @@ function criarFormularioAula07() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula07() {
@@ -3236,7 +3236,7 @@ function criarFormularioAula08() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula08() {
@@ -3571,7 +3571,7 @@ function criarFormularioAula09() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula09() {
@@ -3906,7 +3906,7 @@ function criarFormularioAula10() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula10() {
@@ -4241,7 +4241,7 @@ function criarFormularioAula11() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula11() {
@@ -4576,7 +4576,7 @@ function criarFormularioAula12() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula12() {
@@ -4911,7 +4911,7 @@ function criarFormularioAula13() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula13() {
@@ -5246,7 +5246,7 @@ function criarFormularioAula14() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula14() {
@@ -5581,7 +5581,7 @@ function criarFormularioAula15() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula15() {
@@ -5916,7 +5916,7 @@ function criarFormularioAula16() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula16() {
@@ -6251,7 +6251,7 @@ function criarFormularioAula17() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula17() {
@@ -6585,7 +6585,7 @@ function criarFormularioAula18() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula18() {
@@ -6920,7 +6920,7 @@ function criarFormularioAula19() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula19() {
@@ -7255,7 +7255,7 @@ function criarFormularioAula20() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula20() {
@@ -7590,7 +7590,7 @@ function criarFormularioAula21() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula21() {
@@ -7925,7 +7925,7 @@ function criarFormularioAula22() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula22() {
@@ -8259,7 +8259,7 @@ function criarFormularioAula23() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula23() {
@@ -8594,7 +8594,7 @@ function criarFormularioAula24() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula24() {
@@ -8928,7 +8928,7 @@ function criarFormularioAula25() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula25() {
@@ -9375,7 +9375,7 @@ function criarQuizRevisao() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasRevisao() {

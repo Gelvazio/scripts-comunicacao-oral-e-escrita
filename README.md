@@ -79,3 +79,9 @@ cp FORMULARIO-PRINCIPAL.gs /tmp/check.js && node --check /tmp/check.js
 ## Licença
 
 [MIT](LICENSE) — Gelvazio Camargo, 2026.
+
+
+## Planilha de controle de codigos
+Informação	Planilha criada: https://docs.google.com/spreadsheets/d/117rTfowLEPEhLT2FGy-U33SCzvzaz9IvPKMm_ue8adk/edit
+
+# Formulario Aula 09 - Comunicacao Ativa

@@ -267,7 +267,7 @@ function criarFormularioAula19() {
   Logger.log(form.getPublishedUrl());
   Logger.log('');
   Logger.log('✏️ LINK PARA EDITAR (PROFESSOR):');
-  Logger.log(FormApp.getActiveForm().getEditUrl());
+  Logger.log(form.getEditUrl());
 }
 
 function analisarRespostasAula19() {
