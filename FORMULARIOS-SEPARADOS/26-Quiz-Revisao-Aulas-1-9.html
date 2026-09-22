@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revisão Integrada — Aulas 1 a 9 — Exercícios</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+
+<style>
+  :root {
+    --azul: #004384;
+    --azul-claro: #0055b3;
+    --laranja: #f7941d;
+    --laranja-escuro: #e87e0d;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #eef2f7;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0 0 60px 0;
+  }
+
+  header.topo {
+    background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+    color: #fff;
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  header.topo h1 {
+    margin: 0 0 6px 0;
+    font-size: 1.6rem;
+  }
+
+  header.topo p {
+    margin: 0;
+    opacity: .9;
+    font-size: .95rem;
+  }
+
+  .temas-avaliados {
+    margin: 18px auto 0 auto;
+    max-width: 640px;
+    text-align: left;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 8px;
+    padding: 14px 22px;
+  }
+
+  .temas-avaliados h2 {
+    margin: 0 0 10px 0;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--laranja);
+  }
+
+  .temas-avaliados ol {
+    margin: 0;
+    padding-left: 18px;
+    columns: 2;
+    column-gap: 26px;
+    color: #fff;
+    font-size: .85rem;
+  }
+
+  .temas-avaliados li {
+    margin-bottom: 6px;
+    break-inside: avoid;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  .aula {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  }
+
+  .aula h2 {
+    color: var(--azul);
+    border-bottom: 3px solid var(--laranja);
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+
+  .aula h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--azul);
+  }
+
+  .btn-export-pdf {
+    background: var(--laranja);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: .85rem;
+  }
+
+  .btn-export-pdf:hover {
+    background: var(--laranja-escuro);
+  }
+
+  .exercicio-box {
+    border: 1px solid var(--azul);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    background: #f9f9f9;
+  }
+
+  .exercicio-header {
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .exercicio-label {
+    font-weight: 600;
+    color: var(--azul);
+  }
+
+  .exercicio-content p {
+    margin: 10px 0;
+  }
+
+  .alternativas {
+    margin: 10px 0 4px 0;
+  }
+
+  .alternativa {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 6px 0;
+    font-size: .95rem;
+  }
+
+  .alternativa .letra {
+    flex: 0 0 24px;
+    height: 24px;
+    border: 1px solid var(--azul);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--azul);
+    font-size: .8rem;
+  }
+
+  /* Gabarito — apenas para o professor, fora dos blocos exportáveis */
+  .gabarito {
+    background: #fff8ec;
+    border: 2px dashed var(--laranja);
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 40px;
+  }
+
+  .gabarito h2 {
+    color: var(--laranja-escuro);
+    margin-top: 0;
+  }
+
+  .gabarito table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .gabarito th, .gabarito td {
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    text-align: center;
+    font-size: .9rem;
+  }
+
+  .gabarito th {
+    background: var(--azul);
+    color: #fff;
+  }
+
+  .gabarito caption {
+    text-align: left;
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 6px;
+    caption-side: top;
+  }
+
+  footer {
+    text-align: center;
+    color: #666;
+    font-size: .85rem;
+    margin-top: 30px;
+  }
+
+  /* Cartão-Resposta — para o aluno preencher */
+  .cartao-resposta {
+    max-width: 900px;
+    margin: 25px auto 0 auto;
+    padding: 0 20px;
+  }
+
+  .cartao-resposta > p {
+    color: #444;
+    font-size: .9rem;
+    margin: 0 0 14px 0;
+  }
+
+  .cartao-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 22px;
+    background: #fff;
+  }
+
+  .cartao-tabela th,
+  .cartao-tabela td {
+    border: 1px solid #000;
+    padding: 6px 8px;
+    text-align: center;
+    font-size: .9rem;
+  }
+
+  .cartao-tabela .titulo-bloco {
+    background: var(--azul);
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+
+  .cartao-tabela .sub-header {
+    background: #f0f0f0;
+    font-weight: 600;
+  }
+
+  .cartao-tabela td:first-child {
+    font-weight: 600;
+    background: #fafafa;
+  }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <h1>Revisão Integrada — Aulas 1 a 9</h1>
+  <p>UC Introdução à Comunicação Oral e Escrita · SENAI · Professor Gelvazio</p>
+  <p>30 questões · 1 ponto cada · Baseado em: 26-Quiz-Revisao-Aulas-1-9.gs</p>
+
+  <div class="temas-avaliados">
+    <h2>Conteúdo avaliado</h2>
+    <ol>
+      <li>Processo Comunicativo</li>
+      <li>Comunicação Eficaz</li>
+      <li>O Ciclo do Feedback na Comunicação</li>
+      <li>Contextos Formais versus Informais</li>
+      <li>Síntese dos Fundamentos da Comunicação</li>
+      <li>Estrutura de Apresentações</li>
+      <li>Técnicas de Oratória e Expressão Vocal</li>
+      <li>Participação e Condução de Reuniões</li>
+      <li>Atendimento e Escuta Ativa</li>
+    </ol>
+  </div>
+</header>
+
+<section class="cartao-resposta">
+  <p>📝 <strong>Cartão-Resposta:</strong> marque com um "X" a alternativa escolhida em cada item. A coluna CORREÇÃO é de uso do professor.</p>
+
+  <table class="cartao-tabela">
+    <thead>
+      <tr><th class="titulo-bloco" colspan="6">GABARITO — BLOCO 1 (ITENS 1 A 10)</th></tr>
+      <tr class="sub-header"><th>ITEM</th><th colspan="4">ALTERNATIVAS</th><th>CORREÇÃO</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>2</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>3</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>4</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>5</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>6</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>7</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>8</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>9</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>10</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <table class="cartao-tabela">
+    <thead>
+      <tr><th class="titulo-bloco" colspan="6">GABARITO — BLOCO 2 (ITENS 11 A 20)</th></tr>
+      <tr class="sub-header"><th>ITEM</th><th colspan="4">ALTERNATIVAS</th><th>CORREÇÃO</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>11</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>12</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>13</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>14</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>15</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>16</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>17</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>18</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>19</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>20</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <table class="cartao-tabela">
+    <thead>
+      <tr><th class="titulo-bloco" colspan="6">GABARITO — BLOCO 3 (ITENS 21 A 30)</th></tr>
+      <tr class="sub-header"><th>ITEM</th><th colspan="4">ALTERNATIVAS</th><th>CORREÇÃO</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>21</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>22</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>23</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>24</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>25</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>26</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>27</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>28</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>29</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+      <tr><td>30</td><td>( &nbsp;) A</td><td>( &nbsp;) B</td><td>( &nbsp;) C</td><td>( &nbsp;) D</td><td></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<main>
+
+  <!-- ============================================================ -->
+  <!-- BLOCO 1: Fundamentos da Comunicação (Aulas 1-3) -->
+  <!-- ============================================================ -->
+  <div class="aula" id="aula-1">
+    <h2>Bloco 1 — Fundamentos da Comunicação (Aulas 1-3)</h2>
+
+    <h3>✏️ Exercícios
+      <button class="btn-export-pdf" onclick="exportarPDFExercicios()">📥 Exportar PDF</button>
+    </h3>
+
+    <div class="exercicios" id="exercicios-modulo">
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 1</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 1 — Processo Comunicativo</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que caracteriza o Emissor no processo comunicativo?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Quem concebe uma ideia e a transforma em sinais compreensíveis, selecionando palavras e adequando a linguagem</div>
+            <div class="alternativa"><span class="letra">B</span> Capta os sinais transmitidos e realiza a decodificação da mensagem</div>
+            <div class="alternativa"><span class="letra">C</span> Conjunto convencionado de signos e regras usado para construir a mensagem</div>
+            <div class="alternativa"><span class="letra">D</span> Qualquer interferência que degrade a mensagem</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 2</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 1 — Processo Comunicativo</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, o que é o Ruído no processo comunicativo?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> O destinatário que acolhe e decodifica o sinal</div>
+            <div class="alternativa"><span class="letra">B</span> Qualquer perturbação que degrade a mensagem, podendo ser físico, semântico, psicológico ou fisiológico</div>
+            <div class="alternativa"><span class="letra">C</span> A situação real que envolve a conversa: lugar, momento e relações sociais</div>
+            <div class="alternativa"><span class="letra">D</span> O meio físico ou digital pelo qual a mensagem viaja</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 3</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 1 — Processo Comunicativo</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, qual é a função do Feedback no ciclo comunicativo?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> É o conteúdo concreto da transmissão: ideias, sentimentos ou dados enviados</div>
+            <div class="alternativa"><span class="letra">B</span> É o conjunto de signos e regras compartilhado entre emissor e receptor</div>
+            <div class="alternativa"><span class="letra">C</span> É a interferência que impede a comunicação de ocorrer</div>
+            <div class="alternativa"><span class="letra">D</span> É a resposta do receptor ao emissor, fechando o ciclo e permitindo verificar se a mensagem foi decodificada corretamente</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 4</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 2 — Comunicação Eficaz</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, o que caracteriza a Concisão em uma mensagem eficaz?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Foco direto no propósito sem rodeios secundários</div>
+            <div class="alternativa"><span class="letra">B</span> Transmissão do máximo de ideias com o mínimo de termos, eliminando redundâncias</div>
+            <div class="alternativa"><span class="letra">C</span> Harmonia lógica e integridade estrutural das ideias</div>
+            <div class="alternativa"><span class="letra">D</span> Ausência de obscuridade; mensagem sem margem a dúvidas</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 5</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 2 — Comunicação Eficaz</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que é Ambiguidade Estrutural?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Nasce da posição inadequada de pronomes, termos modificadores ou adjuntos na frase</div>
+            <div class="alternativa"><span class="letra">B</span> É a técnica de perguntar "Você entendeu?" para validar a compreensão</div>
+            <div class="alternativa"><span class="letra">C</span> É o uso de vocabulário técnico compreendido apenas por especialistas</div>
+            <div class="alternativa"><span class="letra">D</span> É a resposta do receptor que fecha o ciclo comunicativo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 6</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 2 — Comunicação Eficaz</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, qual é a forma correta de checar a compreensão do interlocutor?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Perguntar diretamente "Você entendeu?" e aceitar a resposta afirmativa</div>
+            <div class="alternativa"><span class="letra">B</span> Repetir a mensagem original com o mesmo vocabulário técnico</div>
+            <div class="alternativa"><span class="letra">C</span> Pedir uma paráfrase, como "você pode resumir os próximos passos que combinamos?"</div>
+            <div class="alternativa"><span class="letra">D</span> Presumir que o silêncio do receptor significa compreensão total</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 7</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 3 — O Ciclo do Feedback na Comunicação</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que caracteriza a comunicação Unilateral?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> A mensagem viaja em sentido único, sem que o emissor obtenha dados sobre a reação do destinatário</div>
+            <div class="alternativa"><span class="letra">B</span> Há troca constante e recíproca entre emissor e receptor</div>
+            <div class="alternativa"><span class="letra">C</span> É a técnica que organiza a crítica em elogio, ponto de melhoria e incentivo</div>
+            <div class="alternativa"><span class="letra">D</span> É a postura de justificar-se antes de assimilar o que foi dito</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 8</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 3 — O Ciclo do Feedback na Comunicação</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, como funciona a Técnica do Feedback Sanduíche?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Consiste em criticar diretamente sem qualquer elogio para economizar tempo</div>
+            <div class="alternativa"><span class="letra">B</span> Organiza a mensagem em três camadas: reconhecimento de um ponto forte, o aspecto a melhorar e um encerramento com incentivo</div>
+            <div class="alternativa"><span class="letra">C</span> É o fluxo de informação que ocorre em um único sentido, sem retorno</div>
+            <div class="alternativa"><span class="letra">D</span> Baseia-se apenas em dados e fatos, nunca mencionando pontos positivos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 9</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 3 — O Ciclo do Feedback na Comunicação</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que caracteriza um Feedback Factual (construtivo)?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> É uma crítica vaga que aponta defeitos gerais de personalidade</div>
+            <div class="alternativa"><span class="letra">B</span> É a fase inicial de brainstorming livre sem julgamento</div>
+            <div class="alternativa"><span class="letra">C</span> Foca em fatos concretos e observáveis, nunca em características pessoais do interlocutor</div>
+            <div class="alternativa"><span class="letra">D</span> É o retorno dado apenas ao final do projeto, sem checagens intermediárias</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 10</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Fundamentos da Comunicação</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 3 — O Ciclo do Feedback na Comunicação</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, qual é uma barreira emocional comum ao receber críticas?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Escutar atentamente até a conclusão da fala sem interromper</div>
+            <div class="alternativa"><span class="letra">B</span> Pedir exemplos concretos para compreender melhor a falha apontada</div>
+            <div class="alternativa"><span class="letra">C</span> Agradecer o retorno e propor um plano de melhoria realista</div>
+            <div class="alternativa"><span class="letra">D</span> Postura Defensiva: justificar-se imediatamente antes de assimilar o que foi observado</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- BLOCO 2: Adequação e Estrutura (Aulas 4-6) -->
+  <!-- ============================================================ -->
+  <div class="aula" id="aula-2">
+    <h2>Bloco 2 — Adequação e Estrutura (Aulas 4-6)</h2>
+
+    <h3>✏️ Exercícios
+      <button class="btn-export-pdf" onclick="exportarPDFExercicios()">📥 Exportar PDF</button>
+    </h3>
+
+    <div class="exercicios" id="exercicios-modulo">
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 11</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 4 — Contextos Formais versus Informais</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que caracteriza o Registro Formal?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Segue a norma-padrão gramatical, possui vocabulário preciso e evita gírias, priorizando a objetividade</div>
+            <div class="alternativa"><span class="letra">B</span> É marcado pela espontaneidade e uso de termos coloquiais e abreviações</div>
+            <div class="alternativa"><span class="letra">C</span> Ocorre quando o comunicador tenta soar sofisticado e comete deslizes gramaticais</div>
+            <div class="alternativa"><span class="letra">D</span> É o termo técnico específico compreendido apenas por especialistas de uma área</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 12</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 4 — Contextos Formais versus Informais</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, o que é Hipercorreção?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> É o uso de gírias e abreviações típicas de conversas entre amigos</div>
+            <div class="alternativa"><span class="letra">B</span> É a adaptação da linguagem ao ambiente, interlocutor e objetivo da mensagem</div>
+            <div class="alternativa"><span class="letra">C</span> Ocorre quando o comunicador tenta soar excessivamente sofisticado e comete deslizes gramaticais ou artificiais</div>
+            <div class="alternativa"><span class="letra">D</span> É o uso de termos técnicos compreendidos apenas por especialistas de uma área</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 13</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 4 — Contextos Formais versus Informais</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, qual é o risco de usar jargões técnicos com um público leigo?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Demonstra sempre domínio técnico e melhora automaticamente a compreensão do público</div>
+            <div class="alternativa"><span class="letra">B</span> Cria barreiras instransponíveis e gera distanciamento entre emissor e receptor</div>
+            <div class="alternativa"><span class="letra">C</span> Torna a mensagem mais concisa sem qualquer prejuízo à clareza</div>
+            <div class="alternativa"><span class="letra">D</span> Elimina a necessidade de adequar o registro ao contexto e ao interlocutor</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 14</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 5 — Síntese dos Fundamentos da Comunicação</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, o que representa o papel "Responsável" na Matriz RACI?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Quem executa a tarefa ou redige o comunicado técnico inicial</div>
+            <div class="alternativa"><span class="letra">B</span> Quem responde pelo resultado e valida formalmente a transmissão</div>
+            <div class="alternativa"><span class="letra">C</span> Especialistas ouvidos antes da emissão da mensagem definitiva</div>
+            <div class="alternativa"><span class="letra">D</span> Pessoas que recebem a notificação apenas para acompanhamento</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 15</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 5 — Síntese dos Fundamentos da Comunicação</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que caracteriza os Silos Departamentais como causa de falha na comunicação interna?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Equipes usam termos herméticos com áreas que não dominam o vocabulário técnico</div>
+            <div class="alternativa"><span class="letra">B</span> Mensagens ficam espalhadas por vários canais sem registro formal</div>
+            <div class="alternativa"><span class="letra">C</span> Setores retêm informações cruciais por falta de integração ou rivalidade interna</div>
+            <div class="alternativa"><span class="letra">D</span> Prazos ficam indefinidos e tarefas sem responsável identificado</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 16</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 5 — Síntese dos Fundamentos da Comunicação</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, o que avalia a etapa "Quando/Onde" da Matriz 5W2H?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Definir o objetivo da mensagem e sua real necessidade</div>
+            <div class="alternativa"><span class="letra">B</span> Definir prazos de envio e os canais adequados para a mensagem</div>
+            <div class="alternativa"><span class="letra">C</span> Indicar o emissor e os receptores diretos da mensagem</div>
+            <div class="alternativa"><span class="letra">D</span> Descrever a execução e as métricas de retorno</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 17</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 6 — Estrutura de Apresentações</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, qual é a função do Gancho Inicial (the hook) em uma apresentação?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Sintetizar os pontos discutidos e convidar a uma reflexão final</div>
+            <div class="alternativa"><span class="letra">B</span> Apresentar argumentos, evidências e conexões lógicas centrais</div>
+            <div class="alternativa"><span class="letra">C</span> Captar a atenção do público logo no início, usando pergunta instigante, dado surpreendente ou história curta</div>
+            <div class="alternativa"><span class="letra">D</span> Controlar a velocidade e as pausas durante toda a fala</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 18</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 6 — Estrutura de Apresentações</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, por que um roteiro não deve conter a transcrição exata de cada palavra?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Porque o público prefere ouvir um discurso totalmente improvisado sem qualquer preparo</div>
+            <div class="alternativa"><span class="letra">B</span> Porque a leitura literal trava a espontaneidade, quebra o contato visual e dificulta a recuperação caso o orador se perca</div>
+            <div class="alternativa"><span class="letra">C</span> Porque slides com pouco texto sempre confundem mais a audiência</div>
+            <div class="alternativa"><span class="letra">D</span> Porque a conclusão deve ser sempre mais longa que o desenvolvimento</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 19</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 6 — Estrutura de Apresentações</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que é o Pacing em uma apresentação?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> O elemento inicial concebido para capturar a atenção do público</div>
+            <div class="alternativa"><span class="letra">B</span> A técnica de ler cada slide literalmente sem improviso</div>
+            <div class="alternativa"><span class="letra">C</span> O tempo total dedicado exclusivamente à conclusão do discurso</div>
+            <div class="alternativa"><span class="letra">D</span> A alternância consciente entre momentos de aceleração enérgica e pausas reflexivas</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 20</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Adequação e Estrutura</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 6 — Estrutura de Apresentações</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, qual é a distribuição recomendada de tempo em uma apresentação?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> 50% para abertura, 25% para desenvolvimento e 25% para conclusão</div>
+            <div class="alternativa"><span class="letra">B</span> 70% para desenvolvimento, 15% para abertura e 15% para conclusão</div>
+            <div class="alternativa"><span class="letra">C</span> 90% para desenvolvimento e 10% dividido entre abertura e conclusão</div>
+            <div class="alternativa"><span class="letra">D</span> Tempo igual (33%) para abertura, desenvolvimento e conclusão</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- BLOCO 3: Oralidade e Atendimento Profissional (Aulas 7-9) -->
+  <!-- ============================================================ -->
+  <div class="aula" id="aula-3">
+    <h2>Bloco 3 — Oralidade e Atendimento Profissional (Aulas 7-9)</h2>
+
+    <h3>✏️ Exercícios
+      <button class="btn-export-pdf" onclick="exportarPDFExercicios()">📥 Exportar PDF</button>
+    </h3>
+
+    <div class="exercicios" id="exercicios-modulo">
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 21</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 7 — Técnicas de Oratória e Expressão Vocal</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, qual é a diferença entre Articulação e Dicção?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Articulação é o movimento muscular da boca; Dicção é a clareza sonora resultante desse movimento</div>
+            <div class="alternativa"><span class="letra">B</span> Articulação é a variação de tom e ritmo; Dicção é a arte de discursar com persuasão</div>
+            <div class="alternativa"><span class="letra">C</span> Articulação é a pausa estratégica; Dicção é o volume da voz</div>
+            <div class="alternativa"><span class="letra">D</span> Articulação é a respiração diafragmática; Dicção é o aquecimento vocal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 22</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 7 — Técnicas de Oratória e Expressão Vocal</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, qual é a função da respiração diafragmática ao falar em público?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Acumula tensão nos ombros e pescoço, comprimindo a laringe</div>
+            <div class="alternativa"><span class="letra">B</span> Elimina completamente a necessidade de pausas durante a fala</div>
+            <div class="alternativa"><span class="letra">C</span> Serve apenas para aquecer as pregas vocais antes do discurso</div>
+            <div class="alternativa"><span class="letra">D</span> Expande a região abdominal, fornecendo um colchão constante de ar para sustentar frases longas com estabilidade</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 23</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 7 — Técnicas de Oratória e Expressão Vocal</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, como eliminar vícios de linguagem como "né" e "tipo assim"?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Falar mais rápido para não dar tempo de pensar nas palavras</div>
+            <div class="alternativa"><span class="letra">B</span> Substituir o vício por uma pausa estratégica de silêncio, mantendo o apoio do diafragma</div>
+            <div class="alternativa"><span class="letra">C</span> Aumentar o volume da voz sempre que sentir vontade de usar o vício</div>
+            <div class="alternativa"><span class="letra">D</span> Ignorar completamente a preparação vocal antes de falas importantes</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 24</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 8 — Participação e Condução de Reuniões</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que deve conter uma Ata formal de reunião?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> A transcrição literal de tudo o que cada participante falou durante o encontro</div>
+            <div class="alternativa"><span class="letra">B</span> Apenas a lista de presença, sem registrar decisões ou encaminhamentos</div>
+            <div class="alternativa"><span class="letra">C</span> Cabeçalho com data e participantes, pauta tratada, deliberações e plano de ação com responsáveis e prazos</div>
+            <div class="alternativa"><span class="letra">D</span> Somente as divergências de opinião, sem mencionar os acordos finais</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 25</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 8 — Participação e Condução de Reuniões</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, o que caracteriza a Comunicação Assertiva em uma reunião?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Guarda ideias por receio e acumula frustração em silêncio</div>
+            <div class="alternativa"><span class="letra">B</span> Interrompe os outros e impõe pontos de vista à força</div>
+            <div class="alternativa"><span class="letra">C</span> Evita qualquer posicionamento para não gerar conflito no grupo</div>
+            <div class="alternativa"><span class="letra">D</span> Expressa convicções com gentileza, apoia argumentos em fatos e sabe dizer "não" quando necessário</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 26</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 8 — Participação e Condução de Reuniões</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, quais são os passos para mediar um conflito em reunião?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Impor a decisão do líder para encerrar rapidamente a divergência</div>
+            <div class="alternativa"><span class="letra">B</span> Escutar os dois lados sem interrupção, encontrar o ponto comum e construir um acordo equilibrado</div>
+            <div class="alternativa"><span class="letra">C</span> Ignorar o conflito e seguir adiante com a pauta original</div>
+            <div class="alternativa"><span class="letra">D</span> Pedir que apenas uma das partes explique sua posição</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 27</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 9 — Atendimento e Escuta Ativa</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que é Parafraseamento no atendimento?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Reconhecer e legitimar o sentimento do usuário antes da solução técnica</div>
+            <div class="alternativa"><span class="letra">B</span> Resumir a essência do que foi dito usando suas próprias palavras, demonstrando que a mensagem foi processada com precisão</div>
+            <div class="alternativa"><span class="letra">C</span> Formulação que convida o interlocutor a explicar o ocorrido em profundidade</div>
+            <div class="alternativa"><span class="letra">D</span> Apenas receber sons sem demonstrar engajamento ou reflexão crítica</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 28</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 9 — Atendimento e Escuta Ativa</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, por que a Validação Emocional deve vir antes da solução técnica?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Porque o registro do chamado só pode ser feito após o cliente se acalmar completamente</div>
+            <div class="alternativa"><span class="letra">B</span> Porque pessoas irritadas não conseguem raciocinar bem sobre soluções lógicas enquanto não sentem sua frustração compreendida</div>
+            <div class="alternativa"><span class="letra">C</span> Porque valida se o código de acesso do atendimento está correto</div>
+            <div class="alternativa"><span class="letra">D</span> Porque é uma exigência legal em todos os tipos de atendimento ao consumidor</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 29</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 9 — Atendimento e Escuta Ativa</p>
+          <p><span class="exercicio-label">Comando:</span> Segundo a aula, o que caracteriza uma solução Ganha-Ganha no atendimento?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> A empresa impõe a regra friamente e o usuário sai lesado</div>
+            <div class="alternativa"><span class="letra">B</span> O atendente cede a exigências ilegais e a empresa sofre prejuízos</div>
+            <div class="alternativa"><span class="letra">C</span> Ambos chegam a uma alternativa viável e construtiva, respeitando as necessidades do usuário e as regras da instituição</div>
+            <div class="alternativa"><span class="letra">D</span> O atendimento é encerrado sem qualquer registro formal do ocorrido</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercicio-box">
+        <div class="exercicio-header">ITEM 30</div>
+        <div class="exercicio-content">
+          <p><span class="exercicio-label">CAPACIDADE:</span> Oralidade e Atendimento Profissional</p>
+          <div style="border-bottom: 1px solid black; margin: 12px 0;"></div>
+          <p><span class="exercicio-label">Contexto:</span> Aula 9 — Atendimento e Escuta Ativa</p>
+          <p><span class="exercicio-label">Comando:</span> De acordo com a aula, qual é a diferença entre pergunta aberta e pergunta fechada no atendimento?</p>
+          <div class="alternativas">
+            <div class="alternativa"><span class="letra">A</span> Perguntas abertas só podem ser feitas por escrito, nunca verbalmente</div>
+            <div class="alternativa"><span class="letra">B</span> Perguntas fechadas são sempre mais respeitosas com o tempo do cliente</div>
+            <div class="alternativa"><span class="letra">C</span> Não há diferença prática entre os dois tipos de pergunta no atendimento</div>
+            <div class="alternativa"><span class="letra">D</span> Perguntas fechadas aceitam apenas "sim" ou "não"; perguntas abertas estimulam a fala detalhada e ajudam a descobrir a causa raiz</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- GABARITO — uso exclusivo do professor -->
+  <!-- ============================================================ -->
+  <div class="gabarito">
+    <h2>🔑 Gabarito (uso do professor)</h2>
+
+    <table>
+      <caption>Bloco 1 — Fundamentos da Comunicação (Aulas 1-3)</caption>
+      <thead><tr><th>Item</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead>
+      <tbody><tr><td>Resposta</td><td>A</td><td>B</td><td>D</td><td>B</td><td>A</td><td>C</td><td>A</td><td>B</td><td>C</td><td>D</td></tr></tbody>
+    </table>
+
+    <table>
+      <caption>Bloco 2 — Adequação e Estrutura (Aulas 4-6)</caption>
+      <thead><tr><th>Item</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th>20</th></tr></thead>
+      <tbody><tr><td>Resposta</td><td>A</td><td>C</td><td>B</td><td>A</td><td>C</td><td>B</td><td>C</td><td>B</td><td>D</td><td>B</td></tr></tbody>
+    </table>
+
+    <table>
+      <caption>Bloco 3 — Oralidade e Atendimento Profissional (Aulas 7-9)</caption>
+      <thead><tr><th>Item</th><th>21</th><th>22</th><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th></tr></thead>
+      <tbody><tr><td>Resposta</td><td>A</td><td>D</td><td>B</td><td>C</td><td>D</td><td>B</td><td>B</td><td>B</td><td>C</td><td>D</td></tr></tbody>
+    </table>
+  </div>
+
+</main>
+
+<footer>
+  Professor Gelvazio · SENAI · Introdução à Comunicação Oral e Escrita
+</footer>
+
+<script>
+function exportarPDFExercicios() {
+    const modulos = document.querySelectorAll('.aula');
+    if (!modulos.length) {
+        alert('Nenhum exercício encontrado');
+        return;
+    }
+
+    const blocos = [];
+    modulos.forEach((modulo) => {
+        const nomeModulo = modulo.querySelector('h2')?.textContent || 'EXERCÍCIOS';
+        const exercicios = [];
+        modulo.querySelectorAll('.exercicio-box').forEach((box) => {
+            const header = box.querySelector('.exercicio-header')?.textContent || '';
+            const textos = [];
+            box.querySelectorAll('.exercicio-content > p').forEach(p => {
+                const txt = p.textContent.trim();
+                if (txt) textos.push(txt);
+            });
+            box.querySelectorAll('.alternativa').forEach(alt => {
+                const txt = alt.textContent.trim();
+                if (txt) textos.push(txt);
+            });
+            exercicios.push({ header: header, content: textos });
+        });
+        blocos.push({ nomeModulo: nomeModulo, exercicios: exercicios });
+    });
+
+    const temas = Array.from(document.querySelectorAll('.temas-avaliados li')).map(li => li.textContent.trim());
+
+    const jsPDF = window.jspdf?.jsPDF || window.jsPDF;
+    if (!jsPDF) {
+        alert('Erro: jsPDF não carregado');
+        return;
+    }
+    const doc = new jsPDF('p', 'mm', 'a4');
+
+    let yPos = 20;
+    const margin = 15;
+
+    const headerData = [
+        [
+            {
+                content: 'SENAI\nServiço Nacional de Aprendizagem Industrial\nSanta Catarina',
+                styles: { fontStyle: 'bold', fontSize: 10, halign: 'center', fillColor: [0, 51, 153], textColor: [255, 255, 255] },
+                colSpan: 2
+            },
+            {
+                content: 'REVISÃO INTEGRADA',
+                styles: { fontStyle: 'bold', fontSize: 11, halign: 'center', fillColor: [240, 240, 240] }
+            },
+            {
+                content: 'Desempenho',
+                styles: { fontStyle: 'bold', fontSize: 10, halign: 'center', fillColor: [240, 240, 240] }
+            }
+        ],
+        [
+            { content: 'REVISÃO INTEGRADA — AULAS 1 A 9 (TODOS OS BLOCOS · 30 QUESTÕES)', styles: { fontSize: 10, fontStyle: 'bold' }, colSpan: 4 }
+        ],
+        [
+            { content: 'Data: ___/___/___', styles: { fontSize: 10 } },
+            { content: '', styles: { fontSize: 10 } },
+            { content: '', styles: { fontSize: 10 } },
+            { content: '', styles: { fontSize: 10 } }
+        ],
+        [
+            { content: 'Docente: GELVAZIO CAMARGO', styles: { fontSize: 10, fontStyle: 'bold' }, colSpan: 2 },
+            { content: '', styles: { fontSize: 10 } },
+            { content: '', styles: { fontSize: 10 } }
+        ],
+        [
+            { content: 'Unidade Curricular: Introdução à Comunicação Oral e Escrita', styles: { fontSize: 10 }, colSpan: 2 },
+            { content: 'Turma: ___________________', styles: { fontSize: 10 }, colSpan: 2 }
+        ],
+        [
+            { content: 'Estudante: ___________________________________________________', styles: { fontSize: 10 }, colSpan: 4 }
+        ]
+    ];
+
+    doc.autoTable({
+        body: headerData,
+        startY: yPos,
+        margin: margin,
+        columnStyles: {
+            0: { cellWidth: 30 },
+            1: { cellWidth: 60 },
+            2: { cellWidth: 60 },
+            3: { cellWidth: 30 }
+        },
+        styles: {
+            fontSize: 10,
+            cellPadding: 4,
+            lineColor: [0, 0, 0],
+            lineWidth: 0.1,
+            textColor: [0, 0, 0]
+        }
+    });
+
+    yPos = doc.lastAutoTable.finalY + 10;
+
+    if (temas.length) {
+        const temaRows = temas.map((t, i) => [{
+            content: (i + 1) + '. ' + t,
+            styles: { fontSize: 9, halign: 'left' }
+        }]);
+
+        doc.autoTable({
+            body: [
+                [{
+                    content: 'CONTEÚDO AVALIADO',
+                    styles: { fontStyle: 'bold', fontSize: 10, halign: 'center', fillColor: [247, 148, 29], textColor: [255, 255, 255] }
+                }],
+                ...temaRows
+            ],
+            startY: yPos,
+            margin: margin,
+            styles: {
+                fontSize: 9,
+                cellPadding: 3,
+                lineColor: [0, 0, 0],
+                lineWidth: 0.1
+            }
+        });
+
+        yPos = doc.lastAutoTable.finalY + 10;
+    }
+
+    blocos.forEach((bloco) => {
+        doc.autoTable({
+            body: [[{
+                content: bloco.nomeModulo.toUpperCase(),
+                styles: { fontStyle: 'bold', fontSize: 12, halign: 'center', fillColor: [0, 67, 132], textColor: [255, 255, 255] }
+            }]],
+            startY: yPos,
+            margin: margin,
+            styles: { fontSize: 12, cellPadding: 5 }
+        });
+        yPos = doc.lastAutoTable.finalY + 6;
+
+        bloco.exercicios.forEach((ex) => {
+            const tableData = [];
+
+            tableData.push([{
+                content: ex.header,
+                styles: { fontStyle: 'bold', fontSize: 13, halign: 'center', fillColor: [220, 220, 220] }
+            }]);
+
+            ex.content.forEach(line => {
+                const labels = ['CAPACIDADE:', 'Contexto:', 'Comando:'];
+                let isBoldLabel = false;
+
+                for (let label of labels) {
+                    if (line.startsWith(label)) {
+                        isBoldLabel = true;
+                        break;
+                    }
+                }
+
+                tableData.push([{
+                    content: line,
+                    styles: {
+                        fontSize: 10,
+                        halign: 'left',
+                        fontStyle: isBoldLabel ? 'bold' : 'normal'
+                    }
+                }]);
+            });
+
+            doc.autoTable({
+                head: [],
+                body: tableData,
+                startY: yPos,
+                margin: margin,
+                pageBreak: 'auto',
+                columnStyles: { 0: { cellWidth: 'auto', halign: 'left' } },
+                didDrawPage: function(data) {
+                    yPos = data.cursor.y;
+                },
+                styles: {
+                    fontSize: 10,
+                    cellPadding: 4,
+                    lineColor: [0, 0, 0],
+                    lineWidth: 0.1
+                }
+            });
+
+            yPos = doc.lastAutoTable.finalY + 8;
+        });
+    });
+
+    doc.save('Revisao-Aulas-1-9-Completo.pdf');
+}
+</script>
+
+</body>
+</html>
