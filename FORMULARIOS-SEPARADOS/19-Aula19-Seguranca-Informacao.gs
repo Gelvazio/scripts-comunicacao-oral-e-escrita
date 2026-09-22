@@ -255,6 +255,8 @@ function criarFormularioAula11() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ Aula 19 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');

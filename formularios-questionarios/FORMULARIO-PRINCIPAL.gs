@@ -1,4 +1,4 @@
-/**
+﻿/**
  * FORMULARIO-PRINCIPAL.gs
  * CONSOLIDADO: Todos os 26 formulários de aulas em um único arquivo
  * Gerado automaticamente em 2026-09-21
@@ -322,6 +322,7 @@ var CODIGOS_VALIDOS = [
 
 // Planilha de rastreamento de codigos usados
 var SHEET_NAME = 'Codigos-Utilizados';
+var PROP_PLANILHA_ID = 'PLANILHA_RASTREAMENTO_ID';
 
 function criarPlanilhaRastreamento() {
   var spreadsheet = SpreadsheetApp.create('Rastreamento-Codigos-Avaliacoes');
@@ -329,15 +330,35 @@ function criarPlanilhaRastreamento() {
   sheet.setName(SHEET_NAME);
 
   // Headers
-  sheet.appendRow(['Codigo', 'Data Uso', 'Hora', 'Nome Aluno', 'Aula', 'Status']);
+  sheet.appendRow(['Codigo', 'Data Uso', 'Hora', 'Nome Aluno', 'Questionario', 'Nota', 'Status']);
 
   // Inicializar com todos os codigos como "Disponivel"
   CODIGOS_VALIDOS.forEach(function(codigo) {
-    sheet.appendRow([codigo, '', '', '', '', 'Disponivel']);
+    sheet.appendRow([codigo, '', '', '', '', '', 'Disponivel']);
   });
+
+  // Guardar o ID para as demais funcoes acharem a planilha
+  // (script standalone nao tem "planilha ativa" - SpreadsheetApp.getActiveSpreadsheet()
+  // so funciona em script vinculado a uma planilha como container)
+  PropertiesService.getScriptProperties().setProperty(PROP_PLANILHA_ID, spreadsheet.getId());
 
   Logger.log('Planilha criada: ' + spreadsheet.getUrl());
   return spreadsheet.getId();
+}
+
+// Retorna a planilha de rastreamento, ou null se ainda nao foi criada.
+// Centraliza o acesso para nao depender de SpreadsheetApp.getActiveSpreadsheet(),
+// que retorna null neste script standalone.
+function getPlanilhaRastreamento() {
+  var id = PropertiesService.getScriptProperties().getProperty(PROP_PLANILHA_ID);
+  if (!id) return null;
+
+  try {
+    return SpreadsheetApp.openById(id);
+  } catch (e) {
+    Logger.log('Aviso: planilha de rastreamento nao encontrada (ID salvo invalido): ' + e.message);
+    return null;
+  }
 }
 
 function validarCodigoUnico(codigo, nomeAluno, nomeAula) {
@@ -362,20 +383,23 @@ function validarCodigoUnico(codigo, nomeAluno, nomeAula) {
 
   // Verificar se codigo ja foi usado
   try {
-    var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    var spreadsheet = getPlanilhaRastreamento();
+    if (!spreadsheet) {
+      throw new Error('Planilha de rastreamento nao encontrada. Rode criarPlanilhaRastreamento() primeiro.');
+    }
     var sheet = spreadsheet.getSheetByName(SHEET_NAME);
 
     if (!sheet) {
       // Se nao existe, criar
       sheet = spreadsheet.insertSheet(SHEET_NAME);
-      sheet.appendRow(['Codigo', 'Data Uso', 'Hora', 'Nome Aluno', 'Aula', 'Status']);
+      sheet.appendRow(['Codigo', 'Data Uso', 'Hora', 'Nome Aluno', 'Questionario', 'Nota', 'Status']);
     }
 
     var data = sheet.getDataRange().getValues();
 
     for (var i = 1; i < data.length; i++) {
       if (data[i][0] === codigo) {
-        if (data[i][5] === 'Usado' || data[i][5] === 'USADO') {
+        if (data[i][6] === 'Usado' || data[i][6] === 'USADO') {
           return {
             valido: false,
             mensagem: 'Este codigo ja foi utilizado. Um codigo pode ser usado apenas 1 vez.',
@@ -407,7 +431,8 @@ function validarCodigoUnico(codigo, nomeAluno, nomeAula) {
 
 function registrarUsoDeCodego(codigo, nomeAluno, nomeAula) {
   try {
-    var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    var spreadsheet = getPlanilhaRastreamento();
+    if (!spreadsheet) return;
     var sheet = spreadsheet.getSheetByName(SHEET_NAME);
 
     if (!sheet) return;
@@ -423,12 +448,83 @@ function registrarUsoDeCodego(codigo, nomeAluno, nomeAula) {
         sheet.getRange(i + 1, 3).setValue(hora_str);
         sheet.getRange(i + 1, 4).setValue(nomeAluno || 'N/A');
         sheet.getRange(i + 1, 5).setValue(nomeAula || 'N/A');
-        sheet.getRange(i + 1, 6).setValue('USADO');
+        sheet.getRange(i + 1, 7).setValue('USADO');
         break;
       }
     }
   } catch (e) {
     // Silenciosamente ignorar se nao conseguir escrever
+  }
+}
+
+// Registra a nota de um questionario na linha do codigo correspondente.
+// Chamada automaticamente pelo trigger aoSubmeterFormulario() quando o aluno envia a resposta.
+function registrarNotaNoRastreamento(codigo, nomeQuestionario, nota, notaMaxima) {
+  try {
+    if (!codigo) {
+      Logger.log('Aviso: submissao sem codigo de acesso, nota nao registrada. Questionario: ' + nomeQuestionario);
+      return;
+    }
+    codigo = codigo.toUpperCase().trim();
+
+    var spreadsheet = getPlanilhaRastreamento();
+    if (!spreadsheet) {
+      Logger.log('Aviso: planilha de rastreamento nao encontrada. Nota nao registrada.');
+      return;
+    }
+    var sheet = spreadsheet.getSheetByName(SHEET_NAME);
+    if (!sheet) return;
+
+    var data = sheet.getDataRange().getValues();
+    var notaFormatada = nota + (notaMaxima ? ' / ' + notaMaxima : '');
+
+    for (var i = 1; i < data.length; i++) {
+      if (data[i][0] === codigo) {
+        sheet.getRange(i + 1, 5).setValue(nomeQuestionario || 'N/A'); // Questionario
+        sheet.getRange(i + 1, 6).setValue(notaFormatada);              // Nota
+        Logger.log('Nota registrada: ' + codigo + ' - ' + nomeQuestionario + ' - ' + notaFormatada);
+        return;
+      }
+    }
+
+    Logger.log('Aviso: codigo ' + codigo + ' nao encontrado na planilha de rastreamento.');
+  } catch (e) {
+    Logger.log('Erro ao registrar nota: ' + e.message);
+  }
+}
+
+// Trigger instalavel (onFormSubmit) - precisa ser instalado em cada formulario
+// via ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create()
+// (ja incluido automaticamente em cada criarFormularioAulaXX()).
+function aoSubmeterFormulario(e) {
+  try {
+    var form = e.source;
+    var response = e.response;
+    var itemResponses = response.getItemResponses();
+
+    var codigo = null;
+    var nomeAluno = null;
+
+    itemResponses.forEach(function(itemResponse) {
+      var titulo = itemResponse.getItem().getTitle();
+      if (titulo.indexOf('Codigo de Acesso') !== -1) {
+        codigo = itemResponse.getResponse();
+      } else if (titulo.indexOf('Nome Completo') !== -1) {
+        nomeAluno = itemResponse.getResponse();
+      }
+    });
+
+    var nota = response.getTotalScore(); // calculo nativo do quiz (setIsQuiz + setPoints)
+    var nomeQuestionario = form.getTitle();
+
+    registrarNotaNoRastreamento(codigo, nomeQuestionario, nota, null);
+
+    if (nomeAluno && codigo) {
+      // Garante Nome Aluno preenchido mesmo se validarCodigoUnico nao rodou antes
+      registrarUsoDeCodego(codigo.toUpperCase().trim(), nomeAluno, nomeQuestionario);
+    }
+  } catch (err) {
+    Logger.log('Erro no trigger aoSubmeterFormulario: ' + err.message);
   }
 }
 
@@ -439,8 +535,8 @@ function listarCodigosDisponiveis() {
   Logger.log('');
 
   try {
-    var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-    var sheet = spreadsheet.getSheetByName(SHEET_NAME);
+    var spreadsheet = getPlanilhaRastreamento();
+    var sheet = spreadsheet ? spreadsheet.getSheetByName(SHEET_NAME) : null;
 
     if (sheet) {
       var data = sheet.getDataRange().getValues();
@@ -448,7 +544,7 @@ function listarCodigosDisponiveis() {
       var usados = 0;
 
       for (var i = 1; i < data.length; i++) {
-        var status = data[i][5];
+        var status = data[i][6];
 
         if (status === 'Disponivel' || status === 'DISPONIVEL') {
           Logger.log((i) + '. ' + data[i][0] + ' - [Disponivel]');
@@ -531,8 +627,8 @@ function gerarRelatorioUsoCodigosCompleto() {
   Logger.log('');
 
   try {
-    var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-    var sheet = spreadsheet.getSheetByName(SHEET_NAME);
+    var spreadsheet = getPlanilhaRastreamento();
+    var sheet = spreadsheet ? spreadsheet.getSheetByName(SHEET_NAME) : null;
 
     if (!sheet) {
       Logger.log('Nenhuma planilha de rastreamento encontrada');
@@ -546,10 +642,11 @@ function gerarRelatorioUsoCodigosCompleto() {
 
     var usados = 0;
     for (var i = 1; i < data.length; i++) {
-      if (data[i][5] === 'USADO') {
+      if (data[i][6] === 'USADO') {
         Logger.log(data[i][0] + ' - ' + data[i][1] + ' ' + data[i][2]);
         Logger.log('  Aluno: ' + data[i][3]);
-        Logger.log('  Aula: ' + data[i][4]);
+        Logger.log('  Questionario: ' + data[i][4]);
+        Logger.log('  Nota: ' + data[i][5]);
         Logger.log('');
         usados++;
       }
@@ -561,7 +658,7 @@ function gerarRelatorioUsoCodigosCompleto() {
 
     var disponiveis = 0;
     for (var i = 1; i < data.length; i++) {
-      if (data[i][5] !== 'USADO') {
+      if (data[i][6] !== 'USADO') {
         Logger.log(data[i][0]);
         disponiveis++;
       }
@@ -880,6 +977,8 @@ function criarFormularioAula01() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 01 criada com sucesso!');
   Logger.log('');
@@ -1216,6 +1315,8 @@ function criarFormularioAula02() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 02 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -1550,6 +1651,8 @@ function criarFormularioAula03() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 03 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -1883,6 +1986,8 @@ function criarFormularioAula04() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 04 criada com sucesso!');
   Logger.log('');
@@ -2219,6 +2324,8 @@ function criarFormularioAula05() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 05 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -2553,6 +2660,8 @@ function criarFormularioAula06() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 06 criada com sucesso!');
   Logger.log('');
@@ -2889,6 +2998,8 @@ function criarFormularioAula07() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 07 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -3223,6 +3334,8 @@ function criarFormularioAula08() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 08 criada com sucesso!');
   Logger.log('');
@@ -3559,6 +3672,8 @@ function criarFormularioAula09() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 09 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -3893,6 +4008,8 @@ function criarFormularioAula10() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 10 criada com sucesso!');
   Logger.log('');
@@ -4229,6 +4346,8 @@ function criarFormularioAula11() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 11 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -4563,6 +4682,8 @@ function criarFormularioAula12() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 12 criada com sucesso!');
   Logger.log('');
@@ -4899,6 +5020,8 @@ function criarFormularioAula13() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 13 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -5233,6 +5356,8 @@ function criarFormularioAula14() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 14 criada com sucesso!');
   Logger.log('');
@@ -5569,6 +5694,8 @@ function criarFormularioAula15() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 15 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -5903,6 +6030,8 @@ function criarFormularioAula16() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 16 criada com sucesso!');
   Logger.log('');
@@ -6239,6 +6368,8 @@ function criarFormularioAula17() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 17 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -6572,6 +6703,8 @@ function criarFormularioAula18() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 18 criada com sucesso!');
   Logger.log('');
@@ -6908,6 +7041,8 @@ function criarFormularioAula19() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 19 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -7242,6 +7377,8 @@ function criarFormularioAula20() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 20 criada com sucesso!');
   Logger.log('');
@@ -7578,6 +7715,8 @@ function criarFormularioAula21() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 21 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -7913,6 +8052,8 @@ function criarFormularioAula22() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 22 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -8246,6 +8387,8 @@ function criarFormularioAula23() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 23 criada com sucesso!');
   Logger.log('');
@@ -8582,6 +8725,8 @@ function criarFormularioAula24() {
 
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ AULA 24 criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
@@ -8915,6 +9060,8 @@ function criarFormularioAula25() {
   q20.setRequired(true);
 
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ AULA 25 criada com sucesso!');
   Logger.log('');
@@ -9361,6 +9508,8 @@ function criarQuizRevisao() {
   q30.setPoints(1);
   q30.setRequired(true);
 
+
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
 
   Logger.log('✅ REVISÃO INTEGRADA (Aulas 1-9) criada com sucesso!');
   Logger.log('');

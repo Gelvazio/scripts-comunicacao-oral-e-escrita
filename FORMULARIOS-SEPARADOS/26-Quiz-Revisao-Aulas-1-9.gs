@@ -366,6 +366,8 @@ function criarQuizRevisao() {
   q30.setRequired(true);
 
 
+  ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+
   Logger.log('✅ REVISÃO INTEGRADA (Aulas 1-9) criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
