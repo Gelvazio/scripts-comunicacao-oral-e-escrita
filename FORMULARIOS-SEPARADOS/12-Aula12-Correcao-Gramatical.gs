@@ -33,7 +33,6 @@ function criarFormularioAula04() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Correção Gramatical Aplicada ao Trabalho');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Acentuação Gráfica"?');
   q1.setChoices([

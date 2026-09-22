@@ -33,7 +33,6 @@ function criarFormularioAula22() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "História Curta"?');
   q1.setChoices([

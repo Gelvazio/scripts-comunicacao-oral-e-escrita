@@ -33,7 +33,6 @@ function criarFormularioAula09() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Dúvidas Levantadas"?');
   q1.setChoices([

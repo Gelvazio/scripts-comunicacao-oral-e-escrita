@@ -33,7 +33,6 @@ function criarFormularioAula01() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Processo Comunicativo');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. Segundo a aula, o que é "Eficiência"?');
   q1.setChoices([

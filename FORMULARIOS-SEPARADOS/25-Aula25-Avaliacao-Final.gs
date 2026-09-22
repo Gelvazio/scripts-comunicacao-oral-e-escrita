@@ -33,7 +33,6 @@ function criarFormularioAula18() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Avaliação Final e Encerramento');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Clareza Estrutural"?');
   q1.setChoices([

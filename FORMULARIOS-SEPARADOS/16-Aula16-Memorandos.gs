@@ -33,7 +33,6 @@ function criarFormularioAula08() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Excesso de Detalhes"?');
   q1.setChoices([

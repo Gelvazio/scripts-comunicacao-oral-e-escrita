@@ -33,7 +33,6 @@ function criarFormularioAula11() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Canais de Comunicação: Revisão"?');
   q1.setChoices([

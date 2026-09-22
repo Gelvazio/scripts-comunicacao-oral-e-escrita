@@ -33,7 +33,6 @@ function criarFormularioAula15() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. Segundo a aula, o que é "Proxêmica"?');
   q1.setChoices([

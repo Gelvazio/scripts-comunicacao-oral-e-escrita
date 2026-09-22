@@ -33,7 +33,6 @@ function criarFormularioAula19() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. Segundo a aula, o que é "Objetividade"?');
   q1.setChoices([

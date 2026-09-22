@@ -33,7 +33,6 @@ function criarFormularioAula17() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Entregável 2: Memorando Interno"?');
   q1.setChoices([

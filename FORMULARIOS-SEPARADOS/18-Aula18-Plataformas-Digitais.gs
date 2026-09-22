@@ -33,7 +33,6 @@ function criarFormularioAula10() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho.');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Recapitulação: Procedimentos e Manuais"?');
   q1.setChoices([

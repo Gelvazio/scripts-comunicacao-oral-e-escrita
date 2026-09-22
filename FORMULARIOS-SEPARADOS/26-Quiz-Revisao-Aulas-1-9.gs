@@ -32,7 +32,6 @@ function criarQuizRevisao() {
   );
 
   form.addSectionHeaderItem().setTitle('REVISÃO INTEGRADA — Aulas 1 a 9');
-  form.addTextItem().setHelpText('30 questões | 1 ponto cada | Total: 30 pontos | Cobertura: Aulas 1-9');
 
   // AULAS 1-3: Fundamentos da Comunicação (9 questões)
   form.addSectionHeaderItem().setTitle('Bloco 1: Fundamentos da Comunicação (Aulas 1-3)');

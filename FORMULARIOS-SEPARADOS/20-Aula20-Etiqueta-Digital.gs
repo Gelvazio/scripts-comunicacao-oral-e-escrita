@@ -33,7 +33,6 @@ function criarFormularioAula13() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. Qual conceito a aula define como: "contexto é tudo. Conheça seu público antes de usar elementos visuais descontraídos"?');
   q1.setChoices([

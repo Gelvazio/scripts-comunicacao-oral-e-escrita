@@ -33,7 +33,6 @@ function criarFormularioAula24() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Participação e Condução de Reuniões Como liderar, intervir com firmeza e registrar decisões com eficiência');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. Segundo a aula, o que é "Separe as pessoas dos problemas"?');
   q1.setChoices([

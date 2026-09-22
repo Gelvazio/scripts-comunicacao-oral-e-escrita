@@ -33,7 +33,6 @@ function criarFormularioAula12() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Registro Informal"?');
   q1.setChoices([

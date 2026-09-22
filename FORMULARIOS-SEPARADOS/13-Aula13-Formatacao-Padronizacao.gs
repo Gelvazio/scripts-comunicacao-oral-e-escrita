@@ -33,7 +33,6 @@ function criarFormularioAula05() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. Qual conceito a aula define como: "preparam o leitor para citações, listagens ou conclusões"?');
   q1.setChoices([

@@ -33,7 +33,6 @@ function criarFormularioAula02() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Preparação para Entrevistas Comunicação oral estratégica e postura profissional');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. Qual conceito a aula define como: "se não souber um termo técnico, admita com disposição para aprender"?');
   q1.setChoices([

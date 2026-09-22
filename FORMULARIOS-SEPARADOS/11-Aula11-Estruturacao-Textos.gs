@@ -33,7 +33,6 @@ function criarFormularioAula03() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Estruturação de Textos Profissionais');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Coesão: a costura do texto"?');
   q1.setChoices([

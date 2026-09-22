@@ -33,7 +33,6 @@ function criarFormularioAula07() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "Finalidade do relatório nas organizações"?');
   q1.setChoices([

@@ -33,7 +33,6 @@ function criarFormularioAula16() {
   );
 
   form.addSectionHeaderItem().setTitle('Questionário Completo — Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional');
-  form.addTextItem().setHelpText('20 questões | 1 ponto cada | Total: 20 pontos | Cobertura: 100% do assunto');
   var q1 = form.addMultipleChoiceItem();
   q1.setTitle('1. De acordo com a aula, o que caracteriza "A Harmonia entre Corpo e Voz"?');
   q1.setChoices([
