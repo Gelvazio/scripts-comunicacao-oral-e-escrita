@@ -361,6 +361,104 @@ function getPlanilhaRastreamento() {
   }
 }
 
+// Rodar UMA VEZ se a planilha "Rastreamento-Codigos-Avaliacoes" ja existia antes desta
+// atualizacao. Copie o ID da planilha (na URL: .../spreadsheets/d/ESTE_TRECHO/edit) e
+// chame configurarPlanilhaExistente('SEU_ID_AQUI') pelo editor do Apps Script.
+// Garante tambem que as colunas Questionario/Nota existem, sem apagar dados ja gravados.
+function configurarPlanilhaExistente(spreadsheetId) {
+  var spreadsheet = SpreadsheetApp.openById(spreadsheetId);
+  var sheet = spreadsheet.getSheetByName(SHEET_NAME);
+
+  if (!sheet) {
+    Logger.log('Erro: aba "' + SHEET_NAME + '" nao encontrada nessa planilha.');
+    return;
+  }
+
+  var headerAtual = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+
+  if (headerAtual.length < 7 || headerAtual[4] !== 'Questionario') {
+    // Planilha no formato antigo (6 colunas: ...Aula, Status) - inserir coluna Nota antes de Status
+    sheet.insertColumnAfter(5);
+    sheet.getRange(1, 5).setValue('Questionario');
+    sheet.getRange(1, 6).setValue('Nota');
+    sheet.getRange(1, 7).setValue('Status');
+    Logger.log('Colunas Questionario/Nota adicionadas ao formato antigo da planilha.');
+  } else {
+    Logger.log('Planilha ja esta no formato novo (com colunas Questionario e Nota).');
+  }
+
+  PropertiesService.getScriptProperties().setProperty(PROP_PLANILHA_ID, spreadsheetId);
+  Logger.log('Planilha configurada com sucesso: ' + spreadsheet.getUrl());
+}
+
+// Rodar UMA VEZ para instalar o trigger onFormSubmit nos formularios que ja existiam
+// antes desta atualizacao (formularios criados depois disso ja recebem o trigger
+// automaticamente dentro da propria funcao criarFormularioAulaXX()).
+function instalarTriggerEmTodosFormularios() {
+  var titulos = [
+    'Avaliação — Aula 01 · Processo Comunicativo · SENAI',
+    'Avaliação — Aula 02 · Comunicação Eficaz Como transformar ideias em mensagens claras, precisas e compreensíveis · SENAI',
+    'Avaliação — Aula 03 · O Ciclo do Feedback na Comunicação Como transformar respostas em ferramentas de crescimento e alinhamento · SENAI',
+    'Avaliação — Aula 04 · Contextos Formais versus Informais Adequação comunicativa, registros e impacto profissional · SENAI',
+    'Avaliação — Aula 05 · Síntese dos Fundamentos da Comunicação Consolidação e Prática do Módulo 1 · SENAI',
+    'Avaliação — Aula 06 · Estrutura de Apresentações Como planejar discursos memoráveis, claros e persuasivos · SENAI',
+    'Avaliação — Aula 07 · Técnicas de Oratória e Expressão Vocal · SENAI',
+    'Avaliação — Aula 08 · Participação e Condução de Reuniões Como liderar, intervir com firmeza e registrar decisões com eficiência · SENAI',
+    'Avaliação — Aula 09 · Atendimento e Escuta Ativa · SENAI',
+    'Avaliação — Aula 10 · Preparação para Entrevistas Comunicação oral estratégica e postura profissional · SENAI',
+    'Avaliação — Aula 11 · Estruturação de Textos Profissionais · SENAI',
+    'Avaliação — Aula 12 · Correção Gramatical Aplicada ao Trabalho · SENAI',
+    'Avaliação — Aula 13 · Formatação e Padronização de Documentos Apresentação visual e clareza na escrita formal · SENAI',
+    'Avaliação — Aula 14 · Redação de E-mails Corporativos Comunicação escrita eficaz e profissional no ambiente de trabalho · SENAI',
+    'Avaliação — Aula 15 · Elaboração de Relatórios Técnicos Estrutura, objetividade e análise prática no mundo profissional · SENAI',
+    'Avaliação — Aula 16 · Redação de Memorandos e Comunicações Internas Agilidade, clareza e alinhamento na rotina corporativa · SENAI',
+    'Avaliação — Aula 17 · Procedimentos e Instruções Como escrever passos claros, sequenciais e sem erros · SENAI',
+    'Avaliação — Aula 18 · Plataformas Digitais de Comunicação Conectando equipes com eficiência, agilidade e clareza no trabalho. · SENAI',
+    'Avaliação — Aula 19 · Segurança da Informação e Privacidade Protegendo dados, canais e reputação no ambiente digital corporativo · SENAI',
+    'Avaliação — Aula 20 · Etiqueta Digital e Netiqueta Convivência e postura ética no ambiente virtual · SENAI',
+    'Avaliação — Aula 21 · Trabalho Remoto e Colaboração Práticas e ferramentas para produzir em equipe digital · SENAI',
+    'Avaliação — Aula 22 · Linguagem Corporal e Comunicação O poder dos sinais não-verbais no ambiente profissional · SENAI',
+    'Avaliação — Aula 23 · Gestual, Tom de Voz e Sincronismo A harmonia perfeita entre corpo, voz e mensagem profissional · SENAI',
+    'Avaliação — Aula 24 · Integração Prática: O Projeto Capstone Unindo escrita técnica, oratória e ferramentas digitais · SENAI',
+    'Avaliação — Aula 25 · Avaliação Final e Encerramento · SENAI',
+    'Revisão Integrada — Aulas 1 a 9 · Comunicação Oral e Escrita · SENAI'
+  ];
+
+  var instalados = 0;
+  var jaTinham = 0;
+  var naoEncontrados = [];
+
+  titulos.forEach(function(titulo) {
+    var form;
+    try {
+      form = FormApp.openByTitle(titulo);
+    } catch (e) {
+      naoEncontrados.push(titulo);
+      return;
+    }
+
+    var triggers = ScriptApp.getUserTriggers(form);
+    var jaTem = triggers.some(function(t) {
+      return t.getHandlerFunction() === 'aoSubmeterFormulario';
+    });
+
+    if (jaTem) {
+      jaTinham++;
+    } else {
+      ScriptApp.newTrigger('aoSubmeterFormulario').forForm(form).onFormSubmit().create();
+      instalados++;
+      Logger.log('Trigger instalado: ' + titulo);
+    }
+  });
+
+  Logger.log('');
+  Logger.log('RESUMO:');
+  Logger.log('Triggers novos instalados: ' + instalados);
+  Logger.log('Ja tinham trigger: ' + jaTinham);
+  Logger.log('Formularios nao encontrados: ' + naoEncontrados.length);
+  naoEncontrados.forEach(function(t) { Logger.log('  - ' + t); });
+}
+
 function validarCodigoUnico(codigo, nomeAluno, nomeAula) {
   if (!codigo || codigo.trim() === '') {
     return {

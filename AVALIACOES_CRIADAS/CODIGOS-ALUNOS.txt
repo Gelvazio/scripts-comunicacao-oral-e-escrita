@@ -1,0 +1,33 @@
+CODIGOS DE ACESSO - Introducao a Comunicacao Oral e Escrita
+Professor: Gelvazio | SENAI Rio do Sul
+============================================================
+
+Total de codigos: 15
+Data de geracao: 2026-09-21
+
+LISTA DE CODIGOS:
+------------------------------------------------------------
+
+ 1. 3DJ4-CAJ6-5UT0
+ 2. 3S3N-FE19-YZ21
+ 3. 6MEF-HJC4-V6CF
+ 4. B9YR-P262-FEAG
+ 5. DGYM-KQKX-UDJE
+ 6. EYB9-KYE3-RHB4
+ 7. FG06-9HSW-DHG5
+ 8. GQCM-D54R-B7UM
+ 9. JHQ7-H2J9-JYEV
+10. KS0S-B515-HM6S
+11. PUUM-WNS5-RM0W
+12. SS5X-JBNV-PZUJ
+13. TJ48-DG71-BYQP
+14. VR44-4441-ESKA
+15. YQW0-5V51-X0Z3
+
+============================================================
+
+INSTRUCOES DE USO:
+1. Distribuir um codigo para cada aluno (15 alunos)
+2. Aluno digita codigo no formulario antes de responder
+3. Se codigo for invalido, nao deixa prosseguir
+4. Se codigo for valido, aluno pode responder
