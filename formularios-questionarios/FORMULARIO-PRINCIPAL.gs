@@ -833,7 +833,7 @@ function criarFormularioAula01() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -1170,7 +1170,7 @@ function criarFormularioAula02() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -1506,7 +1506,7 @@ function criarFormularioAula03() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -1842,7 +1842,7 @@ function criarFormularioAula04() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -2179,7 +2179,7 @@ function criarFormularioAula05() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -2516,7 +2516,7 @@ function criarFormularioAula06() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -2853,7 +2853,7 @@ function criarFormularioAula07() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -3190,7 +3190,7 @@ function criarFormularioAula08() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -3527,7 +3527,7 @@ function criarFormularioAula09() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -3864,7 +3864,7 @@ function criarFormularioAula10() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -4201,7 +4201,7 @@ function criarFormularioAula11() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -4538,7 +4538,7 @@ function criarFormularioAula12() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -4875,7 +4875,7 @@ function criarFormularioAula13() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -5212,7 +5212,7 @@ function criarFormularioAula14() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -5549,7 +5549,7 @@ function criarFormularioAula15() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -5886,7 +5886,7 @@ function criarFormularioAula16() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -6223,7 +6223,7 @@ function criarFormularioAula17() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -6559,7 +6559,7 @@ function criarFormularioAula18() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -6896,7 +6896,7 @@ function criarFormularioAula19() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -7233,7 +7233,7 @@ function criarFormularioAula20() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -7570,7 +7570,7 @@ function criarFormularioAula21() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -7907,7 +7907,7 @@ function criarFormularioAula22() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -8243,7 +8243,7 @@ function criarFormularioAula23() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -8580,7 +8580,7 @@ function criarFormularioAula24() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -8916,7 +8916,7 @@ function criarFormularioAula25() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -9252,7 +9252,7 @@ function criarQuizRevisao() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);

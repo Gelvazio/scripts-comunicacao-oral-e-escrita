@@ -82,6 +82,15 @@ cp FORMULARIO-PRINCIPAL.gs /tmp/check.js && node --check /tmp/check.js
 
 
 ## Planilha de controle de codigos
-Informação	Planilha criada: https://docs.google.com/spreadsheets/d/117rTfowLEPEhLT2FGy-U33SCzvzaz9IvPKMm_ue8adk/edit
+
+Informação	Planilha criada: https://docs.google.com/spreadsheets/d/1tUSJ8MBmWCLDC6Di-fgBVCcxH6CQPd-PY3jGPv9gZoo/edit
 
 # Formulario Aula 09 - Comunicacao Ativa
+🔗 LINK PARA COMPARTILHAR COM ALUNOS:
+08:58:50	Informação	https://docs.google.com/forms/d/e/1FAIpQLSdyFD8dEJ13-3bVNDgF1Hc_V4mbmnSJ5j6Pd7SsH5B0b450FQ/viewform
+
+✏️ LINK PARA EDITAR (PROFESSOR):
+08:58:50	Informação	https://docs.google.com/forms/d/1yaZFTsGnJTPRtmL6JrogZyn75tRVyPVyTRvFFRyPSbM/edit
+
+# Formulario Aula 10 - Preparação Entrevista
+

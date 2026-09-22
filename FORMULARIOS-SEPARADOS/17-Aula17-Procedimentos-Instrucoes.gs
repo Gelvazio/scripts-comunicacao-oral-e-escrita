@@ -12,7 +12,7 @@ function criarFormularioAula09() {
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  form.setLimitOneResponsePerUser(true);
+  // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
