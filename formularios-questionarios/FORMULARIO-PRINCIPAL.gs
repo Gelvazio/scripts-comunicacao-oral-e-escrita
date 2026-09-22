@@ -626,6 +626,75 @@ function aoSubmeterFormulario(e) {
   }
 }
 
+// Rode esta funcao pelo editor do Apps Script para descobrir por que a nota
+// nao esta chegando na planilha. Ela nao altera nada, so diagnostica.
+function diagnosticarSistemaDeNotas() {
+  Logger.log('╔═══════════════════════════════════════════════════╗');
+  Logger.log('║   DIAGNOSTICO - SISTEMA DE NOTAS AUTOMATICO        ║');
+  Logger.log('╚═══════════════════════════════════════════════════╝');
+  Logger.log('');
+
+  // 1. Planilha configurada?
+  var id = PropertiesService.getScriptProperties().getProperty(PROP_PLANILHA_ID);
+  if (!id) {
+    Logger.log('❌ PROBLEMA ENCONTRADO: nenhuma planilha configurada.');
+    Logger.log('   A Script Property "' + PROP_PLANILHA_ID + '" esta vazia.');
+    Logger.log('   Solucao: rode criarPlanilhaRastreamento() (planilha nova) OU');
+    Logger.log('   configurarPlanilhaExistente(\'SEU_ID\') (planilha ja existente).');
+    Logger.log('');
+  } else {
+    Logger.log('✅ Script Property configurada. ID: ' + id);
+    try {
+      var spreadsheet = SpreadsheetApp.openById(id);
+      var sheet = spreadsheet.getSheetByName(SHEET_NAME);
+      if (!sheet) {
+        Logger.log('❌ PROBLEMA: planilha abre, mas a aba "' + SHEET_NAME + '" nao existe nela.');
+      } else {
+        var header = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+        Logger.log('✅ Planilha e aba OK. Cabecalho atual: ' + header.join(' | '));
+        if (header[4] !== 'Questionario' || header[5] !== 'Nota') {
+          Logger.log('❌ PROBLEMA: cabecalho no formato antigo (sem colunas Questionario/Nota).');
+          Logger.log('   Solucao: rode configurarPlanilhaExistente(\'' + id + '\')');
+        }
+        Logger.log('   Total de codigos na planilha: ' + (sheet.getLastRow() - 1));
+      }
+      Logger.log('   URL: ' + spreadsheet.getUrl());
+    } catch (e) {
+      Logger.log('❌ PROBLEMA: ID salvo nao abre nenhuma planilha. Erro: ' + e.message);
+    }
+    Logger.log('');
+  }
+
+  // 2. Triggers instalados no projeto inteiro
+  var triggers = ScriptApp.getProjectTriggers();
+  var triggersDeSubmissao = triggers.filter(function(t) {
+    return t.getHandlerFunction() === 'aoSubmeterFormulario';
+  });
+
+  Logger.log('Triggers "aoSubmeterFormulario" instalados: ' + triggersDeSubmissao.length);
+  if (triggersDeSubmissao.length === 0) {
+    Logger.log('❌ PROBLEMA ENCONTRADO: nenhum trigger instalado em nenhum formulario.');
+    Logger.log('   Isso acontece quando o formulario foi criado ANTES do codigo ter');
+    Logger.log('   a linha ScriptApp.newTrigger(...), ou quando a autorizacao de');
+    Logger.log('   "gerenciar seus gatilhos" nao foi concedida na hora de criar o form.');
+    Logger.log('   Solucao: rode instalarTriggerEmTodosFormularios().');
+  } else {
+    Logger.log('✅ Ha triggers instalados.');
+  }
+  Logger.log('');
+  Logger.log('Total de triggers de QUALQUER tipo no projeto: ' + triggers.length);
+  Logger.log('(se for 0, nenhuma autorizacao de trigger foi concedida ainda)');
+  Logger.log('');
+
+  Logger.log('═════════════════════════════════════════════════');
+  Logger.log('PROXIMO PASSO:');
+  Logger.log('Depois de corrigir o que apareceu como ❌ acima, responda o');
+  Logger.log('formulario de novo e rode diagnosticarSistemaDeNotas() outra vez.');
+  Logger.log('Tambem confira o menu "Execucoes" (relogio na lateral) do Apps');
+  Logger.log('Script: se aoSubmeterFormulario aparecer la com erro, o erro exato');
+  Logger.log('estara descrito ali.');
+}
+
 function listarCodigosDisponiveis() {
   Logger.log('╔═══════════════════════════════════════════════════╗');
   Logger.log('║         CODIGOS DISPONIVEIS (1 USO CADA)            ║');
@@ -834,6 +903,7 @@ function criarFormularioAula01() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -1171,6 +1241,7 @@ function criarFormularioAula02() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -1507,6 +1578,7 @@ function criarFormularioAula03() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -1843,6 +1915,7 @@ function criarFormularioAula04() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -2180,6 +2253,7 @@ function criarFormularioAula05() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -2517,6 +2591,7 @@ function criarFormularioAula06() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -2854,6 +2929,7 @@ function criarFormularioAula07() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -3191,6 +3267,7 @@ function criarFormularioAula08() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -3528,6 +3605,7 @@ function criarFormularioAula09() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -3865,6 +3943,7 @@ function criarFormularioAula10() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -4202,6 +4281,7 @@ function criarFormularioAula11() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -4539,6 +4619,7 @@ function criarFormularioAula12() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -4876,6 +4957,7 @@ function criarFormularioAula13() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -5213,6 +5295,7 @@ function criarFormularioAula14() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -5550,6 +5633,7 @@ function criarFormularioAula15() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -5887,6 +5971,7 @@ function criarFormularioAula16() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -6224,6 +6309,7 @@ function criarFormularioAula17() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -6560,6 +6646,7 @@ function criarFormularioAula18() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -6897,6 +6984,7 @@ function criarFormularioAula19() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -7234,6 +7322,7 @@ function criarFormularioAula20() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -7571,6 +7660,7 @@ function criarFormularioAula21() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -7908,6 +7998,7 @@ function criarFormularioAula22() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -8244,6 +8335,7 @@ function criarFormularioAula23() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -8581,6 +8673,7 @@ function criarFormularioAula24() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -8917,6 +9010,7 @@ function criarFormularioAula25() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
@@ -9253,6 +9347,7 @@ function criarQuizRevisao() {
   form.setCollectEmail(false);
   form.setProgressBar(true);
   // setLimitOneResponsePerUser removido: exigia login Google; controle de uso unico ja e feito pelo codigo de acesso na planilha
+  form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
   form.addTextItem().setTitle('Nome Completo').setRequired(true);
