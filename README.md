@@ -81,9 +81,19 @@ cp FORMULARIO-PRINCIPAL.gs /tmp/check.js && node --check /tmp/check.js
 [MIT](LICENSE) — Gelvazio Camargo, 2026.
 
 
-## Planilha de controle de codigos
+## Formularios de perguntas
+APOSTILAS
+https://bit.ly/ceplas
 
-Informação	Planilha criada: https://docs.google.com/spreadsheets/d/1tUSJ8MBmWCLDC6Di-fgBVCcxH6CQPd-PY3jGPv9gZoo/edit
+
+#Formulario revisão 
+
+Informação	🔗 LINK PARA COMPARTILHAR COM ALUNOS:
+09:41:27	Informação	https://docs.google.com/forms/d/e/1FAIpQLSeEpvP5_oBbBIEfaB76PO0duS7jxER8q7sG5H9plOaGgY8ffw/viewform
+09:41:27	Informação	
+09:41:27	Informação	✏️ LINK PARA EDITAR (PROFESSOR):
+09:41:27	Informação	https://docs.google.com/forms/d/12-jamPBbO-ES-URyD400Em32AzlY0N4hUs4iasZbjsw/edit
+
 
 # Formulario Aula 09 - Comunicacao Ativa
 Informação	🔗 LINK PARA COMPARTILHAR COM ALUNOS:

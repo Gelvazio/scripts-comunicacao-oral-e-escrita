@@ -1,17 +1,19 @@
-﻿// ===== 26-Quiz-Revisao-Aulas-1-9.gs =====
+// ===== 26-Quiz-Revisao-Aulas-1-9.gs =====
 // Funcoes: criarQuizRevisao(), analisarRespostasRevisao()
-// Extraido de FORMULARIO-PRINCIPAL.gs
+// Recriado a partir do conteudo real das Aulas 1-9 (VERSAO-POWERPOINT/1..9)
+// Substitui a versao anterior, que continha questoes da numeracao antiga do
+// Google Forms (aulas reais 11-17), nao das aulas reais 1-9.
 
 function criarQuizRevisao() {
   var form = FormApp.create('Revisão Integrada — Aulas 1 a 9 · Comunicação Oral e Escrita · SENAI');
 
-  form.setDescription( 'REVISÃO INTEGRADA: Aulas 1 a 9\n\nUC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n30 questões | 30 pontos no total\nTempo estimado: 45-60 minutos\nCobertura: Consolidação de todos os tópicos das aulas 1-9\nVocê verá sua pontuação e feedback detalhado ao enviar!\n\nOBJETIVOS:\n- Revisar conceitos principais das aulas 1-9\n- Identificar áreas que precisam de reforço\n- Preparar-se para avaliações posteriores'
+  form.setDescription(
+    'REVISÃO INTEGRADA: Aulas 1 a 9\n\nUC Introdução à Comunicação Oral e Escrita\nProfessor: Gelvazio\n\n30 questões | 30 pontos no total\nTempo estimado: 45-60 minutos\nCobertura: Consolidação de todos os tópicos das aulas 1-9\nVocê verá sua pontuação e feedback detalhado ao enviar!\n\nOBJETIVOS:\n- Revisar conceitos principais das aulas 1-9\n- Identificar áreas que precisam de reforço\n- Preparar-se para avaliações posteriores'
   );
 
   form.setIsQuiz(true);
   form.setCollectEmail(false);
   form.setProgressBar(true);
-  // setLimitOneResponsePerUser removido: exigia login Google. Identificacao do aluno agora e feita pelo Nome Completo
   form.setConfirmationMessage('✅ Resposta enviada! Sua pontuação aparece logo acima, nesta mesma tela.');
 
   form.addSectionHeaderItem().setTitle('Identificação');
@@ -19,347 +21,364 @@ function criarQuizRevisao() {
 
   form.addSectionHeaderItem().setTitle('REVISÃO INTEGRADA — Aulas 1 a 9');
 
-  // AULAS 1-3: Fundamentos da Comunicação (9 questões)
+  // ============================================================
+  // BLOCO 1: Fundamentos da Comunicação (Aulas 1-3)
+  // Aula 1: Processo Comunicativo | Aula 2: Comunicação Eficaz
+  // Aula 3: O Ciclo do Feedback na Comunicação
+  // ============================================================
   form.addSectionHeaderItem().setTitle('Bloco 1: Fundamentos da Comunicação (Aulas 1-3)');
+
   var q1 = form.addMultipleChoiceItem();
-  q1.setTitle('1. De acordo com a aula, o que caracteriza "RECAPITULAÇÃO"?');
+  q1.setTitle('1. (Aula 1) Segundo a aula, o que caracteriza o Emissor no processo comunicativo?');
   q1.setChoices([
-    q1.createChoice('O relatório técnico investiga situações complexas com introdução, desenvolvimento, conclusão e recomendações', true),
-    q1.createChoice('O cabeçalho do memorando deve responder imediatamente a quatro perguntas essenciais do leitor', false),
-    q1.createChoice('Texto idêntico distribuído simultaneamente a múltiplos setores para uniformizar uma norma ou instrução geral', false),
-    q1.createChoice('Se uma palavra pode ser cortada sem alterar o sentido do pedido, corte-a', false)
+    q1.createChoice('Quem concebe uma ideia e a transforma em sinais compreensíveis, selecionando palavras e adequando a linguagem', true),
+    q1.createChoice('Capta os sinais transmitidos e realiza a decodificação da mensagem', false),
+    q1.createChoice('Conjunto convencionado de signos e regras usado para construir a mensagem', false),
+    q1.createChoice('Qualquer interferência que degrade a mensagem', false)
   ]);
   q1.setPoints(1);
   q1.setRequired(true);
 
   var q2 = form.addMultipleChoiceItem();
-  q2.setTitle('2. De acordo com a aula, o que caracteriza "Notícias Recentes"?');
+  q2.setTitle('2. (Aula 1) De acordo com a aula, o que é o Ruído no processo comunicativo?');
   q2.setChoices([
-    q2.createChoice('Sente-se ocupando o encosto da cadeira. Evite debruçar-se sobre a mesa ou recostar desleixadamente', false),
-    q2.createChoice('Sentir nervosismo antes de uma entrevista é perfeitamente normal. O objetivo não é extinguir a emoção, mas sim gerenciá-la fisiologicamente', false),
-    q2.createChoice('Uma pausa silenciosa de dois segundos demonstra reflexão e segurança, enquanto vícios sonoros transmitem insegurança', false),
-    q2.createChoice('Identifique prêmios, lançamentos ou parcerias públicas que mostram seu interesse genuíno', true)
+    q2.createChoice('O destinatário que acolhe e decodifica o sinal', false),
+    q2.createChoice('Qualquer perturbação que degrade a mensagem, podendo ser físico, semântico, psicológico ou fisiológico', true),
+    q2.createChoice('A situação real que envolve a conversa: lugar, momento e relações sociais', false),
+    q2.createChoice('O meio físico ou digital pelo qual a mensagem viaja', false)
   ]);
   q2.setPoints(1);
   q2.setRequired(true);
 
   var q3 = form.addMultipleChoiceItem();
-  q3.setTitle('3. Segundo a aula, o que é "Conexão direta"?');
+  q3.setTitle('3. (Aula 1) Segundo a aula, qual é a função do Feedback no ciclo comunicativo?');
   q3.setChoices([
-    q3.createChoice('Indicam causa, oposição, conclusão ou acréscimo', false),
-    q3.createChoice('Respostas alinhadas aos objetivos da pergunta', true),
-    q3.createChoice('Conduzem o leitor sem solavancos de uma ideia à seguinte', false),
-    q3.createChoice('Organização lógica das ideias para orientar o leitor com clareza', false)
+    q3.createChoice('É o conteúdo concreto da transmissão: ideias, sentimentos ou dados enviados', false),
+    q3.createChoice('É o conjunto de signos e regras compartilhado entre emissor e receptor', false),
+    q3.createChoice('É a interferência que impede a comunicação de ocorrer', false),
+    q3.createChoice('É a resposta do receptor ao emissor, fechando o ciclo e permitindo verificar se a mensagem foi decodificada corretamente', true)
   ]);
   q3.setPoints(1);
   q3.setRequired(true);
 
   var q4 = form.addMultipleChoiceItem();
-  q4.setTitle('4. De acordo com a aula, o que caracteriza "Revisão: A redação no ambiente de trabalho"?');
+  q4.setTitle('4. (Aula 2) De acordo com a aula, o que caracteriza a Concisão em uma mensagem eficaz?');
   q4.setChoices([
-    q4.createChoice('Na aula anterior, estudamos os e-mails corporativos. Eles são rápidos e voltados à ação diária. Aprendemos que o assunto deve antecipar o tema sem rodeios e o texto...', true),
-    q4.createChoice('Relatórios técnicos exigem linguagem impessoal e dados mensuráveis em decibéis, tornando impressões subjetivas inadequadas', false),
-    q4.createChoice('Especifique sempre a marca, o modelo e a data da última calibração dos aparelhos empregados nos testes', false),
-    q4.createChoice('Identificação da Caldeira B-04, do setor térmico e da solicitação de vistoria preventiva', false)
+    q4.createChoice('Foco direto no propósito sem rodeios secundários', false),
+    q4.createChoice('Transmissão do máximo de ideias com o mínimo de termos, eliminando redundâncias', true),
+    q4.createChoice('Harmonia lógica e integridade estrutural das ideias', false),
+    q4.createChoice('Ausência de obscuridade; mensagem sem margem a dúvidas', false)
   ]);
   q4.setPoints(1);
   q4.setRequired(true);
 
   var q5 = form.addMultipleChoiceItem();
-  q5.setTitle('5. De acordo com a aula, o que caracteriza "Ponto e Vírgula"?');
+  q5.setTitle('5. (Aula 2) Segundo a aula, o que é Ambiguidade Estrutural?');
   q5.setChoices([
-    q5.createChoice('O verbo concorda em número (singular/plural) e pessoa com o núcleo do sujeito, mesmo com palavras intermediárias intercaladas', false),
-    q5.createChoice('O Acordo Ortográfico eliminou acentos que muitos profissionais ainda usam por desatenção', false),
-    q5.createChoice('Separe itens extensos de uma listagem em propostas ou orações já divididas internamente por vírgulas', true),
-    q5.createChoice('Em documentos de trabalho, cada parágrafo deve girar em torno de uma ideia central declarada claramente no início: o tópico frasal', false)
+    q5.createChoice('Nasce da posição inadequada de pronomes, termos modificadores ou adjuntos na frase', true),
+    q5.createChoice('É a técnica de perguntar "Você entendeu?" para validar a compreensão', false),
+    q5.createChoice('É o uso de vocabulário técnico compreendido apenas por especialistas', false),
+    q5.createChoice('É a resposta do receptor que fecha o ciclo comunicativo', false)
   ]);
   q5.setPoints(1);
   q5.setRequired(true);
 
   var q6 = form.addMultipleChoiceItem();
-  q6.setTitle('6. Segundo a aula, o que é "Honestidade"?');
+  q6.setTitle('6. (Aula 2) De acordo com a aula, qual é a forma correta de checar a compreensão do interlocutor?');
   q6.setChoices([
-    q6.createChoice('pontos fortes comprovados por projetos práticos', false),
-    q6.createChoice('Expressão corporal que transmite segurança e receptividade', false),
-    q6.createChoice('área de estudo atual e interesses gerais', false),
-    q6.createChoice('se não souber um termo técnico, admita com disposição para aprender', true)
+    q6.createChoice('Perguntar diretamente "Você entendeu?" e aceitar a resposta afirmativa', false),
+    q6.createChoice('Repetir a mensagem original com o mesmo vocabulário técnico', false),
+    q6.createChoice('Pedir uma paráfrase, como "você pode resumir os próximos passos que combinamos?"', true),
+    q6.createChoice('Presumir que o silêncio do receptor significa compreensão total', false)
   ]);
   q6.setPoints(1);
   q6.setRequired(true);
 
   var q7 = form.addMultipleChoiceItem();
-  q7.setTitle('7. Segundo a aula, o que é "Clareza"?');
+  q7.setTitle('7. (Aula 3) Segundo a aula, o que caracteriza a comunicação Unilateral?');
   q7.setChoices([
-    q7.createChoice('Escolha palavras simples e diretas, eliminando rodeios desnecessários', true),
-    q7.createChoice('Proteger conversas confidenciais e dados pessoais alheios', false),
-    q7.createChoice('Ajuste o vocabulário e o tom ao contexto social e ao interlocutor', false),
-    q7.createChoice('Projetos complexos exigem alinhamento constante entre setores', false)
+    q7.createChoice('A mensagem viaja em sentido único, sem que o emissor obtenha dados sobre a reação do destinatário', true),
+    q7.createChoice('Há troca constante e recíproca entre emissor e receptor', false),
+    q7.createChoice('É a técnica que organiza a crítica em elogio, ponto de melhoria e incentivo', false),
+    q7.createChoice('É a postura de justificar-se antes de assimilar o que foi dito', false)
   ]);
   q7.setPoints(1);
   q7.setRequired(true);
 
   var q8 = form.addMultipleChoiceItem();
-  q8.setTitle('8. Segundo a aula, o que é "Coesão"?');
+  q8.setTitle('8. (Aula 3) De acordo com a aula, como funciona a Técnica do Feedback Sanduíche?');
   q8.setChoices([
-    q8.createChoice('Ligação gramatical entre frases e palavras com conectivos precisos', true),
-    q8.createChoice('Organização lógica das ideias para orientar o leitor com clareza', false),
-    q8.createChoice('Indicam causa, oposição, conclusão ou acréscimo', false),
-    q8.createChoice('Unidade textual básica em torno de uma ideia central condutora', false)
+    q8.createChoice('Consiste em criticar diretamente sem qualquer elogio para economizar tempo', false),
+    q8.createChoice('Organiza a mensagem em três camadas: reconhecimento de um ponto forte, o aspecto a melhorar e um encerramento com incentivo', true),
+    q8.createChoice('É o fluxo de informação que ocorre em um único sentido, sem retorno', false),
+    q8.createChoice('Baseia-se apenas em dados e fatos, nunca mencionando pontos positivos', false)
   ]);
   q8.setPoints(1);
   q8.setRequired(true);
 
   var q9 = form.addMultipleChoiceItem();
-  q9.setTitle('9. De acordo com a aula, o que caracteriza "Etapa 3: Desenvolvimento e resultados"?');
+  q9.setTitle('9. (Aula 3) Segundo a aula, o que caracteriza um Feedback Factual (construtivo)?');
   q9.setChoices([
-    q9.createChoice('Abaixo da figura, registre sempre a procedência (ex.: Fonte: Laboratório de Metrologia (2026))', false),
-    q9.createChoice('Todo recurso visual deve ter identificador e legenda superior (ex.: Tabela 1 – Índice de Ruído por Sala)', false),
-    q9.createChoice('O desenvolvimento é a parte mais volumosa do documento. É aqui que os dados brutos são organizados, descritos e analisados com profundidade técnica', true),
-    q9.createChoice('A introdução situa o leitor no tempo, no espaço e no motivo da elaboração do documento. Ela deve responder com exatidão: o quê, por quê e para quem', false)
+    q9.createChoice('É uma crítica vaga que aponta defeitos gerais de personalidade', false),
+    q9.createChoice('É a fase inicial de brainstorming livre sem julgamento', false),
+    q9.createChoice('Foca em fatos concretos e observáveis, nunca em características pessoais do interlocutor', true),
+    q9.createChoice('É o retorno dado apenas ao final do projeto, sem checagens intermediárias', false)
   ]);
   q9.setPoints(1);
   q9.setRequired(true);
 
   var q10 = form.addMultipleChoiceItem();
-  q10.setTitle('10. De acordo com a aula, o que caracteriza "Vocativo e Saudação Inicial"?');
+  q10.setTitle('10. (Aula 3) De acordo com a aula, qual é uma barreira emocional comum ao receber críticas?');
   q10.setChoices([
-    q10.createChoice('Pessoas incluídas apenas para acompanhamento e ciência do tema', false),
-    q10.createChoice('A saudação estabelece a conexão interpessoal e o grau correto de respeito na hierarquia profissional', true),
-    q10.createChoice('Isso polui desnecessariamente a caixa de entrada de 49 pessoas que não precisam dessa confirmação', false),
-    q10.createChoice('Na aula anterior, estudamos como a hierarquia visual orienta os olhos do leitor por títulos, tópicos e espaçamentos equilibrados', false)
+    q10.createChoice('Escutar atentamente até a conclusão da fala sem interromper', false),
+    q10.createChoice('Pedir exemplos concretos para compreender melhor a falha apontada', false),
+    q10.createChoice('Agradecer o retorno e propor um plano de melhoria realista', false),
+    q10.createChoice('Postura Defensiva: justificar-se imediatamente antes de assimilar o que foi observado', true)
   ]);
   q10.setPoints(1);
   q10.setRequired(true);
 
+  // ============================================================
+  // BLOCO 2: Adequação e Estrutura (Aulas 4-6)
+  // Aula 4: Contextos Formais versus Informais | Aula 5: Síntese
+  // dos Fundamentos da Comunicação | Aula 6: Estrutura de Apresentações
+  // ============================================================
+  form.addSectionHeaderItem().setTitle('Bloco 2: Adequação e Estrutura (Aulas 4-6)');
+
   var q11 = form.addMultipleChoiceItem();
-  q11.setTitle('11. De acordo com a aula, o que caracteriza "A Mensagem: O Conteúdo"?');
+  q11.setTitle('11. (Aula 4) Segundo a aula, o que caracteriza o Registro Formal?');
   q11.setChoices([
-    q11.createChoice('É por meio do feedback que o emissor verifica se a mensagem foi decodificada corretamente ou se precisa corrigir ruídos e reformular explicações', false),
-    q11.createChoice('Quem tem empatia não presume que o outro sabe tudo o que ele sabe. Explica com paciência, escolhe termos acessíveis e confere se foi compreendido', false),
-    q11.createChoice('A mensagem é o objeto concreto da transmissão: o conjunto de ideias, sentimentos, instruções ou dados enviados', true),
-    q11.createChoice('A falta de uma vírgula pode alterar radicalmente ordens e avisos contratuais', false)
+    q11.createChoice('Segue a norma-padrão gramatical, possui vocabulário preciso e evita gírias, priorizando a objetividade', true),
+    q11.createChoice('É marcado pela espontaneidade e uso de termos coloquiais e abreviações', false),
+    q11.createChoice('Ocorre quando o comunicador tenta soar sofisticado e comete deslizes gramaticais', false),
+    q11.createChoice('É o termo técnico específico compreendido apenas por especialistas de uma área', false)
   ]);
   q11.setPoints(1);
   q11.setRequired(true);
 
   var q12 = form.addMultipleChoiceItem();
-  q12.setTitle('12. Segundo a aula, o que é "Comunicado"?');
+  q12.setTitle('12. (Aula 4) De acordo com a aula, o que é Hipercorreção?');
   q12.setChoices([
-    q12.createChoice('Aviso oficial voltado para toda a equipe ou empresa', true),
-    q12.createChoice('Texto ágil entre setores para pedidos ou avisos internos', false),
-    q12.createChoice('Cria comprovação formal de que um pedido ou aviso foi entregue entre setores', false),
-    q12.createChoice('Registro cronológico exato (ex: 15 de abril de 2026)', false)
+    q12.createChoice('É o uso de gírias e abreviações típicas de conversas entre amigos', false),
+    q12.createChoice('É a adaptação da linguagem ao ambiente, interlocutor e objetivo da mensagem', false),
+    q12.createChoice('Ocorre quando o comunicador tenta soar excessivamente sofisticado e comete deslizes gramaticais ou artificiais', true),
+    q12.createChoice('É o uso de termos técnicos compreendidos apenas por especialistas de uma área', false)
   ]);
   q12.setPoints(1);
   q12.setRequired(true);
 
   var q13 = form.addMultipleChoiceItem();
-  q13.setTitle('13. De acordo com a aula, o que caracteriza "Bem-vindos ao Curso!"?');
+  q13.setTitle('13. (Aula 4) Segundo a aula, qual é o risco de usar jargões técnicos com um público leigo?');
   q13.setChoices([
-    q13.createChoice('O ar atmosférico que propaga ondas sonoras e a visão que capta movimentos e gestos', false),
-    q13.createChoice('O emissor traduz sua ideia em palavras, sinais ou imagens compreensíveis', false),
-    q13.createChoice('Ao longo desta disciplina, você aprenderá a se expressar com clareza, segurança e ética no colégio e na futura vida profissional', true),
-    q13.createChoice('Termos técnicos desconhecidos, gírias regionais e ambiguidades gramaticais', false)
+    q13.createChoice('Demonstra sempre domínio técnico e melhora automaticamente a compreensão do público', false),
+    q13.createChoice('Cria barreiras instransponíveis e gera distanciamento entre emissor e receptor', true),
+    q13.createChoice('Torna a mensagem mais concisa sem qualquer prejuízo à clareza', false),
+    q13.createChoice('Elimina a necessidade de adequar o registro ao contexto e ao interlocutor', false)
   ]);
   q13.setPoints(1);
   q13.setRequired(true);
 
   var q14 = form.addMultipleChoiceItem();
-  q14.setTitle('14. De acordo com a aula, o que caracteriza "Recapitulação: Hierarquia Visual"?');
+  q14.setTitle('14. (Aula 5) De acordo com a aula, o que representa o papel "Responsável" na Matriz RACI?');
   q14.setChoices([
-    q14.createChoice('Colocar a pessoa errada no campo inadequado pode sobrecarregar caixas de entrada ou violar leis de privacidade de dados (como a LGPD)', false),
-    q14.createChoice('O campo Assunto define se o seu e-mail será aberto agora, arquivado ou ignorado', false),
-    q14.createChoice('Na aula anterior, estudamos como a hierarquia visual orienta os olhos do leitor por títulos, tópicos e espaçamentos equilibrados', true),
-    q14.createChoice('Pessoas que precisam acompanhar o assunto por ciência, sem obrigação de responder diretamente à mensagem', false)
+    q14.createChoice('Quem executa a tarefa ou redige o comunicado técnico inicial', true),
+    q14.createChoice('Quem responde pelo resultado e valida formalmente a transmissão', false),
+    q14.createChoice('Especialistas ouvidos antes da emissão da mensagem definitiva', false),
+    q14.createChoice('Pessoas que recebem a notificação apenas para acompanhamento', false)
   ]);
   q14.setPoints(1);
   q14.setRequired(true);
 
   var q15 = form.addMultipleChoiceItem();
-  q15.setTitle('15. De acordo com a aula, o que caracteriza "Dica prática"?');
+  q15.setTitle('15. (Aula 5) Segundo a aula, o que caracteriza os Silos Departamentais como causa de falha na comunicação interna?');
   q15.setChoices([
-    q15.createChoice('Se uma palavra pode ser cortada sem alterar o sentido do pedido, corte-a', true),
-    q15.createChoice('Quais elementos tornam a segunda versão do memorando mais eficaz do que a primeira? (Mais de uma opção está correta)', false),
-    q15.createChoice('Algumas pessoas acreditam que escrever bem no trabalho significa usar termos arcaicos ou palavras difíceis que ninguém entende', false),
-    q15.createChoice('Gostaríamos de avisar que os materiais estão acabando rápido demais e quem quiser coisas precisa mandar o papel logo, senão vai ficar sem nada na semana que vem', false)
+    q15.createChoice('Equipes usam termos herméticos com áreas que não dominam o vocabulário técnico', false),
+    q15.createChoice('Mensagens ficam espalhadas por vários canais sem registro formal', false),
+    q15.createChoice('Setores retêm informações cruciais por falta de integração ou rivalidade interna', true),
+    q15.createChoice('Prazos ficam indefinidos e tarefas sem responsável identificado', false)
   ]);
   q15.setPoints(1);
   q15.setRequired(true);
 
   var q16 = form.addMultipleChoiceItem();
-  q16.setTitle('16. De acordo com a aula, o que caracteriza "Revisão: Pontuação Aplicada"?');
+  q16.setTitle('16. (Aula 5) De acordo com a aula, o que avalia a etapa "Quando/Onde" da Matriz 5W2H?');
   q16.setChoices([
-    q16.createChoice('Na aula anterior, estudamos correção gramatical. Antes de pensar no visual, o texto deve estar impecável', true),
-    q16.createChoice('Empresas e escolas utilizam templates (modelos prontos) para garantir que ninguém precise recriar estilos do zero', false),
-    q16.createChoice('Documentos bem formatados perdem credibilidade se houver falhas de concordância', false),
-    q16.createChoice('Inicia a mensagem dirigindo-se formalmente à autoridade ou leitor (ex.: Senhor Diretor, ou Prezada Equipe,)', false)
+    q16.createChoice('Definir o objetivo da mensagem e sua real necessidade', false),
+    q16.createChoice('Definir prazos de envio e os canais adequados para a mensagem', true),
+    q16.createChoice('Indicar o emissor e os receptores diretos da mensagem', false),
+    q16.createChoice('Descrever a execução e as métricas de retorno', false)
   ]);
   q16.setPoints(1);
   q16.setRequired(true);
 
   var q17 = form.addMultipleChoiceItem();
-  q17.setTitle('17. Segundo a aula, o que é "Metodologia"?');
+  q17.setTitle('17. (Aula 6) Segundo a aula, qual é a função do Gancho Inicial (the hook) em uma apresentação?');
   q17.setChoices([
-    q17.createChoice('Descrição clara dos métodos e passos usados para investigar o caso', true),
-    q17.createChoice('Comparação de resultados com metas de projeto ou limites regulamentares', false),
-    q17.createChoice('Medidas viáveis técnica, operacional e financeiramente', false),
-    q17.createChoice('Exame da correlação entre variáveis (ex.: aumento de temperatura x queda de tensão)', false)
+    q17.createChoice('Sintetizar os pontos discutidos e convidar a uma reflexão final', false),
+    q17.createChoice('Apresentar argumentos, evidências e conexões lógicas centrais', false),
+    q17.createChoice('Captar a atenção do público logo no início, usando pergunta instigante, dado surpreendente ou história curta', true),
+    q17.createChoice('Controlar a velocidade e as pausas durante toda a fala', false)
   ]);
   q17.setPoints(1);
   q17.setRequired(true);
 
   var q18 = form.addMultipleChoiceItem();
-  q18.setTitle('18. De acordo com a aula, o que caracteriza "Revisão: Escuta Ativa e Atendimento"?');
+  q18.setTitle('18. (Aula 6) De acordo com a aula, por que um roteiro não deve conter a transcrição exata de cada palavra?');
   q18.setChoices([
-    q18.createChoice('Sentir nervosismo antes de uma entrevista é perfeitamente normal. O objetivo não é extinguir a emoção, mas sim gerenciá-la fisiologicamente', false),
-    q18.createChoice('Hoje transformamos a entrevista de emprego em um processo dominado por técnicas de comunicação', false),
-    q18.createChoice('Uma pausa silenciosa de dois segundos demonstra reflexão e segurança, enquanto vícios sonoros transmitem insegurança', false),
-    q18.createChoice('Na aula anterior, estudamos o atendimento profissional. Vimos que ouvir ativamente não é apenas esperar a sua vez de falar, mas compreender o objetivo da outra...', true)
+    q18.createChoice('Porque o público prefere ouvir um discurso totalmente improvisado sem qualquer preparo', false),
+    q18.createChoice('Porque a leitura literal trava a espontaneidade, quebra o contato visual e dificulta a recuperação caso o orador se perca', true),
+    q18.createChoice('Porque slides com pouco texto sempre confundem mais a audiência', false),
+    q18.createChoice('Porque a conclusão deve ser sempre mais longa que o desenvolvimento', false)
   ]);
   q18.setPoints(1);
   q18.setRequired(true);
 
   var q19 = form.addMultipleChoiceItem();
-  q19.setTitle('19. De acordo com a aula, o que caracteriza "O impacto do texto no trabalho"?');
+  q19.setTitle('19. (Aula 6) Segundo a aula, o que é o Pacing em uma apresentação?');
   q19.setChoices([
-    q19.createChoice('No ambiente profissional contemporâneo, a maioria das decisões diárias circula por escrito em e-mails, relatórios, atas e comunicados corporativos', true),
-    q19.createChoice('Dessa forma, todos os relatórios foram plenamente regularizados dentro do prazo legal', false),
-    q19.createChoice('A diretora pediu que o assistente enviasse o relatório elaborado por ela', false),
-    q19.createChoice('O parágrafo é uma unidade de pensamento. Misturar múltiplos assuntos não relacionados no mesmo bloco cansa o leitor e oculta informações cruciais', false)
+    q19.createChoice('O elemento inicial concebido para capturar a atenção do público', false),
+    q19.createChoice('A técnica de ler cada slide literalmente sem improviso', false),
+    q19.createChoice('O tempo total dedicado exclusivamente à conclusão do discurso', false),
+    q19.createChoice('A alternância consciente entre momentos de aceleração enérgica e pausas reflexivas', true)
   ]);
   q19.setPoints(1);
   q19.setRequired(true);
 
   var q20 = form.addMultipleChoiceItem();
-  q20.setTitle('20. De acordo com a aula, o que caracteriza "PADRÃO CORPORATIVO"?');
+  q20.setTitle('20. (Aula 6) De acordo com a aula, qual é a distribuição recomendada de tempo em uma apresentação?');
   q20.setChoices([
-    q20.createChoice('A assinatura institucional comprova a legitimidade do emissor e facilita o contato imediato', true),
-    q20.createChoice('Pessoas incluídas apenas para acompanhamento e ciência do tema', false),
-    q20.createChoice('Informa urgência ou data limite. Ex: Aprovação até 15/10', false),
-    q20.createChoice('Assunto vago, gírias inapropriadas, sem especificação de documento ou prazo e sem assinatura', false)
+    q20.createChoice('50% para abertura, 25% para desenvolvimento e 25% para conclusão', false),
+    q20.createChoice('70% para desenvolvimento, 15% para abertura e 15% para conclusão', true),
+    q20.createChoice('90% para desenvolvimento e 10% dividido entre abertura e conclusão', false),
+    q20.createChoice('Tempo igual (33%) para abertura, desenvolvimento e conclusão', false)
   ]);
   q20.setPoints(1);
   q20.setRequired(true);
 
+  // ============================================================
+  // BLOCO 3: Oralidade e Atendimento Profissional (Aulas 7-9)
+  // Aula 7: Técnicas de Oratória e Expressão Vocal | Aula 8:
+  // Participação e Condução de Reuniões | Aula 9: Atendimento e
+  // Escuta Ativa
+  // ============================================================
+  form.addSectionHeaderItem().setTitle('Bloco 3: Oralidade e Atendimento Profissional (Aulas 7-9)');
+
   var q21 = form.addMultipleChoiceItem();
-  q21.setTitle('21. Segundo a aula, o que é "Pontuação"?');
+  q21.setTitle('21. (Aula 7) Segundo a aula, qual é a diferença entre Articulação e Dicção?');
   q21.setChoices([
-    q21.createChoice('Clientes e líderes confiam mais em dados apresentados sem falhas gramaticais', false),
-    q21.createChoice('Traga dados, justificativas e exemplos em seguida', false),
-    q21.createChoice('Regras formais para a escrita pública oficial', false),
-    q21.createChoice('Sinais que organizam pausas e sentidos das orações', true)
+    q21.createChoice('Articulação é o movimento muscular da boca; Dicção é a clareza sonora resultante desse movimento', true),
+    q21.createChoice('Articulação é a variação de tom e ritmo; Dicção é a arte de discursar com persuasão', false),
+    q21.createChoice('Articulação é a pausa estratégica; Dicção é o volume da voz', false),
+    q21.createChoice('Articulação é a respiração diafragmática; Dicção é o aquecimento vocal', false)
   ]);
   q21.setPoints(1);
   q21.setRequired(true);
 
   var q22 = form.addMultipleChoiceItem();
-  q22.setTitle('22. Segundo a aula, o que é "Redução de desperdícios"?');
+  q22.setTitle('22. (Aula 7) De acordo com a aula, qual é a função da respiração diafragmática ao falar em público?');
   q22.setChoices([
-    q22.createChoice('novos colaboradores aprendem a rotina com autonomia e rapidez', false),
-    q22.createChoice('Salvar cópias seguras dos projetos no servidor nuvem', false),
-    q22.createChoice('garantia de uso correto de equipamentos de proteção individual', false),
-    q22.createChoice('menos erros de montagem e menor perda de matéria-prima', true)
+    q22.createChoice('Acumula tensão nos ombros e pescoço, comprimindo a laringe', false),
+    q22.createChoice('Elimina completamente a necessidade de pausas durante a fala', false),
+    q22.createChoice('Serve apenas para aquecer as pregas vocais antes do discurso', false),
+    q22.createChoice('Expande a região abdominal, fornecendo um colchão constante de ar para sustentar frases longas com estabilidade', true)
   ]);
   q22.setPoints(1);
   q22.setRequired(true);
 
   var q23 = form.addMultipleChoiceItem();
-  q23.setTitle('23. De acordo com a aula, o que caracteriza "Estruturação de Textos Profissionais"?');
+  q23.setTitle('23. (Aula 7) Segundo a aula, como eliminar vícios de linguagem como "né" e "tipo assim"?');
   q23.setChoices([
-    q23.createChoice('Um texto pode estar gramaticalmente correto e ainda assim ser incoerente. A coerência reside na não contradição, na verossimilhança e na progressão temática sólida', false),
-    q23.createChoice('Mude de parágrafo sempre que mudar de aspecto, argumento ou etapa do tema', false),
-    q23.createChoice('Comunicação escrita com clareza, coesão e impacto no ambiente corporativo', true),
-    q23.createChoice('Permite correções instantâneas, entonação vocal, pausas de respiração e gestos para apoiar a compreensão mútua', false)
+    q23.createChoice('Falar mais rápido para não dar tempo de pensar nas palavras', false),
+    q23.createChoice('Substituir o vício por uma pausa estratégica de silêncio, mantendo o apoio do diafragma', true),
+    q23.createChoice('Aumentar o volume da voz sempre que sentir vontade de usar o vício', false),
+    q23.createChoice('Ignorar completamente a preparação vocal antes de falas importantes', false)
   ]);
   q23.setPoints(1);
   q23.setRequired(true);
 
   var q24 = form.addMultipleChoiceItem();
-  q24.setTitle('24. De acordo com a aula, o que caracteriza "Coesão e Coerência"?');
+  q24.setTitle('24. (Aula 8) Segundo a aula, o que deve conter uma Ata formal de reunião?');
   q24.setChoices([
-    q24.createChoice('Por que para perguntas e motivos. Porque para respostas explicativas', false),
-    q24.createChoice('Use portanto, por conseguinte ou dessa forma para consolidar decisões e próximos passos', false),
-    q24.createChoice('Um texto profissional precisa ser uma ponte sólida. A coesão é a costura gramatical (pronomes, conectivos e pontuação), enquanto a coerência é a lógica interna que...', true),
-    q24.createChoice('O Acordo Ortográfico eliminou acentos que muitos profissionais ainda usam por desatenção', false)
+    q24.createChoice('A transcrição literal de tudo o que cada participante falou durante o encontro', false),
+    q24.createChoice('Apenas a lista de presença, sem registrar decisões ou encaminhamentos', false),
+    q24.createChoice('Cabeçalho com data e participantes, pauta tratada, deliberações e plano de ação com responsáveis e prazos', true),
+    q24.createChoice('Somente as divergências de opinião, sem mencionar os acordos finais', false)
   ]);
   q24.setPoints(1);
   q24.setRequired(true);
 
   var q25 = form.addMultipleChoiceItem();
-  q25.setTitle('25. De acordo com a aula, o que caracteriza "Relação de Pré-requisito"?');
+  q25.setTitle('25. (Aula 8) De acordo com a aula, o que caracteriza a Comunicação Assertiva em uma reunião?');
   q25.setChoices([
-    q25.createChoice('Registra quantas etapas foram executadas fora de ordem ou de maneira incorreta', false),
-    q25.createChoice('O manual presume que o usuário já sabe como encaixar uma peça e omite o passo básico', false),
-    q25.createChoice('Enumera equipamentos, EPIs, ferramentas e insumos necessários antes do início', false),
-    q25.createChoice('Se uma cola precisa de 10 minutos para secar antes do aperto final, ou se a energia precisa ser cortada antes de abrir a tampa, isso deve constar no momento exato', true)
+    q25.createChoice('Guarda ideias por receio e acumula frustração em silêncio', false),
+    q25.createChoice('Interrompe os outros e impõe pontos de vista à força', false),
+    q25.createChoice('Evita qualquer posicionamento para não gerar conflito no grupo', false),
+    q25.createChoice('Expressa convicções com gentileza, apoia argumentos em fatos e sabe dizer "não" quando necessário', true)
   ]);
   q25.setPoints(1);
   q25.setRequired(true);
 
   var q26 = form.addMultipleChoiceItem();
-  q26.setTitle('26. Segundo a aula, o que é "Padronização"?');
+  q26.setTitle('26. (Aula 8) Segundo a aula, quais são os passos para mediar um conflito em reunião?');
   q26.setChoices([
-    q26.createChoice('Times New Roman, Georgia. Possuem pequenos traços (serifas) nas pontas; excelentes para livros impressos', false),
-    q26.createChoice('ideal para separar itens longos em listas numeradas', false),
-    q26.createChoice('Regras unificadas para consistência institucional', true),
-    q26.createChoice('organiza termos de mesma função sintática', false)
+    q26.createChoice('Impor a decisão do líder para encerrar rapidamente a divergência', false),
+    q26.createChoice('Escutar os dois lados sem interrupção, encontrar o ponto comum e construir um acordo equilibrado', true),
+    q26.createChoice('Ignorar o conflito e seguir adiante com a pauta original', false),
+    q26.createChoice('Pedir que apenas uma das partes explique sua posição', false)
   ]);
   q26.setPoints(1);
   q26.setRequired(true);
 
   var q27 = form.addMultipleChoiceItem();
-  q27.setTitle('27. Segundo a aula, o que é "Postura"?');
+  q27.setTitle('27. (Aula 9) Segundo a aula, o que é Parafraseamento no atendimento?');
   q27.setChoices([
-    q27.createChoice('manter os pés firmes no chão ancora o corpo e reduz tremores', false),
-    q27.createChoice('desacelerar o ritmo reduz o estresse da conversa', false),
-    q27.createChoice('Diálogo intencional para avaliar competências e perfil', false),
-    q27.createChoice('Expressão corporal que transmite segurança e receptividade', true)
+    q27.createChoice('Reconhecer e legitimar o sentimento do usuário antes da solução técnica', false),
+    q27.createChoice('Resumir a essência do que foi dito usando suas próprias palavras, demonstrando que a mensagem foi processada com precisão', true),
+    q27.createChoice('Formulação que convida o interlocutor a explicar o ocorrido em profundidade', false),
+    q27.createChoice('Apenas receber sons sem demonstrar engajamento ou reflexão crítica', false)
   ]);
   q27.setPoints(1);
   q27.setRequired(true);
 
   var q28 = form.addMultipleChoiceItem();
-  q28.setTitle('28. De acordo com a aula, o que caracteriza "Vocabulário Essencial"?');
+  q28.setTitle('28. (Aula 9) De acordo com a aula, por que a Validação Emocional deve vir antes da solução técnica?');
   q28.setChoices([
-    q28.createChoice('Avalia a segurança sentida pelo usuário durante o processo do início ao fim', false),
-    q28.createChoice('Indicados para inventários, listas de materiais, EPIs ou alertas em que a ordem não interfere no resultado', false),
-    q28.createChoice('Usabilidade - Facilidade com que o leitor compreende e executa o texto', true),
-    q28.createChoice('Diagramas e ilustrações técnicas mostram o exato encaixe de componentes difíceis de descrever apenas com palavras', false)
+    q28.createChoice('Porque o registro do chamado só pode ser feito após o cliente se acalmar completamente', false),
+    q28.createChoice('Porque pessoas irritadas não conseguem raciocinar bem sobre soluções lógicas enquanto não sentem sua frustração compreendida', true),
+    q28.createChoice('Porque valida se o código de acesso do atendimento está correto', false),
+    q28.createChoice('Porque é uma exigência legal em todos os tipos de atendimento ao consumidor', false)
   ]);
   q28.setPoints(1);
   q28.setRequired(true);
 
   var q29 = form.addMultipleChoiceItem();
-  q29.setTitle('29. De acordo com a aula, o que caracteriza "O Padrão de Leitura em "F""?');
+  q29.setTitle('29. (Aula 9) Segundo a aula, o que caracteriza uma solução Ganha-Ganha no atendimento?');
   q29.setChoices([
-    q29.createChoice('Pesquisas comprovam que em ambientes corporativos e telas digitais, o leitor realiza uma varredura visual em formato de F', true),
-    q29.createChoice('O formato PDF foi criado para assegurar que um documento seja impresso e visualizado de forma idêntica em qualquer dispositivo ou sistema operacional', false),
-    q29.createChoice('Em documentos oficiais e corporativos, o vocativo demonstra respeito à função do destinatário', false),
-    q29.createChoice('Espaço em branco não é desperdício de papel: é área de respiro para os olhos. Um layout equilibrado separa tópicos, conduz o olhar e reduz a fadiga visual durante a...', false)
+    q29.createChoice('A empresa impõe a regra friamente e o usuário sai lesado', false),
+    q29.createChoice('O atendente cede a exigências ilegais e a empresa sofre prejuízos', false),
+    q29.createChoice('Ambos chegam a uma alternativa viável e construtiva, respeitando as necessidades do usuário e as regras da instituição', true),
+    q29.createChoice('O atendimento é encerrado sem qualquer registro formal do ocorrido', false)
   ]);
   q29.setPoints(1);
   q29.setRequired(true);
 
   var q30 = form.addMultipleChoiceItem();
-  q30.setTitle('30. Segundo a aula, o que é "Segurança"?');
+  q30.setTitle('30. (Aula 9) De acordo com a aula, qual é a diferença entre pergunta aberta e pergunta fechada no atendimento?');
   q30.setChoices([
-    q30.createChoice('Escolha palavras simples e diretas, eliminando rodeios desnecessários', false),
-    q30.createChoice('Não propagar informações falsas ou dados distorcidos', false),
-    q30.createChoice('Rejeitar agressões verbais, ironias cruéis e ofensas preconceituosas', false),
-    q30.createChoice('Uma instrução técnica confusa pode causar acidentes graves', true)
+    q30.createChoice('Perguntas abertas só podem ser feitas por escrito, nunca verbalmente', false),
+    q30.createChoice('Perguntas fechadas são sempre mais respeitosas com o tempo do cliente', false),
+    q30.createChoice('Não há diferença prática entre os dois tipos de pergunta no atendimento', false),
+    q30.createChoice('Perguntas fechadas aceitam apenas "sim" ou "não"; perguntas abertas estimulam a fala detalhada e ajudam a descobrir a causa raiz', true)
   ]);
   q30.setPoints(1);
   q30.setRequired(true);
 
-
   Logger.log('✅ REVISÃO INTEGRADA (Aulas 1-9) criada com sucesso!');
   Logger.log('');
   Logger.log('📊 INFORMAÇÕES DO FORMULÁRIO:');
-  Logger.log('   Tipo: Quiz de Revisão');
-  Logger.log('   Abrangência: Aulas 1 a 9');
-  Logger.log('   Questões: 30');
+  Logger.log('   Cobertura: Aulas 1 a 9 (Processo Comunicativo até Atendimento e Escuta Ativa)');
+  Logger.log('   Questões: 30 (10 por bloco)');
   Logger.log('   Pontuação: 30 pontos (1 ponto/questão)');
-  Logger.log('   Blocos: 3 (Fundamentos, Apresentações, Comunicação Profissional)');
   Logger.log('');
   Logger.log('🔗 LINK PARA COMPARTILHAR COM ALUNOS:');
   Logger.log(form.getPublishedUrl());
@@ -372,75 +391,57 @@ function analisarRespostasRevisao() {
   var form = FormApp.openByTitle('Revisão Integrada — Aulas 1 a 9 · Comunicação Oral e Escrita · SENAI');
   var responses = form.getResponses();
 
-  Logger.log('📊 ANÁLISE DETALHADA — REVISÃO INTEGRADA (Aulas 1-9)');
+  Logger.log('📊 ANÁLISE DETALHADA — Revisão Integrada (Aulas 1-9)');
   Logger.log('═══════════════════════════════════════════════════');
   Logger.log('Total de respostas: ' + responses.length);
   Logger.log('');
 
   var todasAsNotas = [];
-  var blocos = { bloco1: [], bloco2: [], bloco3: [] };
- responses.forEach(function(response) {
-    var email = response.getRespondentEmail();
-    var itemResponses = response.getItemResponses();
-    var acertos = 0;
-    var total = 30;
-    var acertos_bloco1 = 0, acertos_bloco2 = 0, acertos_bloco3 = 0;
 
-    var respostasCorretas = [ 'Identificar claramente o objetivo e o público-alvo', 'A clareza da mensagem, compreensão do público e feedback', 'Compreender e minimizar interferências que prejudicam mensagens', 'Resposta ou reação do receptor que confirma entendimento', 'Define o tom, estilo e nível de formalidade apropriados', 'Emissor e receptor devem compartilhar o mesmo código para compreensão', 'Ouvindo ativamente, pedindo esclarecimentos e respondendo com respeito', 'Formal segue normas gramaticais rigorosas; informal é coloquial', 'De acordo com o público e o contexto profissional', 'Organizar ideias logicamente para melhor compreensão do público', 'Introdução clara, desenvolvimento lógico, conclusão forte', 'Melhora a clareza, o engajamento e o impacto emocional', 'Transmitem emoção, intenção e reforçam a mensagem', 'Com uma história, pergunta provocadora ou estatística impactante', 'Expandir ideias principais com exemplos, dados e argumentos', 'Com resumo impactante, call-to-action ou reflexão provocadora', 'Complementar e reforçar a mensagem verbal, não substituí-la', 'Planejar com antecedência, cronometrar e adaptar durante', 'Aumentam produtividade, clareza e alinhamento de equipes', 'Pauta clara, horário, objetivos definidos e atas documentadas', 'Ouvir atentamente, contribuir quando relevante e respeitar turnos', 'Mantendo foco, controlando tempo e equilibrando participações', 'Ouvir com atenção plena, fazer perguntas e validar compreensão', 'Ouvir, compreender perspectivas diferentes e buscar consenso', 'Cria confiança, satisfação e relacionamentos positivos', 'Ajustando linguagem, tom e complexidade conforme perfil', 'Comunica até 70% da mensagem; deve estar alinhada com palavras', 'Sendo honesto, cumprir promessas e manter confidencialidade', 'Reconhecer, desculpar-se sinceramente e corrigir', 'Comunicação eficaz é uma habilidade prática e desenvolvível'
-    ];
- itemResponses.forEach(function(itemResponse, idx) {
-      var resposta = itemResponse.getResponse();
-      if (idx >= 3 && idx < 33) {
-        var questao_idx = idx - 3;
-        if (resposta === respostasCorretas[questao_idx]) { acertos++;
-          if (questao_idx < 9) acertos_bloco1++;
-          else if (questao_idx < 18) acertos_bloco2++;
-          else acertos_bloco3++;
-        }
+  responses.forEach(function(response) {
+    var nome = 'N/A';
+    response.getItemResponses().forEach(function(itemResponse) {
+      if (itemResponse.getItem().getTitle() === 'Nome Completo') {
+        nome = itemResponse.getResponse();
       }
     });
 
-    var nota = (acertos / total) * 30;
-    var percentual = (acertos / total) * 100;
- todasAsNotas.push(nota); blocos.bloco1.push((acertos_bloco1 / 9) * 100); blocos.bloco2.push((acertos_bloco2 / 9) * 100); blocos.bloco3.push((acertos_bloco3 / 12) * 100);
+    var nota = response.getTotalScore(); // calculo nativo do quiz (setIsQuiz + setPoints)
+    var percentual = (nota / 30) * 100;
+    todasAsNotas.push(nota);
 
     var feedback = '';
-    if (percentual >= 90) { feedback = 'EXCELENTE! Domina completamente os tópicos das aulas 1-9!';
-    } else if (percentual >= 80) { feedback = 'MUITO BOM! Compreendeu bem. Revise tópicos específicos.';
-    } else if (percentual >= 70) { feedback = 'BOM! Revise os tópicos com menor acerto.';
-    } else if (percentual >= 60) { feedback = 'Bom início. Estude novamente os conceitos com professor.';
-    } else { feedback = 'Procure o professor para revisão orientada.';
+    if (percentual >= 90) {
+      feedback = '🌟 EXCELENTE! Domina completamente todos os conceitos!';
+    } else if (percentual >= 80) {
+      feedback = '✅ MUITO BOM! Compreendeu bem a maioria dos tópicos.';
+    } else if (percentual >= 70) {
+      feedback = '⚠️ BOM! Revise os tópicos com menor acerto para melhorar.';
+    } else if (percentual >= 60) {
+      feedback = '💡 Bom início. Estude novamente os elementos principais com o professor.';
+    } else {
+      feedback = '📚 Procure o professor para revisão orientada e aprofundamento.';
     }
 
-    Logger.log('👤 ' + email);
-    Logger.log('   Acertos: " + acertos + "/' + total);
-    Logger.log('   Nota: " + nota.toFixed(1) + "/30 (" + percentual.toFixed(0) + "%)');
-    Logger.log('   Bloco 1 (Fundamentos): " + acertos_bloco1 + "/9');
-    Logger.log('   Bloco 2 (Apresentações): " + acertos_bloco2 + "/9');
-    Logger.log('   Bloco 3 (Profissional): " + acertos_bloco3 + "/12');
+    Logger.log('👤 ' + nome);
+    Logger.log('   Nota: ' + nota.toFixed(1) + '/30 (' + percentual.toFixed(0) + '%)');
     Logger.log('   ' + feedback);
     Logger.log('');
   });
 
   if (todasAsNotas.length > 0) {
     var media = todasAsNotas.reduce(function(a, b) { return a + b; }) / todasAsNotas.length;
-    var media_bloco1 = blocos.bloco1.reduce(function(a, b) { return a + b; }) / blocos.bloco1.length;
-    var media_bloco2 = blocos.bloco2.reduce(function(a, b) { return a + b; }) / blocos.bloco2.length;
-    var media_bloco3 = blocos.bloco3.reduce(function(a, b) { return a + b; }) / blocos.bloco3.length;
+    var maior = Math.max.apply(null, todasAsNotas);
+    var menor = Math.min.apply(null, todasAsNotas);
 
     Logger.log('─────────────────────────────────────────────────');
-    Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS (Revisão Aulas 1-9)');
-    Logger.log('   Média Geral: " + media.toFixed(1) + "/30 (" + ((media/30)*100).toFixed(0) + "%)');
-    Logger.log('');
-    Logger.log('   Bloco 1 (Fundamentos): " + media_bloco1.toFixed(0) + "%');
-    Logger.log('   Bloco 2 (Apresentações): " + media_bloco2.toFixed(0) + "%');
-    Logger.log('   Bloco 3 (Comunicação Profissional): " + media_bloco3.toFixed(0) + "%');
-    Logger.log('');
-    Logger.log('   Maior nota: " + Math.max.apply(null, todasAsNotas).toFixed(1) + "/30');
-    Logger.log('   Menor nota: " + Math.min.apply(null, todasAsNotas).toFixed(1) + "/30');
-    Logger.log('   Variação: " + (Math.max.apply(null, todasAsNotas) - Math.min.apply(null, todasAsNotas)).toFixed(1) + " pontos');
+    Logger.log('📈 ESTATÍSTICAS CONSOLIDADAS DA TURMA');
+    Logger.log('   Média: ' + media.toFixed(1) + '/30 (' + ((media / 30) * 100).toFixed(0) + '%)');
+    Logger.log('   Maior nota: ' + maior.toFixed(1) + '/30');
+    Logger.log('   Menor nota: ' + menor.toFixed(1) + '/30');
+    Logger.log('   Variação: ' + (maior - menor).toFixed(1) + ' pontos');
 
-    var aprovados = todasAsNotas.filter(function(n) { return n >= 21; }).length;
-    Logger.log('   Aprovados (70%+): " + aprovados + " de ' + todasAsNotas.length);
+    var aprovados = todasAsNotas.filter(function(n) { return n >= 21; }).length; // 70%
+    Logger.log('   Aprovados (70%+): ' + aprovados + ' de ' + todasAsNotas.length);
   }
 }
